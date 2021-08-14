@@ -1,0 +1,33 @@
+state={
+	id=437
+	name="STATE_437"
+	provinces={
+		5564 8080 8579 14562 14590 14608 14644 19494 19562 19563 19567 19568 19570 19571 19573 19576 19577 19660 
+	}
+	
+	history={
+		owner = FRA
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 8
+			anti_air_building = 2
+
+		}
+		victory_points = {
+			19563 10 
+		}
+		victory_points = {
+			19576 3 
+		}
+		victory_points = {
+			19577 20 
+		}
+		victory_points = {
+			19494 5 
+		}
+	}
+	
+	manpower=3351967‬
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

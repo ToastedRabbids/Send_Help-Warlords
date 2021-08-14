@@ -1,0 +1,19 @@
+state={
+	id=450
+	name="STATE_450"
+	history = {
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 8
+		}
+		victory_points = { 10911 5 }
+		victory_points = { 15863 5 }
+	}
+	provinces={
+		4770 7131 7647 8288 8819 8933 10911 10959 15801 15850 15855 15863 15895 20251 20252 20268 
+	}
+	manpower=722544
+	buildings_max_level_factor=1.000
+	state_category = town
+}

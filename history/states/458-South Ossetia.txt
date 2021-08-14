@@ -1,0 +1,20 @@
+state={
+	id=458
+	name="STATE_458"
+	provinces={
+		8703 9313 14850 
+	}
+	
+	history={
+		owner = SOV
+		add_core_of = SOV
+		add_core_of = GEO
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	
+	manpower=42825
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -1,0 +1,22 @@
+state={
+	id=413
+	name="STATE_413"
+	
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = PRE
+		buildings = {
+			infrastructure = 6
+
+		}
+
+	}
+	
+	provinces={
+		3187 4316 7021 7141 7754 7840 8559 8588 9077 13380 13437 13452 13461 13474 13481 13486 13498 13499 13514 13521 13540 13549 
+	}
+	manpower=716430
+	buildings_max_level_factor=1.000
+	state_category=town
+}

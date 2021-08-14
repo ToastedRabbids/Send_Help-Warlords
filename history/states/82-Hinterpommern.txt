@@ -1,0 +1,27 @@
+
+state={
+	id=82
+	name="STATE_82"
+	resources={
+		steel=37.000
+		aluminium=13.000
+	}
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = POM
+		buildings = {
+			infrastructure = 6
+			10912 = { naval_base = 4 }
+		}
+
+	}
+
+	provinces={
+		107 1566 3227 7709 7731 7855 7898 8886 10912 13506 13517 13532 13538 13543 13571 13577 13612 13620 13676 13682 13686 13712 
+	}
+	manpower=288533
+	buildings_max_level_factor=1.000
+	state_category=town
+}

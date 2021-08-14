@@ -1,0 +1,31 @@
+
+state={
+	id=156
+	name="STATE_156"
+
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = KOS
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			15834 5 
+		}
+		victory_points = {
+			4074 20 
+		}
+		victory_points = {
+			15720 10 
+		}
+	}
+
+	provinces={
+		833 2405 2648 3297 4074 7564 8199 10725 10778 15776 15792 15824 15834 15869 
+	}
+	manpower=1386400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

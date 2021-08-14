@@ -1,0 +1,30 @@
+
+state={
+	id=154
+	name="STATE_154"
+	resources={
+		chromium=98.000
+		aluminium=22.000
+	}
+
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = MAC
+		add_claim_by = BUL
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		783 3077 3273 3488 3997 4110 4557 5408 5766 6500 6736 7292 7780 8269 8519 8750 9047 9185 9578 9816 10344 10631 11151 11559 15842 15874 15877 15892 15959 15987 16013 20300 
+	}
+	manpower=824520
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

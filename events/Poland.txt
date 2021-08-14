@@ -1,0 +1,615 @@
+﻿###########################
+# Polish Events
+###########################
+
+add_namespace = poland
+
+# Eastward Expansion (Danzig Ceded)
+country_event = {
+	id = poland.1
+	title = poland.1.t
+	desc = poland.1.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.1.a
+		ai_chance = { factor = 10 }
+		add_ideas = fascist_influence
+		add_state_claim = 177
+		add_state_claim = 176
+		add_state_claim = 191
+	}
+
+	option = {
+		name = poland.1.b
+		ai_chance = { factor = 10 }
+		add_opinion_modifier = { target = SOV modifier = medium_increase }
+	}
+}
+
+# Soviet Union Demands the East
+country_event = {
+	id = poland.2
+	title = poland.2.t
+	desc = poland.2.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.2.a
+		ai_chance = { factor = 30 }
+		effect_tooltip = {
+			SOV = {
+				if = {
+					limit = { POL = { owns_state = 291 controls_state = 291 } }
+					transfer_state = 291
+					add_state_claim = 291
+				}
+				if = {
+					limit = { POL = { owns_state = 380 controls_state = 380 } }
+					transfer_state = 380
+					add_state_claim = 380
+				}
+				if = {
+					limit = { POL = { owns_state = 388 controls_state = 388 } }
+					transfer_state = 388
+					add_state_claim = 388
+				}
+				if = {
+					limit = { POL = { owns_state = 278 controls_state = 278 } }
+					transfer_state = 278
+					add_state_claim = 278
+				}
+				if = {
+					limit = { POL = { owns_state = 389 controls_state = 389 } }
+					transfer_state = 389
+					add_state_claim = 389
+				}
+				if = {
+					limit = { POL = { owns_state = 290 controls_state = 290 } }
+					transfer_state = 290
+					add_state_claim = 290
+				}
+				if = {
+					limit = { POL = { owns_state = 289 controls_state = 289 } }
+					transfer_state = 289
+					add_state_claim = 289
+				}
+				if = {
+					limit = { POL = { owns_state = 288 controls_state = 288 } }
+					transfer_state = 288
+					add_state_claim = 288
+				}
+				if = {
+					limit = { POL = { owns_state = 284 controls_state = 284 } }
+					transfer_state = 284
+					add_state_claim = 284
+				}
+				if = {
+					limit = { POL = { owns_state = 283 controls_state = 283 } }
+					transfer_state = 283
+					add_state_claim = 283
+				}
+				if = {
+					limit = { POL = { owns_state = 387 controls_state = 387 } }
+					transfer_state = 387
+					add_state_claim = 387
+				}
+			}
+		}
+		SOV = {country_event = { id = poland.3} }
+	}
+
+	option = {
+		name = poland.2.b
+		ai_chance = { factor = 70 }
+		effect_tooltip = {
+			SOV = {
+				create_wargoal = {
+					type = take_state_focus
+					target = POL
+					generator = { 380 291 290 388 389 278 289 288 284 2833 387 }
+				}
+			}
+		}
+		SOV = { country_event = { id = poland.4 } }
+	}
+}
+
+# Poland Cedes the East
+country_event = {
+	id = poland.3
+	title = poland.3.t
+	desc = poland.3.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.3.a
+		SOV = {
+			if = {
+				limit = { POL = { owns_state = 291 controls_state = 291 } }
+				transfer_state = 291
+				add_state_claim = 291
+			}
+			if = {
+				limit = { POL = { owns_state = 380 controls_state = 380 } }
+				transfer_state = 380
+				add_state_claim = 380
+			}
+			if = {
+				limit = { POL = { owns_state = 388 controls_state = 388 } }
+				transfer_state = 388
+				add_state_claim = 388
+			}
+			if = {
+				limit = { POL = { owns_state = 278 controls_state = 278 } }
+				transfer_state = 278
+				add_state_claim = 278
+			}
+			if = {
+				limit = { POL = { owns_state = 389 controls_state = 389 } }
+				transfer_state = 389
+				add_state_claim = 389
+			}
+			if = {
+				limit = { POL = { owns_state = 290 controls_state = 290 } }
+				transfer_state = 290
+				add_state_claim = 290
+			}
+			if = {
+				limit = { POL = { owns_state = 289 controls_state = 289 } }
+				transfer_state = 289
+				add_state_claim = 289
+			}
+			if = {
+				limit = { POL = { owns_state = 288 controls_state = 288 } }
+				transfer_state = 288
+				add_state_claim = 288
+			}
+			if = {
+				limit = { POL = { owns_state = 284 controls_state = 284 } }
+				transfer_state = 284
+				add_state_claim = 284
+			}
+			if = {
+				limit = { POL = { owns_state = 283 controls_state = 283 } }
+				transfer_state = 283
+				add_state_claim = 283
+			}
+			if = {
+				limit = { POL = { owns_state = 387 controls_state = 387 } }
+				transfer_state = 387
+				add_state_claim = 387
+			}
+		}
+		hidden_effect = {
+			news_event = { id = news.194 }
+		}
+	}
+}
+
+# Poland Refuses to Cede the East
+country_event = {
+	id = poland.4
+	title = poland.4.t
+	desc = poland.4.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.4.a
+		create_wargoal = {
+			type = take_state_focus
+			target = POL
+			generator = { 380 291 290 388 389 278 289 288 284 2833 387 }
+		}
+	}
+}
+
+
+# Soviet Union Offers Protection
+country_event = {
+	id = poland.5
+	title = poland.5.t
+	desc = poland.5.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.5.a
+		ai_chance = { factor = 40 }
+		effect_tooltip = {
+			add_state_core = 82
+			add_state_core = 74
+			add_state_core = 280
+			add_state_core = 282
+			add_state_core = 281
+			custom_effect_tooltip = SOV_offer_poland_protection_tt
+			SOV = {
+				if = {
+					limit = { POL = { owns_state = 291 controls_state = 291 } }
+					transfer_state = 291
+					add_state_claim = 291
+				}
+				if = {
+					limit = { POL = { owns_state = 380 controls_state = 380 } }
+					transfer_state = 380
+					add_state_claim = 380
+				}
+				if = {
+					limit = { POL = { owns_state = 388 controls_state = 388 } }
+					transfer_state = 388
+					add_state_claim = 388
+				}
+				if = {
+					limit = { POL = { owns_state = 278 controls_state = 278 } }
+					transfer_state = 278
+					add_state_claim = 278
+				}
+				if = {
+					limit = { POL = { owns_state = 389 controls_state = 389 } }
+					transfer_state = 389
+					add_state_claim = 389
+				}
+				if = {
+					limit = { POL = { owns_state = 290 controls_state = 290 } }
+					transfer_state = 290
+					add_state_claim = 290
+				}
+				if = {
+					limit = { POL = { owns_state = 289 controls_state = 289 } }
+					transfer_state = 289
+					add_state_claim = 289
+				}
+				if = {
+					limit = { POL = { owns_state = 288 controls_state = 288 } }
+					transfer_state = 288
+					add_state_claim = 288
+				}
+				if = {
+					limit = { POL = { owns_state = 284 controls_state = 284 } }
+					transfer_state = 284
+					add_state_claim = 284
+				}
+				if = {
+					limit = { POL = { owns_state = 283 controls_state = 283 } }
+					transfer_state = 283
+					add_state_claim = 283
+				}
+				if = {
+					limit = { POL = { owns_state = 387 controls_state = 387 } }
+					transfer_state = 387
+					add_state_claim = 387
+				}
+			}
+		}
+		SOV = { country_event = { id = poland.6 } }
+	}
+
+	option = {
+		name = poland.5.b
+		ai_chance = { factor = 60 }
+		effect_tooltip = {
+			SOV = {
+				create_wargoal = {
+					type = take_state_focus
+					target = POL
+					generator = { 380 291 290 388 389 278 289 288 284 283 387 }
+				}
+			}
+		}
+		SOV = { country_event = { id = poland.7 } }
+	}
+}
+
+# Poland Accepts Protection
+country_event = {
+	id = poland.6
+	title = poland.6.t
+	desc = poland.6.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.6.a
+		POL = {
+			add_state_core = 82
+			add_state_core = 74
+			add_state_core = 280
+			add_state_core = 282
+			add_state_core = 281
+			add_state_core = 424
+			add_state_core = 425
+			add_state_core = 426
+			add_state_core = 428
+			add_state_core = 429
+			set_country_flag = POL_accepted_soviet_protection
+		}
+		custom_effect_tooltip = SOV_offer_poland_protection_tt
+		SOV = {
+			if = {
+				limit = { POL = { owns_state = 291 controls_state = 291 } }
+				transfer_state = 291
+				add_state_claim = 291
+			}
+			if = {
+				limit = { POL = { owns_state = 380 controls_state = 380 } }
+				transfer_state = 380
+				add_state_claim = 380
+			}
+			if = {
+				limit = { POL = { owns_state = 388 controls_state = 388 } }
+				transfer_state = 388
+				add_state_claim = 388
+			}
+			if = {
+				limit = { POL = { owns_state = 278 controls_state = 278 } }
+				transfer_state = 278
+				add_state_claim = 278
+			}
+			if = {
+				limit = { POL = { owns_state = 389 controls_state = 389 } }
+				transfer_state = 389
+				add_state_claim = 389
+			}
+			if = {
+				limit = { POL = { owns_state = 290 controls_state = 290 } }
+				transfer_state = 290
+				add_state_claim = 290
+			}
+			if = {
+				limit = { POL = { owns_state = 289 controls_state = 289 } }
+				transfer_state = 289
+				add_state_claim = 289
+			}
+			if = {
+				limit = { POL = { owns_state = 288 controls_state = 288 } }
+				transfer_state = 288
+				add_state_claim = 288
+			}
+			if = {
+				limit = { POL = { owns_state = 284 controls_state = 284 } }
+				transfer_state = 284
+				add_state_claim = 284
+			}
+			if = {
+				limit = { POL = { owns_state = 283 controls_state = 283 } }
+				transfer_state = 283
+				add_state_claim = 283
+			}
+			if = {
+				limit = { POL = { owns_state = 387 controls_state = 387 } }
+				transfer_state = 387
+				add_state_claim = 387
+			}
+		}
+		hidden_effect = {
+			news_event = { id = news.194 }
+		}
+	}
+}
+
+# Poland Refuses Protection
+country_event = {
+	id = poland.7
+	title = poland.7.t
+	desc = poland.7.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.7.a
+		create_wargoal = {
+			type = take_state_focus
+			target = POL
+			generator = { 380 291 290 388 389 278 289 288 284 2833 387 }
+		}
+	}
+}
+
+# Poland Granted Eastern Germany
+country_event = {
+	id = poland.8
+	title = poland.8.t
+	desc = poland.8.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	trigger = {
+		POL = { has_country_flag = POL_accepted_soviet_protection }
+		tag = POL
+		SOV = {
+			OR = {
+				owns_state = 74
+				owns_state = 82
+				owns_state = 280
+				owns_state = 282
+				owns_state = 281
+				owns_state = 424
+				owns_state = 425
+				owns_state = 426
+				owns_state = 428
+				owns_state = 429
+			}
+		}
+	}
+
+	immediate = {
+		clr_country_flag = POL_accepted_soviet_protection
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = poland.8.a
+		if = {
+			limit = { SOV = { owns_state = 74 } }
+			transfer_state = 74
+			add_state_claim = 74
+		}
+		if = {
+			limit = { SOV = { owns_state = 82 } }
+			transfer_state = 82
+			add_state_claim = 82
+		}
+		if = {
+			limit = { SOV = { owns_state = 280 } }
+			transfer_state = 280
+			add_state_claim = 280
+		}
+		if = {
+			limit = { SOV = { owns_state = 282 } }
+			transfer_state = 282
+			add_state_claim = 282
+		}
+		if = {
+			limit = { SOV = { owns_state = 281 } }
+			transfer_state = 281
+			add_state_claim = 281
+		}
+		if = {
+			limit = { SOV = { owns_state = 424 } }
+			transfer_state = 424
+			add_state_claim = 424
+		}
+		if = {
+			limit = { SOV = { owns_state = 425 } }
+			transfer_state = 425
+			add_state_claim = 425
+		}
+		if = {
+			limit = { SOV = { owns_state = 426 } }
+			transfer_state = 426
+			add_state_claim = 426
+		}
+		if = {
+			limit = { SOV = { owns_state = 428 } }
+			transfer_state = 428
+			add_state_claim = 428
+		}
+		if = {
+			limit = { SOV = { owns_state = 429 } }
+			transfer_state = 429
+			add_state_claim = 429
+		}
+		SOV = { country_event = { id = poland.9 } }
+	}
+}
+
+country_event = {
+	id = poland.9
+	title = poland.8.t
+	desc = poland.8.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = poland.9.a
+		hidden_effect = {
+			news_event = { id = news.195 }
+		}
+	}
+}
+
+
+country_event = {
+	id = poland.10
+	title = poland.10.t
+	desc = poland.10.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = poland.10.a
+	}
+}
+
+
+country_event = {
+	id = poland.11
+	title = poland.11.t
+	desc = poland.11.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = poland.11.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+	}
+}
+
+country_event = {
+	id = poland.12
+	title = poland.12.t
+	desc = poland.12.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	trigger = {
+		tag = POL
+		has_completed_focus = POL_artillery_modernisation
+		has_government = neutrality
+		has_war_with = ITA
+		any_country = {
+			NOT = { tag = SOV }
+			OR = {
+				tag = POL
+				is_in_faction_with = POL			
+			}
+			has_war_with = ITA
+			controls_state = 350
+		}
+		OR = {
+			divisions_in_state = {
+				state = 34
+				size > 0
+			}
+			divisions_in_state = {
+				state = 32
+				size > 0
+			}
+			divisions_in_state = {
+				state = 33
+				size > 0
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = poland.12.a
+		custom_effect_tooltip = WOJTEK_COMMANDER
+		hidden_effect = {
+			create_corps_commander = {
+				name = "Wojtek"
+				portrait_path = "gfx/leaders/POL/Portrait_POL_Voytek.dds"
+				traits = { bearer_of_artillery }
+				skill = 1
+			}
+			set_country_flag = POL_vojtek_commander
+		}
+	}
+
+}

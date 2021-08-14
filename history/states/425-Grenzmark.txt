@@ -1,0 +1,24 @@
+state={
+	id=425
+	name="STATE_425"
+	provinces={
+		4272 5249 7242 13850 13869 
+	}
+	
+	history={
+		add_core_of = SIC
+		add_core_of = SIL
+		owner = SIC
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 2
+
+		}
+
+	}
+	
+	manpower=5500336‬
+	buildings_max_level_factor=1.000
+	state_category=city
+}

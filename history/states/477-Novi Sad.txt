@@ -1,0 +1,19 @@
+state={
+	id=477
+	name="STATE_477"
+	provinces={
+		4695 7006 9396 15301 3218 7578
+	}
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = VJV
+		buildings = {
+			infrastructure = 4
+		}
+	}
+	manpower=125390
+	buildings_max_level_factor=1.000
+	state_category=rural	
+}

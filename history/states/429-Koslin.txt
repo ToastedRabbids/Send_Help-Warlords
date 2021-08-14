@@ -1,0 +1,21 @@
+state={
+	id=429
+	name="STATE_429"
+	provinces={
+		254 585 1391 1926 4302 5088 6331 6551 8291 8935 9769 13370 13399 13417 13446 13478 13519 
+	}
+	
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = POM
+		buildings = {
+			infrastructure = 6
+			6551 = { naval_base = 1 }
+		}
+	}
+	
+	manpower=334353
+	buildings_max_level_factor=1.000
+	state_category=town
+}

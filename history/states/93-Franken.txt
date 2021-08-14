@@ -1,0 +1,58 @@
+
+state={
+	id=93
+	name="STATE_93"
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = BAY
+		add_core_of = WGR
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			14333 5 
+		}
+		victory_points = {
+			14305 1 
+		}
+		victory_points = {
+			14383 1 
+		}
+		victory_points = {
+			14404 1 
+		}
+		victory_points = {
+			14396 1 
+		}
+		victory_points = {
+			6412 3 
+		}
+		victory_points = {
+			14440 1 
+		}
+		victory_points = {
+			14394 5 
+		}
+		victory_points = {
+			14516 1 
+		}
+		victory_points = {
+			14458 1 
+		}
+		victory_points = {
+			14535 1 
+		}
+
+	}
+
+	provinces={
+		1264 2034 2338 2348 2691 3190 6182 6412 6546 6678 6750 6769 6884 8093 8100 8117 8502 9551 9853 10229 11318 11505 14292 14305 14321 14327 14333 14355 14366 14383 14394 14395 14396 14403 14435 14440 14458 14469 14470 14486 14516 14535 14540 14557 14578 19463 
+	}
+	manpower=2508159
+	buildings_max_level_factor=1.000
+	state_category=city
+}

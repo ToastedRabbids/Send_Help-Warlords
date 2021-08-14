@@ -1,0 +1,26 @@
+state={
+	id=483
+	name="STATE_483"
+
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 3
+
+		}
+		victory_points = {
+			20269 20 
+		}
+
+	}
+	provinces={
+		3045 3519 5130 5644 5814 7657 8558 10895 10916 15019 15035 15064 15100 15112 15138 20195 20198 20201 20269 20274 
+	}
+	manpower=503769
+	buildings_max_level_factor=1.000
+	state_category=town
+}

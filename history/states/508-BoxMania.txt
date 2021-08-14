@@ -1,0 +1,26 @@
+state={
+	id=508
+	name="BoxMania"
+	
+	history={
+		owner = BOX
+		add_core_of = BOX
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 7
+
+		}
+		victory_points = {
+			10111 40 
+		}
+
+	}
+
+	provinces={
+		1093 2163 2853 5806 7076 10111 14059 14080 14174 14215 
+	}
+	manpower=2789582
+	buildings_max_level_factor= 25.000
+	state_category = megalopolis
+}

@@ -1,0 +1,29 @@
+state={
+	id=509
+	name="Karlsburg"
+
+	history={
+		owner = ZUC
+		add_core_of = ZUC
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 3
+
+		}
+		victory_points = {
+			339 10 
+		}
+
+	}
+	provinces={
+		339 1470 4560 9195 13758 13781 13803 13808 14445 
+	}
+	manpower=5789003
+	buildings_max_level_factor=1.000
+	state_category = megalopolis 
+		resources={
+		steel = 50
+		oil = 50
+		
+}

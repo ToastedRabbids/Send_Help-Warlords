@@ -1,0 +1,30 @@
+state={
+	id=416
+	name="STATE_416"
+	provinces={
+		225 4514 6396 7638 7693 8112 8729 9731 9758 10441 11254 15410 15427 15487 15518 15541 19412 19413 19414 19418 19419 19422 
+	}
+	
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = BOS
+		add_core_of = SRP
+		add_claim_by = CRO
+		add_core_of = SER
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			19413 10 
+		}
+
+	}
+	
+	manpower=491480‬
+	buildings_max_level_factor=1.000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

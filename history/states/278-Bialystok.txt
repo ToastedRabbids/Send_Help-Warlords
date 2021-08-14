@@ -1,0 +1,42 @@
+
+state={
+	id=278
+	name="STATE_278"
+
+	history={
+		owner = POL
+		add_core_of = POL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		victory_points = {
+			6281 10 
+		}
+		victory_points = {
+			3729 1 
+		}
+		victory_points = {
+			4417 1 
+		}
+		victory_points = {
+			11004 1 
+		}
+		victory_points = {
+			3439 1 
+		}
+		victory_points = {
+			13745 1 
+		}
+
+	}
+
+	provinces={
+		589 1527 1719 3316 3439 3473 3729 4162 4417 5259 5537 6281 6550 7270 7853 8231 8791 9222 10121 10575 11004 13453 13487 13495 13513 13569 13597 13598 13616 13631 13632 13644 19466 
+	}
+	manpower=1041480‬
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,75 @@
+
+state={
+	id=72
+	name="STATE_72"
+	resources={
+		steel=8.000
+		aluminium=2.000
+	}
+
+	history={
+		owner = AUS
+		add_core_of = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+
+		}
+		victory_points = {
+			11586 5 
+		}
+		victory_points = {
+			15119 3 
+		}
+		victory_points = {
+			15082 3 
+		}
+		victory_points = {
+			15091 1 
+		}
+		victory_points = {
+			9265 20 
+		}
+		victory_points = {
+			2881 3 
+		}
+		victory_points = {
+			15083 1 
+		}
+		victory_points = {
+			7648 1 
+		}
+		victory_points = {
+			5451 1 
+		}
+		victory_points = {
+			14920 1 
+		}
+		victory_points = {
+			9751 1 
+		}
+		victory_points = {
+			14756 10 
+		}
+		victory_points = {
+			6472 3 
+		}
+		victory_points = {
+			6554 3 
+		}
+		victory_points = {
+			5700 1 
+		}
+		victory_points = {
+			14942 1 
+		}
+
+	}
+
+	provinces={
+		3481 5700 6472 9917 10799 11371 14785 14942 
+	}
+	manpower=905089
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

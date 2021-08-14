@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_edo_event_1"
+		texturefile = "gfx/event_pictures/edo_event_1.dds"
+	}
+	
+}

@@ -1,0 +1,24 @@
+state={
+	id=391
+	name="STATE_391"
+	
+	provinces={
+		6548 
+	}
+	
+	history={
+		owner = CZE
+		add_core_of = CZE
+		add_core_of = UKR
+		add_core_of = SLO
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	manpower=85430
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	
+	buildings_max_level_factor=1.000
+}

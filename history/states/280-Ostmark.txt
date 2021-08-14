@@ -1,0 +1,27 @@
+
+state={
+	id=280
+	name="STATE_280"
+	resources={
+		aluminium=24.000
+	}
+
+	history={
+		add_core_of = GER
+		add_core_of = BRN
+		owner = GER
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		4240 5406 9225 9558 10279 10934 11612 13836 13857 
+	}
+	manpower=750504
+	buildings_max_level_factor=1.000
+	state_category=city
+}

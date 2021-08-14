@@ -1,0 +1,22 @@
+state={
+	id=419
+	name="STATE_419"
+	provinces={
+		10902 
+	}
+	
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = CRO
+		
+		buildings = {
+			infrastructure = 4
+
+		}
+	}
+	
+	manpower=34329
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

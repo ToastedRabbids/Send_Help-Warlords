@@ -1,0 +1,21 @@
+state={
+	id=452
+	name="STATE_452"
+	history = {
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		victory_points = {
+			7625 5 
+		}
+	}
+	provinces={
+		2416 4558 5730 6051 7625 8313 9837 15187 15196 15268 20181 20184 20260 20261 20264 
+	}
+	manpower=370739
+	buildings_max_level_factor=1.000
+	state_category = town
+}

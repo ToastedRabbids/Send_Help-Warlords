@@ -1,0 +1,24 @@
+state={
+	id=504
+	name="South Warsaw"
+
+	history={
+		owner = RED
+		add_core_of = RED
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 6
+}
+		victory_points = {
+			2430 20
+		}
+		
+	}
+	provinces={
+		2430 9026 10617 11440 14027 
+	}
+	manpower=5534783
+	buildings_max_level_factor=1.000
+	state_category= large_city
+}

@@ -1,0 +1,23 @@
+state={
+	id=490
+	name="STATE_490"
+	provinces={
+		3026 3268 4817 4912 5407 5413 6958 7586 9259 9870 10599 10854 11465 15034 15046 15057 15085 15093 15098 15108 15122 20191 20197 
+	}
+	
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 3
+
+		}
+	}
+	
+	manpower=558980
+	buildings_max_level_factor=1.000
+	state_category=town
+}

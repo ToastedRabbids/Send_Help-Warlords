@@ -1,0 +1,59 @@
+
+state={
+	id=94
+	name="STATE_94"
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = HES
+		add_core_of = WGR
+		buildings = {
+			infrastructure = 7
+		}
+		victory_points = {
+			5121 15 
+		}
+		victory_points = {
+			4742 5 
+		}
+		victory_points = {
+			8765 3 
+		}
+		victory_points = {
+			19463 3 
+		}
+		victory_points = {
+			14321 3 
+		}
+		victory_points = {
+			6678 1 
+		}
+		victory_points = {
+			14394 5 
+		}
+		victory_points = {
+			11505 1 
+		}
+		victory_points = {
+			10545 1 
+		}
+		victory_points = {
+			8438 5 
+		}
+		victory_points = {
+			7574 3 
+		}
+		victory_points = {
+			14277 1 
+		}
+
+	}
+
+	provinces={
+		1726 2651 2978 4064 5121 5198 5720 8511 8746 8765 8835 9325 9679 10425 10814 14076 14147 14165 14211 14226 14269 14285 14304 14389 
+	}
+	manpower=1519294
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

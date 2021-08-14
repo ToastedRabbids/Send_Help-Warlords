@@ -1,0 +1,40 @@
+
+state={
+	id=157
+	name="STATE_157"
+	resources={
+		aluminium=11.000
+	}
+
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = BOS
+		add_claim_by = CRO
+		add_claim_by = SRP
+		add_claim_by = SER
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 2
+
+		}
+		victory_points = {
+			19407 50 
+		}
+		victory_points = {
+			15665 10 
+		}
+		victory_points = {
+			15400 1 
+		}
+
+	}
+
+	provinces={
+		635 2194 2305 3679 4698 4728 5910 5923 6124 6874 7328 7936 7941 8364 9449 11182 11473 11590 15400 15417 15436 15445 15450 15483 15488 15526 15542 15570 15592 15616 15665 15680 19407 19410 19417 19421 19423 19424 19425 19426 20082 20086 20087 20090 20091 20092 20093 20094 20096 20230 20231 20233 20234 20235 20236 
+	}
+	manpower=1061596
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

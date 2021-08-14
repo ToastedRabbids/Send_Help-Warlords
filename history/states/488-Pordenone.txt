@@ -1,0 +1,21 @@
+state={
+	id=488
+	name="STATE_488"
+	provinces={
+		30 10701 15248 
+	}
+	
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 6
+			air_base = 3
+		}
+		victory_points = { 15248 3 }
+	}
+	
+	manpower=225529
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,73 @@
+on_actions = {
+	
+	on_state_control_changed = {
+		effect = {
+			
+			#Split
+			if = {
+				limit = {
+					FROM.FROM = { state = 383 }
+					383 = { NOT = { has_state_flag = ITA_Split } }
+					ROOT = { original_tag = ITA }
+				}
+				383 = { set_state_name = Spalato }
+				set_province_name = { id = 4410 name = Sebenico }
+				set_province_name = { id = 4828 name = Spalato }
+				383 = { set_state_flag = ITA_Split }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 383 }
+					383 = { has_state_flag = ITA_Split }
+					ROOT = { original_tag = ITA }
+				}
+				383 = { reset_state_name = yes }
+				reset_province_name = 4410
+				reset_province_name = 4828
+				383 = { clr_state_flag = ITA_Split }
+			}
+			
+			#Susak
+			if = {
+				limit = {
+					FROM.FROM = { state = 411 }
+					411 = { NOT = { has_state_flag = ITA_Susak } }
+					ROOT = { original_tag = ITA }
+				}
+				411 = { set_state_name = Susa-Veglia }
+				411 = { set_state_flag = ITA_Susak }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 411 }
+					411 = { has_state_flag = ITA_Susak }
+					ROOT = { original_tag = ITA }
+				}
+				411 = { reset_state_name = yes }
+				411 = { clr_state_flag = ITA_Susak }
+			}
+			
+			#Dalmatia
+			if = {
+				limit = {
+					FROM.FROM = { state = 100 }
+					100 = { NOT = { has_state_flag = ITA_Dalmatia } }
+					ROOT = { original_tag = ITA }
+				}
+				100 = { set_state_name = Dalmazia }
+				set_province_name = { id = 9923 name = Ragusa }
+				100 = { set_state_flag = ITA_Dalmatia }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 100 }
+					100 = { has_state_flag = ITA_Dalmatia }
+					ROOT = { original_tag = ITA }
+				}
+				100 = { reset_state_name = yes }
+				reset_province_name = 9923
+				100 = { clr_state_flag = ITA_Dalmatia }
+			}
+		}
+	}
+}

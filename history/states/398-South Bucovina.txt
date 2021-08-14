@@ -1,0 +1,21 @@
+state={
+	id=398
+	name="STATE_398"
+	
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = MOL
+		buildings = {
+			infrastructure = 5
+		}
+	}
+	
+	provinces={
+		5044 7919 8721 10884 11107 11457 14637 14682 14713 14753 14774 19442 
+	}
+	
+	manpower=280640
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

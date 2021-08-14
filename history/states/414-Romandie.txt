@@ -1,0 +1,22 @@
+state={
+	id=414
+	name="STATE_414"
+	provinces={
+		558 8161 8417 8800 9114 9239 15023 15069 15103 15139 15142 15152 19401 19402 19930 19955 19960 19972 20072 20073 
+	}
+	
+	history={
+		owner = SWI
+		add_core_of = SWI
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+	}
+	
+	manpower=884675
+	buildings_max_level_factor=1.000
+	state_category=town
+}

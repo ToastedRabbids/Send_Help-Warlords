@@ -1,0 +1,33 @@
+
+state={
+	id=159
+	name="STATE_159"
+
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = VJV
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			15180 10 
+		}
+		victory_points = {
+			4695 10 
+		}
+		victory_points = {
+			4756 1 
+		}
+
+	}
+
+	provinces={
+		873 4429 4756 6859 10820 15180 15181 15206 15249 
+	}
+	manpower=501290
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

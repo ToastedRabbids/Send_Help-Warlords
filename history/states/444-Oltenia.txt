@@ -1,0 +1,27 @@
+state={
+	id=444
+	name="STATE_444"
+	provinces={
+		49 357 1294 1586 2847 2992 4164 4687 5733 5817 5920 5926 6584 8573 8813 9273 9930 9952 10023 10630 10754 11080 11231 15199 15252 15275 15294 15298 15302 15328 15339 15373 15378 15386 15413 15453 15475 15501 
+	}
+	
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = WAL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		victory_points = {
+			15413 1 
+		}
+		victory_points = {
+			5733 1 
+		}
+	}
+	
+	manpower=1338420
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,25 @@
+Baltics_MR = {
+	OR = {
+		state = 108
+		state = 109
+		state = 115
+		state = 116
+		state = 117
+		state = 118
+	}
+}
+
+East_Poland_MR = {
+	OR = {
+		state = 380
+		state = 291
+		state = 278
+		state = 388
+		state = 290
+		state = 289
+		state = 288
+		state = 387
+		state = 284
+		state = 283
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=66
+	name="STATE_66"
+	resources={
+		steel=42.000
+		aluminium=42.000
+	}
+
+	history={
+		owner = FRA
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	provinces={
+		849 2790 4452 5510 5942 6734 7325 7419 10380 10513 11294 11348 15370 15429 15495 15532 15540 15631 19836 19847 19854 19856 19860 20007 20017 20021 20027 20028 20030 20031 20033 20036 20038 
+	}
+	manpower=1007500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,12 @@
+GEN_diplomatic_license = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT ={
+				has_war_with = ROOT
+			}
+		}
+	}
+	license_purchase_cost = -0.5
+	ai_license_acceptance = 100 
+	license_tech_difference_speed = -0.25 
+}

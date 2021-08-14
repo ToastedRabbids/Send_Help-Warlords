@@ -1,0 +1,40 @@
+leader_traits = {
+	
+	il_duce = {
+		random = no
+		political_power_factor = 0.1
+		war_support_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	victorious_caesar = {
+		random = no
+		political_power_factor = 0.2
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	soldier_king = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		political_power_factor = 0.15
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	gentleman_king = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.1
+		stability_weekly = 0.001
+	}
+	
+}

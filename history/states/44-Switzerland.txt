@@ -1,0 +1,61 @@
+
+state={
+	id=44
+	name="STATE_44"
+	resources={
+		aluminium=29.000
+	}
+
+	history={
+		owner = SWI
+		add_core_of = SWI
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 3
+			air_base = 4
+
+		}
+		victory_points = {
+			9114 3 
+		}
+		victory_points = {
+			15139 10 
+		}
+		victory_points = {
+			1453 2 
+		}
+		victory_points = {
+			15192 1 
+		}
+		victory_points = {
+			7758 25 
+		}
+		victory_points = {
+			9103 5 
+		}
+		victory_points = {
+			8417 2 
+		}
+		victory_points = {
+			11158 1 
+		}
+		victory_points = {
+			15154 1 
+		}
+		victory_points = {
+			14986 5 
+		}
+		victory_points = {
+			7022 1 
+		}
+
+	}
+
+	provinces={
+		4190 5454 6275 7022 7174 7758 8321 9103 9794 10200 10370 11267 11518 14986 15030 15038 15065 15154 15186 15192 19969 20074 20075 20076 20077 20078 
+	}
+	manpower=1327013
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

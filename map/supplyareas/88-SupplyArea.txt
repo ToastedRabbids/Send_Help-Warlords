@@ -1,0 +1,9 @@
+
+supply_area={
+	id=88
+	name="SUPPLYAREA_88"
+	value=0
+	states={
+		91 84 88 406 405 404 403 402 400 
+	}
+}

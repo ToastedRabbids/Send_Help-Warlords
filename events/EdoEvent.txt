@@ -1,0 +1,416 @@
+﻿###########################
+# Edo Events
+###########################
+
+add_namespace = edo_event
+
+country_event = {
+	id = edo_event.1
+	title = edo_event.1.t
+	desc = edo_event.1.d
+	picture = GFX_report_event_pierre_laval
+	
+	trigger = {
+		has_government = democratic
+		tag = FRA
+		date > 1936.6.2
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		create_country_leader = {
+			name = "Léon Blum"
+			desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+			picture = GFX_portrait_fra_leon_blum
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				reluctant_interventionist
+				stout_defender
+			}
+		}
+		name = edo_event.1.a
+	}
+}
+
+country_event = {
+	id = edo_event.2
+	title = edo_event.2.t
+	desc = edo_event.2.d
+	picture = GFX_report_event_pierre_laval
+	
+	trigger = {
+		has_government = democratic
+		tag = FRA
+		date > 1938.6.8
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		create_country_leader = {
+			name = "Édouard Daladier"
+			desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+			picture = "Portrait_France_Edouard_Daladier.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				stout_defender
+			}
+		}
+		name = edo_event.2.a
+	}
+}
+
+country_event = {
+	id = edo_event.3
+	title = edo_event.3.t
+	desc = edo_event.3.d
+	picture = GFX_report_event_chamberlain
+	
+	trigger = {
+		has_government = democratic
+		tag = ENG
+		date > 1937.5.27
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		create_country_leader = {
+			name = "Neville Chamberlain"
+			desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
+			picture = "Portrait_Britain_Neville_Chamberlain.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				chamberlain_appeaser rearmer
+			}
+		}
+		name = edo_event.3.a
+	}
+}
+
+
+country_event = {
+	id = edo_event.4
+	title = edo_event.4.t
+	desc = edo_event.4.d
+	picture = GFX_report_event_degaulle_churchill
+	
+	trigger = {
+		tag = ENG
+		AND = {
+			OR = {
+				GER = { has_war = yes }
+				SOV = { has_war = yes }
+				ITA = { has_war = yes }
+				FRA = { has_war = yes }
+				POL = { has_war = yes }
+				ENG = { has_war = yes }
+			}
+			NOT = {
+				ICE = { is_ai = no }
+			}
+			NOT = {
+				has_global_flag = edo_usa_are_here
+			}
+			USA = { exists = no }
+		}
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		name = edo_event.4.a
+		306 = { 
+			set_demilitarized_zone = no 
+			add_building_construction = {
+				type = naval_base
+				level = 10
+				province = 8320
+				instant_build = yes
+			}
+		}
+		set_global_flag = edo_usa_are_here
+		USA = {
+			add_state_core = 306
+			transfer_state = 306
+			set_capital = 306
+			add_manpower = 2000000
+			add_manpower = 2000000
+			add_manpower = 1000000
+			add_offsite_building = { type = arms_factory level = 80 }
+			add_offsite_building = { type = industrial_complex level = 200 }
+			add_offsite_building = { type = dockyard level = 50	}
+			add_ideas = USA_lend_lease_act_na
+			load_oob = "USA_1939"
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+					load_oob = "USA_1939_naval_mtg"
+				else = {
+					load_oob = "USA_1939_naval_legacy"
+				}
+			}
+		}
+		every_other_country = {
+			limit = {
+				OR = { 
+					has_government = fascism
+					is_in_faction_with = GER
+					is_in_faction_with = ITA
+				}	
+			}
+			add_opinion_modifier = { target = USA modifier = embargo }
+			add_opinion_modifier = { target = USA modifier = sanctions_relations }
+		}
+		add_resource = {
+			type = oil
+			amount = 1208
+			state = 306
+		}
+		add_resource = {
+			type = aluminium
+			amount = 308
+			state = 306
+		}
+		add_resource = {
+			type = tungsten
+			amount = 218
+			state = 306
+		}
+		add_resource = {
+			type = steel
+			amount = 920
+			state = 306
+		}
+		hidden_effect = {
+			news_event = { days = 1 id = edo_news.1 }
+		}
+	}
+}
+
+country_event = {
+	id = edo_event.5
+	title = edo_event.5.t
+	desc = edo_event.5.d
+	picture = GFX_report_event_degaulle_churchill
+	
+	trigger = {
+		tag = ENG
+		OR = {
+			USA = { has_war = yes }
+			AND = {
+				ENG = {
+					OR = {
+						has_war_with = GER
+						has_war_with = SOV
+						has_war_with = ITA
+					}
+				}
+				NOT = {
+					ICE = { is_ai = no }
+				}
+				NOT = {
+					USA = { is_in_faction = yes }
+				}
+				date > 1941.12.7
+			}
+		}
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		name = edo_event.5.a
+		if = {
+			limit = {
+				AND = {
+					USA = { exists = no }
+					NOT = {
+						has_global_flag = edo_usa_are_here
+					}
+				}
+			}
+			set_global_flag = edo_usa_are_here
+			306 = { 
+				set_demilitarized_zone = no 
+				add_building_construction = {
+					type = naval_base
+					level = 10
+					province = 8320
+					instant_build = yes
+				}
+			}
+			USA = {
+				add_state_core = 306
+				transfer_state = 306
+				set_capital = 306
+				add_manpower = 2000000
+				add_manpower = 2000000
+				add_manpower = 1000000
+				add_offsite_building = { type = arms_factory level = 100 }
+				add_offsite_building = { type = industrial_complex level = 500 }
+				add_offsite_building = { type = dockyard level = 100	}
+				add_ideas = USA_lend_lease_act_na
+				load_oob = "USA_1939"
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+						load_oob = "USA_1939_naval_mtg"
+					else = {
+						load_oob = "USA_1939_naval_legacy"
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = { 
+						has_government = fascism
+						is_in_faction_with = GER
+						is_in_faction_with = ITA
+					}	
+				}
+				add_opinion_modifier = { target = USA modifier = embargo }
+				add_opinion_modifier = { target = USA modifier = sanctions_relations }
+			}
+			add_resource = {
+				type = oil
+				amount = 1208
+				state = 306
+			}
+			add_resource = {
+				type = aluminium
+				amount = 308
+				state = 306
+			}
+			add_resource = {
+				type = tungsten
+				amount = 218
+				state = 306
+			}
+			add_resource = {
+				type = steel
+				amount = 920
+				state = 306
+			}
+		}
+		USA = {
+			set_global_flag = edo_usa_time_to_kick_ass
+			###Had to divide the manpower cause of overflow TwT
+			add_manpower = 2000000 
+			add_manpower = 2000000 
+			add_manpower = 2000000
+			add_manpower = 2000000 
+			add_manpower = 2000000 
+			add_manpower = 2000000 
+			add_manpower = 2000000 
+			add_manpower = 1000000
+			add_offsite_building = { type = arms_factory level = 100 }
+			add_offsite_building = { type = dockyard level = 100	}
+			add_ideas = war_economy
+			if = {
+				limit = {
+					AND = { 
+						ENG = { is_in_faction = yes }
+						ENG = { is_puppet = no }
+						ENG = { has_government = democratic }
+					}
+				}
+				random_country = {
+					limit = { 
+						is_faction_leader = yes 
+						is_in_faction_with = ENG
+					}
+					add_to_faction = USA
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						ENG = { is_puppet = no }
+						ENG = { has_government = democratic }
+					}
+					create_faction = Allies
+					add_to_faction = USA
+					add_to_faction = ENG
+				}
+			}
+		}
+		hidden_effect = {
+			news_event = { days = 1 id = edo_news.2 }
+		}
+	}
+}
+
+
+country_event = {
+	id = edo_event.6
+	title = edo_event.6.t
+	desc = edo_event.6.d
+	picture = GFX_report_event_pierre_laval
+	
+	trigger = {
+		controls_state = 459
+		date > 1939.6.29
+		TUR = { exists = yes }
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		TUR = {
+			transfer_state = 459
+			add_state_core = 459
+		}
+		name = edo_event.6.a
+	}
+}
+
+country_event = {
+	id = edo_event.7
+	title = edo_event.7.t
+	desc = edo_event.7.d
+	picture = GFX_report_event_pierre_laval
+	
+	trigger = {
+		tag = HOL
+		24 = { is_controlled_by = HOL }
+		NOT = { has_global_flag = no_more_rubber_holland }
+		date > 1941.12.8
+	}
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {	days = 1 }
+	
+	option = {
+		add_resource = {
+			type = rubber
+			amount = -716
+			state = 24
+		}
+		add_resource = {
+			type = oil
+			amount = -46
+			state = 24
+		}
+		set_global_flag = no_more_rubber_holland
+		name = edo_event.7.a
+		hidden_effect = {
+			news_event = { days = 1 id = edo_news.3 }
+		}
+	}
+}

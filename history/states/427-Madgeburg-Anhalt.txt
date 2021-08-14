@@ -1,0 +1,22 @@
+state={
+	id=427
+	name="STATE_427"
+	provinces={
+		2698 3242 4289 6420 6432 8891 11556 13787 13871 13916 
+	}
+	
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = BRN
+		add_core_of = DDR
+		buildings = {
+			infrastructure = 7
+		}
+
+	}
+	
+	manpower=1028608
+	buildings_max_level_factor=1.000
+	state_category=city
+}

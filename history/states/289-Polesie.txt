@@ -1,0 +1,44 @@
+
+state={
+	id=289
+	name="STATE_289"
+
+	history={
+		owner = POL
+		add_core_of = POL
+		add_core_of = BLR
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			13677 1 
+		}
+		victory_points = {
+			5215 1 
+		}
+		victory_points = {
+			11389 1 
+		}
+		victory_points = {
+			9743 1 
+		}
+		victory_points = {
+			1796 1 
+		}
+		victory_points = {
+			6648 1 
+		}
+		victory_points = {
+			13691 1 
+		}
+
+	}
+
+	provinces={
+		486 1552 1796 1875 2914 3168 3515 3768 3887 4781 5215 6648 8157 9391 9743 10587 13639 13677 13684 13690 13691 13715 13719 13732 13791 20335 
+	}
+	manpower=1232200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

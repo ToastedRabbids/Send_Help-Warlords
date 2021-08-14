@@ -1,0 +1,23 @@
+
+state={
+	id=494
+	name="STATE_494"
+
+	history={
+		owner = CZE
+		add_core_of = CZE
+		buildings = {
+			infrastructure = 8
+			anti_air_building = 1
+
+		}
+
+	}
+
+	provinces={
+		240 1201 14534 14596 
+	}
+	manpower=169800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

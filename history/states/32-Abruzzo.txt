@@ -1,0 +1,31 @@
+
+state={
+	id=32
+	name="STATE_32"
+
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 6
+
+		}
+		victory_points = {
+			6633 10 
+		}
+		victory_points = {
+			9116 5 
+		}
+		victory_points = {
+			378 3 
+		}
+
+	}
+
+	provinces={
+		178 375 378 3233 3529 6633 8384 9116 10356 10421 10990 15868 15884 15897 15903 15932 15937 15956 15969 20292 
+	}
+	manpower=1201536
+	buildings_max_level_factor=1.000
+	state_category=town
+}

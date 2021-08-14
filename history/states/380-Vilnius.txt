@@ -1,0 +1,24 @@
+state={
+	id=380
+	name="STATE_380"
+	provinces={
+		2429 2989 5033 8772 9346 9563 9650 13147 13200 13204 13222 13267 13272 13310 
+	}
+	
+	manpower = 517081
+	
+	state_category = rural
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 5
+		}
+		add_core_of = POL
+		add_core_of = LIT
+	}
+	
+	buildings_max_level_factor=1.000
+}

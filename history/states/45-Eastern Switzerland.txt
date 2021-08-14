@@ -1,0 +1,35 @@
+
+state={
+	id=45
+	name="STATE_45"
+	resources={
+		aluminium=24.000
+	}
+
+	history={
+		owner = SWI
+		add_core_of = SWI
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			air_base = 2
+		}
+		victory_points = {
+			15004 20 
+		}
+		victory_points = {
+			9646 3 
+		}
+		victory_points = {
+			6459 1 
+		}
+
+	}
+
+	provinces={
+		55 3912 5034 6394 6837 7820 9124 9646 10068 11223 11227 14972 15004 15007 15041 15079 15099 15109 19399 
+	}
+	manpower=1854711
+	buildings_max_level_factor=1.000
+	state_category=city
+}

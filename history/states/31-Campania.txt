@@ -1,0 +1,45 @@
+
+state={
+	id=31
+	name="STATE_31"
+	resources={
+		aluminium=16.000
+		steel=24.000
+	}
+
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+			5613 = {
+				naval_base = 6
+
+			}
+
+		}
+		victory_points = {
+			5613 20 
+		}
+		victory_points = {
+			4647 10 
+		}
+		victory_points = {
+			19480 10 
+		}
+		victory_points = {
+			5741 5 
+		}
+
+	}
+
+	provinces={
+		2481 2917 4647 5439 5613 5741 6248 7487 9774 10652 11148 16095 16116 16123 16143 16184 16210 16244 16274 16299 17343 19480 19481 19482 19483 20288 
+	}
+	manpower=3696632
+	buildings_max_level_factor=1.000
+	state_category=city
+}

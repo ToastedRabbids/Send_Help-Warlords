@@ -1,0 +1,21 @@
+
+state={
+	id=64
+	name="STATE_64"
+
+	history={
+		owner = FRA
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 19909 10 }
+	}
+
+	provinces={
+		940 1019 2532 5422 7365 8531 8678 8802 9756 15227 15405 19863 19864 19874 19882 19909 20043 20045 20046 20047 20048 
+	}
+	manpower=363000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

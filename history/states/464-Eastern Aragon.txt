@@ -1,0 +1,18 @@
+state={
+	id=464
+	name="STATE_464"
+	provinces={
+		179 401 1519 2184 2479 4294 4746 4905 5619 5884 6453 8029 9073 9205 9474 9676 9960 10938 15800 15841 15880 15927 15928 15976 15977 16070 16096 
+	}
+	history={
+		owner = SPR
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = SPR
+
+	}
+	manpower=387366
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

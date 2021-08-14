@@ -1,0 +1,22 @@
+
+state={
+	id=446
+	name="STATE_446"
+
+	history={
+		owner = AUS
+		add_core_of = AUS
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	provinces={
+		269 3057 4980 7092 7165 11586 15066 15082 15091 15105 15106 15115 15119 15129 15140 
+	}
+	manpower=426153
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

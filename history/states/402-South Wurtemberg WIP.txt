@@ -1,0 +1,30 @@
+state={
+	id=402
+	name="STATE_402"
+	provinces={
+		4117 4568 6771 6913 7222 7989 8082 8473 8846 11168 14745 14755 14764 14788 14813 14816 14836 14858 14876 14902 
+	}
+	
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = WUR
+		add_core_of = WGR
+		buildings = {
+			infrastructure = 8
+			arms_factory = 2
+
+		}
+		
+		victory_points = {
+			4117 5 
+		}
+		victory_points = {
+			8082 1 
+		}
+
+	}
+	manpower=1526056
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

@@ -1,0 +1,22 @@
+state={
+	id=500
+	name="STATE_500"
+	provinces={
+		3148 7170 8468 8590 9110 11301 14505 
+	}
+	
+	history={
+		owner = CZE
+		add_core_of = CZE
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			anti_air_building = 5
+
+		}
+	}
+	
+	manpower=1078224
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,40 @@
+
+state={
+	id=91
+	name="STATE_91"
+	resources={
+		oil=3.000
+	}
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = HAN
+		add_core_of = WGR
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 1
+			dockyard = 2
+			13570 = { naval_base = 1 }
+		}
+		
+		victory_points = {
+			5824 3 
+		}
+		victory_points = {
+			13570 3 
+		}
+		victory_points = {
+			2262 1 
+		}
+
+	}
+
+	provinces={
+		294 315 1192 2262 2607 3790 4176 4433 5177 5303 5824 6022 6037 6326 6729 6871 7020 8285 8296 8852 10354 10815 10936 11240 11306 11496 13570 13580 13628 13663 13711 13748 13750 13763 13779 13815 13848 13856 13876 13883 13892 13897 13908 13924 13928 13961 13995 19462 
+	}
+	manpower=2438286
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

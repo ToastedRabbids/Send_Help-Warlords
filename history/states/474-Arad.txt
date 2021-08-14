@@ -1,0 +1,22 @@
+
+state={
+	id=474
+	name="STATE_474"
+	provinces={
+		3323 5302 9972 14991 15051 20271 
+	}
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = TRA
+		
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+	manpower=130000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

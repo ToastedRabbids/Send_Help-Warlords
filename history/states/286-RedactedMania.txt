@@ -1,0 +1,42 @@
+
+state={
+	id=286
+	name="RedactedMania"
+	resources={
+		steel=24.000
+	}
+
+	history={
+		owner = RED
+		add_core_of = RED
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 5
+
+		}
+		victory_points = {
+			7968 40 
+		}
+		victory_points = {
+			14126 10 
+		}
+		victory_points = {
+			3016 40 
+		}
+		victory_points = {
+			10111 1 
+		}
+		victory_points = {
+			3838 20 
+		}
+
+	}
+
+	provinces={
+		392 1064 6948 7190 7968 8309 8324 8367 9787 10385 10698 11123 14003 14035 14085 14090 14110 14126 14130 14162 14198 
+	}
+	manpower=2835700
+	buildings_max_level_factor= 25.000
+	state_category= megalopolis
+}

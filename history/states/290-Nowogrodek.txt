@@ -1,0 +1,27 @@
+
+state={
+	id=290
+	name="STATE_290"
+
+	history={
+		add_core_of = POL
+		add_core_of = BLR
+		owner = POL
+		buildings = {
+			infrastructure = 5
+			air_base = 3
+
+		}
+		victory_points = {
+			13482 1 
+		}
+
+	}
+
+	provinces={
+		948 1241 1917 2219 2482 3498 4252 5354 5490 5742 7282 7844 8910 9020 10531 10584 11373 13357 13413 13426 13456 13482 13488 13496 13522 13523 13562 13566 13583 13606 13613 20333 
+	}
+	manpower=959340
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

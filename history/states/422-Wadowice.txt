@@ -1,0 +1,23 @@
+state={
+	id=422
+	name="STATE_422"
+	provinces={
+		3565 4719 7436 7811 10755 14367 
+	}
+	
+	history={
+		owner = BOX
+		add_core_of = BOX
+		buildings = {
+			infrastructure = 5
+			air_base = 5
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+	}
+	
+	manpower=1143200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

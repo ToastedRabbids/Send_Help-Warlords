@@ -1,0 +1,50 @@
+
+state={
+	id=134
+	name="STATE_134"
+
+	history={
+		owner = GRE
+		add_core_of = GRE
+		add_claim_by = BUL
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 2
+			1852 = { naval_base = 4 }
+		}
+		victory_points = {
+			1852 20 
+		}
+		victory_points = {
+			8132 1 
+		}
+		victory_points = {
+			4100 1 
+		}
+		victory_points = {
+			16157 1 
+		}
+		victory_points = {
+			2289 1 
+		}
+		victory_points = {
+			9418 1 
+		}
+		victory_points = {
+			16099 1 
+		}
+		victory_points = {
+			16077 1 
+		}
+
+	}
+
+	provinces={
+		1445 1852 2289 2649 3604 4100 4342 4852 4880 5037 5333 6384 6652 6720 6983 7801 7981 8132 9165 10064 10559 10950 11097 11628 15980 16012 16052 16077 16079 16099 16109 16110 16121 16157 16160 
+	}
+	manpower=1155700
+	buildings_max_level_factor=1.000
+	state_category=town
+}

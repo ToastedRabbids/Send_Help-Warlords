@@ -1,0 +1,21 @@
+state={
+	id=505
+	name="Doge Country Side"
+
+	history={
+		owner = RED
+		add_core_of = RED
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+
+}
+	}
+	provinces={
+		548 4372 7697 9359 13643 13745 13773 13790 13804 19464 19465 19428
+	}
+	manpower=3300457
+	buildings_max_level_factor=1.000
+	state_category= town
+}

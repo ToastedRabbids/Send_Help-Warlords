@@ -1,0 +1,7881 @@
+focus_tree = {
+	id = generic_focus
+
+	country = {
+		factor = 1
+	}
+	continuous_focus_position = { x = 50 y = 1150 }
+	default = yes
+	reset_on_civilwar = yes
+
+	initial_show_position = {
+		focus = Generic_modernise_the_army
+	}
+
+	#Focus for Modernise the Army
+	focus = {
+		id = Generic_modernise_the_army
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 5
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Improve Infantry Equipment
+	focus = {
+		id = Generic_improve_infantry_equipment
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_modernise_the_army }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+			}
+		}
+	}
+
+	#Focus for Additional Equipment Research
+	focus = {
+		id = Generic_additional_equipment_research
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_infantry_equipment }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+			}
+		}
+	}
+
+	#Focus for Continued Equipment Effort
+	focus = {
+		id = Generic_continued_equipment_effort
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_additional_equipment_research }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	#Focus for Focus on Support Equipment
+	focus = {
+		id = Generic_focus_on_support_equipment
+		icon = GFX_goal_generic_construction2
+		x = 3
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_modernise_the_army }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ 			bonus = 1 
+			uses = 1
+			category = support_tech 
+			}
+		}
+	}
+
+	#Focus for Additional Support Equipment Research
+	focus = {
+		id = Generic_additional_support_equipment_research
+		icon = GFX_goal_generic_small_arms
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = Generic_focus_on_support_equipment }
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 2
+				category = support_tech 
+			}
+		}
+	}
+
+	#Focus for Decide on a Doctrine
+	focus = {
+		id = Generic_decide_on_a_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_modernise_the_army }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		modifier = {
+			factor = 10
+			has_government = fascism
+			date > 1939.1.1
+			}
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Superior Firepower Doctrine
+	focus = {
+		id = Generic_superior_firepower_doctrine
+		icon = GFX_goal_generic_army_artillery2
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_decide_on_a_doctrine }
+		mutually_exclusive = { 
+			focus = Generic_grand_battleplan_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_mass_assault_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_mobile_warfare_doctrine 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 7
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 1
+				category = cat_superior_firepower 
+			}
+		}
+	}
+
+	#Focus for Artillery Primacy
+	focus = {
+		id = Generic_artillery_primacy
+		icon = GFX_goal_generic_army_artillery
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_superior_firepower_doctrine 
+		}
+		prerequisite = { 
+			focus = Generic_continued_equipment_effort 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas= generic_artillery_primacy
+		}
+	}
+
+	#Focus for Grand Battleplan Doctrine
+	focus = {
+		id = Generic_grand_battleplan_doctrine
+		icon = GFX_goal_generic_position_armies
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_decide_on_a_doctrine }
+		mutually_exclusive = { 
+			focus = Generic_superior_firepower_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_mass_assault_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_mobile_warfare_doctrine 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 7
+				has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_tech_bonus= {
+		 		bonus = 1 
+				uses = 1 
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+
+	#Focus for Improve the General Staff
+	focus = {
+		id = Generic_improve_the_general_staff
+		icon = GFX_focus_generic_military_academy
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_grand_battleplan_doctrine }
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = generic_improved_general_staff
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+	}
+
+	#Focus for Mass Assault Doctrine
+	focus = {
+		id = Generic_mass_assault_doctrine
+		icon = GFX_goal_generic_demand_territory
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_decide_on_a_doctrine }
+		mutually_exclusive = { 
+			focus = Generic_superior_firepower_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_grand_battleplan_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_mobile_warfare_doctrine 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 7
+				has_government = communism
+			}
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 1
+				category = cat_mass_assault 
+			}
+		}
+	}
+
+	#Focus for Expand Conscription
+	focus = {
+		id = Generic_expand_conscription
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_mass_assault_doctrine }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				has_stability < 0.5
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_expanded_conscription
+		}
+	}
+
+	#Focus for Mobile Warfare Doctrine
+	focus = {
+		id = Generic_mobile_warfare_doctrine
+		icon = GFX_goal_generic_army_motorized
+		x = 8
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_decide_on_a_doctrine }
+		mutually_exclusive = { 
+			focus = Generic_superior_firepower_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_grand_battleplan_doctrine 
+		}
+		mutually_exclusive = { 
+			focus = Generic_mass_assault_doctrine 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 7
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	#Focus for Armour Primacy
+	focus = {
+		id = Generic_armour_primacy
+		icon = GFX_focus_generic_tank_production
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY}
+		prerequisite = { 
+			focus = Generic_focus_on_armour 
+		}
+		prerequisite = { 
+			focus = Generic_mobile_warfare_doctrine 
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas= generic_armour_primacy
+		}
+	}
+
+	#Focus for Improved Doctrine Efforts
+	focus = {
+		id = Generic_improved_doctrine_efforts
+		icon = GFX_goal_generic_army_doctrines
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_mobile_warfare_doctrine 
+			focus = Generic_superior_firepower_doctrine 
+			focus = Generic_grand_battleplan_doctrine 
+			focus = Generic_mass_assault_doctrine 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Army War College
+	focus = {
+		id = Generic_army_war_college
+		icon = GFX_goal_generic_construct_military
+		x = 7
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_modernise_the_army }
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = generic_army_war_college
+		}
+	}
+
+	#Focus for Meritocratic Promotion
+	focus = {
+		id = Generic_meritocratic_promotion
+		icon = GFX_goal_rhineland
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_army_war_college }
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			swap_ideas= {
+				remove_idea = generic_army_war_college
+				add_idea = generic_army_war_college_2
+			}
+		}
+	}
+
+	#Focus for Focus on Motorisation
+	focus = {
+		id = Generic_focus_on_motorisation
+		icon = GFX_goal_generic_army_motorized
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_modernise_the_army }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	#Focus for Research Mechanisation
+	focus = {
+		id = Generic_research_mechanisation
+		icon = GFX_goal_generic_build_tank
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_motorisation }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	#Focus for Focus on Armour
+	focus = {
+		id = Generic_focus_on_armour
+		icon = GFX_goal_generic_army_tanks
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_research_mechanisation }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	#Focus for Establish Special Forces
+	focus = {
+		id = Generic_establish_special_forces
+		icon = GFX_goal_generic_special_forces
+		x = 5
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_improved_doctrine_efforts
+		}
+		prerequisite = { 
+			focus = Generic_focus_on_armour 
+		}
+		prerequisite = { 
+			focus = Generic_continued_equipment_effort 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				category = marine_tech
+				category = para_tech
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	#Focus for Army Primacy
+	focus = {
+		id = Generic_army_primacy
+		icon = GFX_goal_generic_small_arms
+		x = 5
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER} 
+		prerequisite = { focus = Generic_establish_special_forces }
+		mutually_exclusive = { 
+			focus = Generic_air_force_primacy 
+		}
+		mutually_exclusive = { 
+			focus = Generic_naval_primacy 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories > 60
+			num_of_military_factories > 30
+			has_army_experience > 50
+		}
+		completion_reward = {
+			army_experience= 50
+			add_ideas = generic_army_primacy
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 2 
+				category = land_doctrine 
+			}
+		}
+	}
+
+	#Focus for Establish the Air Force
+	focus = {
+		id = Generic_establish_the_air_force
+		icon = GFX_goal_generic_build_airforce
+		x = 15
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Focus for Focus on Fighters
+	focus = {
+		id = Generic_focus_on_fighters
+		icon = GFX_goal_generic_air_fighter
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_establish_the_air_force }
+		mutually_exclusive = { focus = Generic_focus_on_bombers }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	#Focus for Focus on CAS
+	focus = {
+		id = Generic_focus_on_cas
+		icon = GFX_goal_generic_CAS
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		prerequisite = { 
+			focus = Generic_focus_on_motorisation 
+		}
+		prerequisite = { 
+			focus = Generic_focus_on_fighters 
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	#Focus for Focus on Bombers
+	focus = {
+		id = Generic_focus_on_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_establish_the_air_force }
+		mutually_exclusive = { focus = Generic_focus_on_fighters }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 20
+				has_completed_focus = Generic_a_flexible_navy
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = tactical_bombers
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	#Focus for Focus on NAV
+	focus = {
+		id = Generic_focus_on_nav
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 18
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_focus_on_bombers 
+		}
+		prerequisite = { 
+			focus = Generic_a_flexible_navy 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	#Focus for Air Doctrine Efforts
+	focus = {
+		id = Generic_air_doctrine_efforts
+		icon = GFX_goal_generic_air_doctrine
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_focus_on_bombers 
+			focus = Generic_focus_on_fighters 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Focus for High Quality Plane Production
+	focus = {
+		id = Generic_high_quality_plane_production
+		icon = GFX_goal_generic_air_production
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_air_doctrine_efforts }
+		mutually_exclusive = { focus = Generic_cheap_plane_production }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = generic_quality_aircraft_production
+		}
+	}
+
+	#Focus for Cheap Plane Production
+	focus = {
+		id = Generic_cheap_plane_production
+		icon = GFX_goal_generic_production
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_air_doctrine_efforts }
+		mutually_exclusive = { focus = Generic_high_quality_plane_production }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_cheap_aircraft_production
+		}
+	}
+
+	#Focus for Focus on Radar
+	focus = {
+		id = Generic_focus_on_radar
+		icon = GFX_goal_generic_radar
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_fighters focus = Generic_focus_on_bombers }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 2 
+				category = radar_tech 
+			}
+		}
+	}
+
+	#Focus for Focus on Scout Planes
+	focus = {
+		id = Generic_focus_on_scout_planes
+		icon = GFX_goal_generic_air_fighter2
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_focus_on_radar
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			if = {
+				limit = {has_dlc = "La Resistance" }
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = cat_scout_plane
+				} 
+			}
+			else = {
+				add_ideas = generic_scout_planes
+			}
+		}
+	}
+
+	#Focus for Research Rocketry
+	focus = {
+		id = Generic_research_rocketry
+		icon = GFX_focus_rocketry
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_air_doctrine_efforts 
+		}
+		prerequisite = { 
+			focus = Generic_focus_on_scout_planes
+		}
+		prerequisite = { 
+			focus = Generic_improve_infrastructure 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 1
+				bonus = 1
+				uses = 2
+				category = rocketry
+			}
+		}
+	}
+
+	#Focus for Pioneer Jet Research
+	focus = {
+		id = Generic_pioneer_jet_research
+		icon = GFX_goal_generic_occupy_start_war
+		x = 14
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_research_rocketry }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			uses = 1
+			ahead_reduction = 2
+			category = jet_technology
+			}
+		}
+	}
+
+	#Focus for Air Force Primacy
+	focus = {
+		id = Generic_air_force_primacy
+		icon = GFX_goal_generic_air_doctrine
+		x = 14
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH} 
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_pioneer_jet_research 
+		}
+		prerequisite = { 
+			focus = Generic_research_rocketry 
+		}
+		mutually_exclusive = { 
+			focus = Generic_army_primacy 
+		}
+		mutually_exclusive = { 
+			focus = Generic_naval_primacy 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories> 60
+			has_air_experience > 150
+		}
+		completion_reward = {
+			air_experience= 100
+			add_tech_bonus= {
+				bonus = 1 
+				uses = 3 
+				category = air_doctrine
+			}
+			add_ideas = generic_air_force_primacy
+		}
+	}
+
+	#Focus for Expand the Dockyards
+	focus = {
+		id = Generic_expand_the_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 21
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_government = fascism
+			}
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	#Focus for A Flexible Navy
+	focus = {
+		id = Generic_a_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_expand_the_dockyards }
+		mutually_exclusive = { focus = Generic_a_large_navy }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 20
+				has_completed_focus = Generic_focus_on_bombers
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	#Focus for A Large Navy
+	focus = {
+		id = Generic_a_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_expand_the_dockyards }
+		mutually_exclusive = { focus = Generic_a_flexible_navy }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				num_of_naval_factories > 5
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	#Focus for Focus on Submarines
+	focus = {
+		id = Generic_focus_on_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_a_large_navy 
+			focus = Generic_a_flexible_navy 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	#Focus for Focus on Destroyers
+	focus = {
+		id = Generic_focus_on_destroyers
+		icon = GFX_goal_generic_wolf_pack
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_submarines }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	#Focus for Focus on Cruisers
+	focus = {
+		id = Generic_focus_on_cruisers
+		icon = GFX_goal_generic_navy_cruiser
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_a_large_navy 
+			focus = Generic_a_flexible_navy 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			navy_experience = 25
+		add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	#Focus for Focus on Capital Ships
+	focus = {
+		id = Generic_focus_on_capital_ships
+		icon = GFX_goal_generic_navy_battleship
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_cruisers }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	#Focus for Naval Primacy
+	focus = {
+		id = Generic_naval_primacy
+		icon = GFX_goal_generic_amphibious_assault
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH} 
+		prerequisite = { 
+			focus = Generic_focus_on_destroyers 
+		}
+		prerequisite = { 
+			focus = Generic_focus_on_capital_ships 
+		}
+
+		mutually_exclusive = { 
+			focus = Generic_air_force_primacy 
+		}
+		mutually_exclusive = { 
+			focus = Generic_army_primacy 
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories> 60
+			num_of_naval_factories > 25
+			has_navy_experience > 150
+		}
+		completion_reward = {
+			navy_experience = 100
+			add_tech_bonus= {
+			 bonus = 1 
+			uses = 3 
+			category = naval_doctrine
+			}
+			add_ideas = generic_naval_primacy
+		}
+	}
+
+	#Focus for Finalise Dockyard Expansion
+	focus = {
+		id = Generic_finalise_dockyard_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 25
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_expand_the_dockyards }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 6
+				num_of_naval_factories < 5
+			}
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+		if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 9
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 3
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	#Focus for Coastal Defense
+	focus = {
+		id = Generic_coastal_defense
+		icon = GFX_focus_generic_coastal_fort
+		x = 24
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_finalise_dockyard_expansion }
+		mutually_exclusive = { focus = Generic_allow_foreign_shipbuilders }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_coastal_defense
+		}
+	}
+
+	#Focus for Allow Foreign Shipbuilders
+	focus = {
+		id = Generic_allow_foreign_shipbuilders
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_finalise_dockyard_expansion }
+		mutually_exclusive = { focus = Generic_coastal_defense }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 1
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_foreign_shipbuilders
+			custom_effect_tooltip = foreign_shipbuilders_tt
+		}
+	}
+
+	#Focus for Focus on Industrial Development
+	focus = {
+		id = Generic_focus_on_industrial_research
+		icon = GFX_goal_generic_production
+		x = 29
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	#Focus for Civilian Expansion
+	focus = {
+		id = Generic_civilian_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 28
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_industrial_research }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Additional Civilian Expansion
+	focus = {
+		id = Generic_additional_civilian_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_civilian_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Finalise Civilian Expansion
+	focus = {
+		id = Generic_finalise_civilian_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_additional_civilian_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Armaments Expansion
+	focus = {
+		id = Generic_armaments_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_industrial_research }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Additional Armaments Expansion
+	focus = {
+		id = Generic_additional_armaments_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_armaments_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Finalise Armaments Expansion
+	focus = {
+		id = Generic_finalise_armaments_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 30
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_additional_armaments_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Improve Infrastructure
+	focus = {
+		id = Generic_improve_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 29
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_finalise_armaments_expansion 
+			focus = Generic_finalise_civilian_expansion 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Continue Improving Infrastructure
+	focus = {
+		id = Generic_continue_improving_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 29
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_infrastructure }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Research Nuclear Technology
+	focus = {
+		id = Generic_research_nuclear_technology
+		icon = GFX_focus_wonderweapons
+		x = 27
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_continue_improving_infrastructure }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+						is_historical_focus_on = yes
+				}
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+			hidden_effect = {
+				news_event = { id = news.174 hours = 16 random = 8 }
+			}
+		}
+	}
+
+	#Focus for Provide for Scientists
+	focus = {
+		id = Generic_provide_for_scientists
+		icon = GFX_focus_research
+		x = 29
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_continue_improving_infrastructure }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Technological Developments
+	focus = {
+		id = Generic_technological_developments
+		icon = GFX_focus_research
+		x = 29
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_provide_for_scientists }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories> 50
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+
+
+	#Focus for Research Secret Weapons
+	focus = {
+		id = Generic_research_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_continue_improving_infrastructure }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_tech_bonus= {
+			 bonus = 1 
+			uses = 4 
+			category = electronics
+			category = nuclear
+			category = rocketry
+			}
+		}
+	}
+
+	#Focus for Urbanity
+	focus = {
+		id = Generic_urbanity
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 32
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_industrial_research }
+		mutually_exclusive = { focus = Generic_rurality }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = generic_urban_focus
+		}
+	}
+
+	#Focus for Industrial Hubs
+	focus = {
+		id = Generic_industrial_hubs
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_urbanity }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas= {
+				remove_idea = generic_urban_focus
+				add_idea = generic_urban_focus_2
+			}
+		}
+	}
+
+	#Focus for Urban Learning Centres
+	focus = {
+		id = Generic_urban_learning_centres
+		icon = GFX_focus_research2
+		x = 32
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_industrial_hubs }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas= {
+				remove_idea = generic_urban_focus_2
+				add_idea = generic_urban_focus_3
+			}
+		}
+	}
+
+	#Focus for Rurality
+	focus = {
+		id = Generic_rurality
+		icon = GFX_goal_generic_consumer_goods
+		x = 34
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_focus_on_industrial_research }
+		mutually_exclusive = { focus = Generic_urbanity }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = generic_rural_focus
+		}
+	}
+
+	#Focus for Improve Mining Towns
+	focus = {
+		id = Generic_improve_mining_towns
+		icon = GFX_goal_generic_construction2
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_rurality }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas= {
+				remove_idea = generic_rural_focus 
+				add_idea = generic_rural_focus_2 
+			}
+			random_owned_controlled_state = {
+			add_resource= { 
+			type = steel 
+			amount = 18 
+				}
+			}
+		}
+	}
+
+	#Focus for The Great Outdoors
+	focus = {
+		id = Generic_the_great_outdoors
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 1
+		relative_position_id = Generic_improve_mining_towns
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_mining_towns }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas= {
+				remove_idea = generic_rural_focus_2 
+				add_idea = generic_rural_focus_3 
+			}
+		}
+	}
+
+	#Focus for Open the Political Sphere
+	focus = {
+		id = Generic_open_the_political_sphere
+		icon = GFX_goal_generic_demand_territory
+		x = 57
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		mutually_exclusive = { focus = Generic_extreme_liberty } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = BRA
+				POR = {
+					NOT = {
+						has_completed_focus = POR_popular_front
+						has_completed_focus = POR_support_the_spanish_nationalists
+						has_completed_focus = POR_strict_neutrality_in_the_spanish_civil_war
+						has_completed_focus = POR_monarchist_uprising_in_brazil
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	#Focus for Collectivist Ethos
+	focus = {
+		id = Generic_collectivist_ethos
+		icon = GFX_goal_generic_national_unity
+		x = -15
+		y = 0
+		relative_position_id = Generic_the_spirit_of_democracy
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_open_the_political_sphere }
+		mutually_exclusive = { 
+			focus = Generic_maintain_the_regime 
+		}
+		mutually_exclusive = { 
+			focus = Generic_the_spirit_of_democracy 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 1
+				NOT = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						OR = {
+							has_government = neutrality
+							has_government = democratic
+						}
+					}
+					has_idea = neutrality_idea
+				}
+			}
+		}
+		available = {
+			democratic < .90
+		}
+		completion_reward = {
+			add_timed_idea = { idea = collectivist_ethos_focus days = 1095 }
+		}
+	}
+
+	#Focus for Socialist Sentiment
+	focus = {
+		id = Generic_socialist_sentiment
+		icon = GFX_goal_support_communism
+		x = -5
+		y = 1
+		relative_position_id = Generic_collectivist_ethos
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_collectivist_ethos }
+		mutually_exclusive = { focus = Generic_nationalist_sentiment }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				IF = {
+					has_government = fascism
+					is_historical_focus_on = yes
+				}
+			}
+		}
+		available = {
+			communism > 0.15
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}
+
+	#Focus for Class Struggle
+	focus = {
+		id = Generic_class_struggle
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = Generic_socialist_sentiment
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_socialist_sentiment }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			has_government= communism
+		}
+		completion_reward = {
+			add_ideas = generic_class_struggle
+			set_rule = {can_send_volunteers = yes}
+		}
+	}
+
+	#Focus for Indoctrination
+	focus = {
+		id = Generic_indoctrination
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = Generic_class_struggle
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_class_struggle }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power= 150
+		}
+	}
+
+	#Focus for Political Correctness
+	focus = {
+		id = Generic_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 1
+		relative_position_id = Generic_class_struggle
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_class_struggle }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+
+	#Focus for Collectivisation
+	focus = {
+		id = Generic_collectivisation
+		icon = GFX_goal_generic_soviet_construction
+		x = -1
+		y = 1
+		relative_position_id = Generic_indoctrination
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_indoctrination 
+		}
+		prerequisite = { 
+			focus = Generic_political_correctness 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas= generic_collectivisation
+		}
+	}
+
+	#Focus for Political Commissars
+	focus = {
+		id = Generic_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		x = 1
+		y = 1
+		relative_position_id = Generic_political_correctness
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_political_correctness 
+		}
+		prerequisite = { 
+			focus = Generic_indoctrination 
+		}
+		prerequisite = { 
+			focus = Generic_secret_police 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_political_power= 200
+			add_ideas = political_commissars_focus
+		}
+	}
+
+	#Focus for The People's Army
+	focus = {
+		id = Generic_peoples_army
+		icon = GFX_goal_rhineland
+		x = -1
+		y = 1
+		relative_position_id = Generic_collectivisation
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_collectivisation }
+		prerequisite = { focus = Generic_political_commissars }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = generic_people_army
+		}
+	}
+
+	#Focus for State Visit to Lenin's Body 
+	focus = {
+		id = Generic_visit_lenin
+		icon = GFX_goal_generic_improve_relations
+		x = -1
+		y = 2
+		relative_position_id = Generic_collectivisation
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_peoples_army }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 100
+				original_tag = TAN
+			}
+		}
+		mutually_exclusive = { 
+			focus = Generic_a_new_way 
+		}
+		mutually_exclusive = { 
+			focus = Generic_permanent_revolutionary 
+		}
+		mutually_exclusive = { 
+			focus = Generic_heir_to_marx
+		}		
+		completion_reward = {
+			add_country_leader_trait = leninist	
+			set_country_leader_ideology = leninism
+			if = {
+				limit = {
+					country_exists = SOV
+					SOV = {has_government = communism}
+				}
+				SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = SOV }
+				SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Create an Equal Society
+	focus = {
+		id = Generic_create_an_equal_society
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 1
+		relative_position_id = Generic_collectivisation
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_collectivisation 
+		}
+		prerequisite = { 
+			focus = Generic_political_commissars 
+		}
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 100
+				original_tag = PRC
+			}
+		}
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			add_ideas = generic_equal_society
+		}
+	}
+
+	#Focus for A New Way
+	focus = {
+		id = Generic_a_new_way
+		icon = GFX_goal_generic_war_with_comintern
+		x = 1
+		y = 2
+		relative_position_id = Generic_collectivisation
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_create_an_equal_society }
+		mutually_exclusive = { 
+			focus = Generic_heir_to_marx 
+		}
+		mutually_exclusive = { 
+			focus = Generic_permanent_revolutionary 
+		}
+		mutually_exclusive = { 
+			focus = Generic_visit_lenin
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 100
+				original_tag = PRC
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = {
+						original_tag = PRC
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_country_leader_trait = unorthodox_communist
+			hidden_effect = {
+				news_event = { id = genericfocustree.4 days = 3 random_days = 3 }
+			}
+		}
+	}
+
+	#Focus for Evolve Past Socialism
+	focus = {
+		id = Generic_evolve_past_socialism
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -1
+		y = 1
+		relative_position_id = Generic_political_commissars
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { 
+			focus = Generic_political_commissars 
+		}
+		prerequisite = { 
+			focus = Generic_collectivisation 
+		}
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 100
+				OR = {
+					original_tag = PAR
+					original_tag = MON
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas= generic_evolve_past_socialism
+		}
+	}
+
+	#Focus for Heir to Marx
+	focus = {
+		id = Generic_heir_to_marx
+		icon = GFX_focus_spr_unify_the_london_bureau
+		x = -1
+		y = 2
+		relative_position_id = Generic_political_commissars
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_evolve_past_socialism }
+		mutually_exclusive = { 
+			focus = Generic_a_new_way 
+		}
+		mutually_exclusive = { 
+			focus = Generic_permanent_revolutionary 
+		}
+		mutually_exclusive = { 
+			focus = Generic_visit_lenin
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 100
+				OR = {
+					original_tag = PAR
+					original_tag = MON
+				}
+			}
+		}
+		completion_reward = {
+			add_country_leader_trait = heir_to_marx
+			set_country_leader_ideology = marxism
+		}
+	}
+
+	#Focus for Export the Revolution
+	focus = {
+		id = Generic_export_the_revolution
+		icon = GFX_goal_generic_trade
+		x = 1
+		y = 1
+		relative_position_id = Generic_political_commissars
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_collectivisation 
+		}
+		prerequisite = { 
+			focus = Generic_political_commissars 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+		}
+		available = {
+			any_neighbor_country = {
+				exists = yes
+			NOT = {	
+				OR = {
+					has_government = communism
+					is_major = yes
+					}
+				}
+			}
+		}
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						has_government = communism
+					}
+					is_major = no
+				}
+				country_event= {
+					hours = 16
+					random = 12
+					id = genericfocustree.12
+				}
+			}
+		}
+	}
+
+	#Focus for Permanent Revolutionary
+	focus = {
+		id = Generic_permanent_revolutionary
+		icon = GFX_goal_support_fourth_int
+		x = 1
+		y = 2
+		relative_position_id = Generic_political_commissars
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_export_the_revolution }
+		mutually_exclusive = { 
+			focus = Generic_a_new_way 
+		}
+		mutually_exclusive = { 
+			focus = Generic_heir_to_marx 
+		}
+		mutually_exclusive = { 
+			focus = Generic_visit_lenin
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 0
+						is_historical_focus_on = yes
+				}
+		}
+		completion_reward = {
+			if = {
+				limit = { SOV = { has_country_leader = { name = "Joseph Stalin" ruling_only = yes } } }
+				SOV = {
+					add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+					}
+				} 
+			}
+			if = {
+				limit = {
+					MEX = {
+						OR = {
+							has_country_leader = {
+								name = "Leon Trotsky"
+								ruling_only = yes
+							}
+							has_country_leader = {
+								name = "Hernán Laborde"
+								ruling_only = yes
+							}
+							has_country_leader = {
+								name = "Valentín Campa"
+								ruling_only = yes
+								}
+							}							
+						}
+					}
+				MEX = {
+					add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+					}
+				} 
+			}
+			if = {
+				limit = {
+					SOV = {has_country_leader = {name = "Leon Trotsky" ruling_only = yes}
+					}
+				}
+				SOV = {
+					add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+					}
+				} 
+			}
+			add_country_leader_trait = permanent_revolutionary
+			hidden_effect = {
+				news_event = { id = genericfocustree.5 days = 3 random_days = 3 }
+			}
+		}
+	}
+
+	#Focus for The True Revolution
+	focus = {
+		id = Generic_the_true_revolution
+		icon = GFX_goal_support_communism
+		x = 2
+		y = 3
+		relative_position_id = Generic_collectivisation
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_a_new_way 
+			focus = Generic_heir_to_marx 
+			focus = Generic_permanent_revolutionary
+			focus = Generic_visit_lenin
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories> 75
+			communism > 0.9
+		}
+		completion_reward = {
+			add_ideas= generic_the_true_revolution
+		}
+	}
+
+	#Focus for Secret Police
+	focus = {
+		id = Generic_secret_police
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 3
+		y = 0
+		relative_position_id = Generic_political_correctness
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_class_struggle 
+			focus = Generic_enforce_militarism 
+		}
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 12
+				has_government = communism
+			}
+		}
+		completion_reward = {
+			add_ideas= generic_secret_police
+			
+		}
+	}
+
+	#Focus for Purge Opposition
+	focus = {
+		id = Generic_purge_opposition
+		icon = GFX_goal_generic_military_deal
+		x = 2
+		y = 0
+		relative_position_id = Generic_secret_police
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_enforce_militarism 
+			focus = Generic_class_struggle 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 12
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.1
+				}	
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+
+	#Focus for Establish Our Alliance
+	focus = {
+		id = Generic_establish_our_alliance
+		icon = GFX_goal_generic_territory_or_war
+		x = 1
+		y = 1
+		relative_position_id = Generic_secret_police
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_secret_police 
+		}
+		prerequisite = { 
+			focus = Generic_purge_opposition 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule = { 
+				can_create_factions = yes 
+			}
+			add_country_leader_trait = warmonger
+		}
+	}
+
+	#Focus for Nationalist Sentiment
+	focus = {
+		id = Generic_nationalist_sentiment
+		icon = GFX_goal_support_fascism
+		x = 5
+		y = 1
+		relative_position_id = Generic_collectivist_ethos
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_collectivist_ethos }
+		mutually_exclusive = { focus = Generic_socialist_sentiment }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				IF = {
+					has_government = communism
+					is_historical_focus_on = yes
+				}
+			}
+		}
+		available = {
+			fascism > 0.15
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+
+	#Focus for Enforce Militarism
+	focus = {
+		id = Generic_enforce_militarism
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = Generic_nationalist_sentiment
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_nationalist_sentiment }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			has_government= fascism
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			add_ideas= militarism_focus
+			army_experience= 10
+			set_rule = { can_send_volunteers = yes}
+		}
+	}
+
+	#Focus for Control the Youth
+	focus = {
+		id = Generic_control_the_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 2
+		relative_position_id = Generic_nationalist_sentiment
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_enforce_militarism }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+	}
+
+	#Focus for Enforce Party Loyalty
+	focus = {
+		id = Generic_enforce_party_loyalty
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = Generic_control_the_youth
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_purge_opposition 
+		}
+		prerequisite = { 
+			focus = Generic_control_the_youth 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY} 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity= { 
+				ideology = fascism 
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for Replace Religion with the State
+	focus = {
+		id = Generic_replace_religion_with_the_state
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = Generic_control_the_youth
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_control_the_youth }
+		mutually_exclusive = { focus = Generic_send_the_church_a_fiat }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = PRU
+					original_tag = VEN
+					original_tag = BRA
+					original_tag = ELS
+					original_tag = SPA
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = dominant_state
+		}
+	}
+
+	#Focus for Send the Church a Fiat
+	focus = {
+		id = Generic_send_the_church_a_fiat
+		icon = GFX_goal_generic_dangerous_deal
+		x = 3
+		y = 1
+		relative_position_id = Generic_control_the_youth
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_control_the_youth }
+		mutually_exclusive = { focus = Generic_replace_religion_with_the_state }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_ideas = church_endorsement
+		}
+	}
+
+	#Focus for Ideological Fanatic
+	focus = {
+		id = Generic_ideological_fanatic
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 1
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_enforce_party_loyalty }
+		mutually_exclusive = { focus = Generic_pragmatic_ideologue }
+		mutually_exclusive = {focus = Generic_fascist_empire}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT} 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_country_leader_trait = ideological_fanatic
+			set_country_leader_ideology = nazism
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						has_government = fascism
+					}
+				}
+				ROOT = {
+					ai_strategy = {
+						type = invade
+						target = PREV
+						value = 200
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for The Ultimate Nation
+	focus = {
+		id = Generic_the_ultimate_nation
+		icon = GFX_goal_generic_demand_territory
+		x = -4
+		y = 2
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_ideological_fanatic }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+			num_of_factories > 50
+		}
+		completion_reward = {
+			add_ideas = generic_the_ultimate_nation
+		}
+	}
+
+	#Focus for Fascist Emperor
+	focus = {
+		id = Generic_fascist_empire
+		icon = GFX_focus_generic_home_defense
+		x = 0
+		y = 1
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_enforce_party_loyalty }
+		mutually_exclusive = { focus = Generic_pragmatic_ideologue }
+		mutually_exclusive = { focus = Generic_ideological_fanatic }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY} 
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+						is_historical_focus_on = yes
+				}
+		}
+		completion_reward = {
+			add_country_leader_trait= fascist_emperor
+			hidden_effect = {
+				##country_event= {
+					##days = 1 
+				##id = genericfocustree.15
+								##}
+				news_event = { id = genericfocustree.11 days = 3 random_days = 3 }
+			}
+		}
+	}
+
+	#Focus for Autarky
+	focus = {
+		id = Generic_autarky
+		icon = GFX_focus_generic_steel
+		x = -2
+		y = 2
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_ideological_fanatic 
+			focus = Generic_pragmatic_ideologue 
+			focus = Generic_fascist_empire
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = closed_economy }
+				}
+				add_ideas = closed_economy
+			}
+			else = {
+				add_political_power = 150
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+
+	#Focus for Paramilitarism
+	focus = {
+		id = Generic_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 2
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_ideological_fanatic 
+			focus = Generic_pragmatic_ideologue 
+			focus = Generic_fascist_empire
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas= paramilitarism_focus
+		}
+	}
+
+	#Focus for Brutal Oppression
+	focus = {
+		id = Generic_brutal_oppression
+		icon = GFX_goal_generic_attack_allies
+		x = 2
+		y = 2
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_ideological_fanatic 
+			focus = Generic_pragmatic_ideologue 
+			focus = Generic_fascist_empire
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = generic_brutal_oppression
+		}
+	}
+
+	#Focus for Masters over All
+	focus = {
+		id = Generic_masters_over_all
+		icon = GFX_goal_support_fascism
+		x = 0
+		y = 3
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_paramilitarism 
+		}
+		prerequisite = { 
+			focus = Generic_brutal_oppression 
+		}
+		prerequisite = { 
+			focus = Generic_autarky 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			num_of_factories > 75
+			fascism > 0.90
+		}
+		completion_reward = {
+			add_ideas = generic_masters_over_all
+		}
+	}
+
+	#Focus for Pragmatic Ideologue
+	focus = {
+		id = Generic_pragmatic_ideologue
+		icon = GFX_goal_generic_dangerous_deal
+		x = 2
+		y = 1
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_enforce_party_loyalty }
+		mutually_exclusive = { focus = Generic_ideological_fanatic }
+		mutually_exclusive = {focus = Generic_fascist_empire}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_country_leader_trait= pragmatic_ideologue
+			set_country_leader_ideology = fascism_ideology
+		}
+	}
+
+	#Focus for Disinterst in Perfection
+	focus = {
+		id = Generic_disinterst_in_perfection
+		icon = GFX_goal_generic_military_deal
+		x = 4
+		y = 2
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_pragmatic_ideologue }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+						is_historical_focus_on = yes
+				}
+		}
+		available = {
+			is_faction_leader= yes is_in_faction= yes
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = neutrality
+					is_in_faction = no
+				}
+				country_event= {
+					days = 5 
+					id = genericfocustree.7
+				}
+			}
+			hidden_effect = {
+				news_event = { id = genericfocustree.6 hours = 16 random = 12 }
+			}
+		}
+	}
+
+	#Focus for Corporatism
+	focus = {
+		id = Generic_corporatism
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 1
+		relative_position_id = Generic_enforce_party_loyalty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_enforce_party_loyalty }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = generic_corporatism
+		}
+	}
+
+	#Focus for A Change in Regime
+	focus = {
+		id = Generic_a_change_in_regime
+		icon = GFX_goal_generic_forceful_treaty
+		x = 3
+		y = 0
+		relative_position_id = Generic_nationalist_sentiment
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 	focus = Generic_the_spirit_of_democracy
+							focus = Generic_collectivist_ethos}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+		OR = {
+			IF = {
+				OR = {
+				has_government = neutrality
+				has_government = democratic
+					}
+				has_completed_focus = Generic_collectivist_ethos
+				}
+			IF = {
+				OR = {
+				has_government = neutrality
+				has_government = fascism
+				has_government = communism
+					}
+				has_completed_focus = Generic_the_spirit_of_democracy
+				}
+			IF = {
+				OR = {
+				has_government = fascism
+					}
+				has_completed_focus = Generic_socialist_sentiment
+				}
+			IF = {
+				OR = {
+				has_government = communism
+					}
+				has_completed_focus = Generic_nationalist_sentiment
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	#Focus for Change Through Violence
+	focus = {
+		id = Generic_change_through_violence
+		icon = GFX_goal_generic_major_war
+		x = -1
+		y = 1
+		relative_position_id = Generic_a_change_in_regime
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_a_change_in_regime }
+		mutually_exclusive = { focus = Generic_change_through_politics }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT} 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				IF = {
+					OR = {
+					has_government = neutrality
+					has_government = democratic
+						}
+					has_completed_focus = Generic_collectivist_ethos
+					}
+				IF = {
+					OR = {
+					has_government = neutrality
+					has_government = fascism
+					has_government = communism
+						}
+					has_completed_focus = Generic_the_spirit_of_democracy
+					}
+				IF = {
+					OR = {
+					has_government = fascism
+						}
+					has_completed_focus = Generic_socialist_sentiment
+					}
+				IF = {
+					OR = {
+					has_government = communism
+						}
+					has_completed_focus = Generic_nationalist_sentiment
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { 
+				idea = generic_change_through_violence
+				days = 140
+			}
+		}
+	}
+
+	#Focus for Change Through Politics
+	focus = {
+		id = Generic_change_through_politics
+		icon = GFX_goal_generic_military_deal
+		x = 1
+		y = 1
+		relative_position_id = Generic_a_change_in_regime
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_a_change_in_regime }
+		mutually_exclusive = { focus = Generic_change_through_violence }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		OR = {
+			IF = {
+				OR = {
+				has_government = neutrality
+				has_government = democratic
+					}
+				has_completed_focus = Generic_collectivist_ethos
+				}
+			IF = {
+				OR = {
+				has_government = neutrality
+				has_government = fascism
+				has_government = communism
+					}
+				has_completed_focus = Generic_the_spirit_of_democracy
+				}
+			IF = {
+				OR = {
+				has_government = fascism
+					}
+				has_completed_focus = Generic_socialist_sentiment
+				}
+			IF = {
+				OR = {
+				has_government = communism
+					}
+				has_completed_focus = Generic_nationalist_sentiment
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { 
+				idea = generic_change_through_politics
+				days = 140
+			}
+		}
+	}
+
+	#Focus for The Spirit of Democracy
+	focus = {
+		id = Generic_the_spirit_of_democracy
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		relative_position_id = Generic_open_the_political_sphere
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_open_the_political_sphere }
+		mutually_exclusive = { 
+			focus = Generic_maintain_the_regime 
+		}
+		mutually_exclusive = { 
+			focus = Generic_collectivist_ethos 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY} 
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				democratic < 0.01
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					is_historical_focus_on = yes
+					has_government = democratic
+				}
+			}
+		}
+		available = {
+			democratic > 0.10
+		}
+		completion_reward = {
+			add_stability= 0.05
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Campaign for Elections
+	focus = {
+		id = Generic_campaign_for_elections
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		relative_position_id = Generic_the_spirit_of_democracy
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = Generic_the_spirit_of_democracy }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		democratic > 0.15
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = generic_campaign_for_elections
+				days = 720
+			}
+		}
+	}
+
+	#Focus for A Social Democratic Goverment
+	focus = {
+		id = Generic_a_socialist_government
+		icon = GFX_goal_generic_national_unity
+		x = -4
+		y = 1
+		relative_position_id = Generic_campaign_for_elections
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_campaign_for_elections }
+		mutually_exclusive = { focus = Generic_a_liberal_government }
+		mutually_exclusive = { focus = Generic_a_conservative_government }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_country_leader_trait = socialist
+			set_country_leader_ideology = socialism
+		}
+	}
+
+	#Focus for Women's Suffrage
+	focus = {
+		id = Generic_womens_suffrage
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		relative_position_id = Generic_a_socialist_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_a_socialist_government }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_political_power= 175
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}	
+	}
+
+	#Focus for A Welfare System
+	focus = {
+		id = Generic_welfare_system
+		icon = GFX_goal_generic_consumer_goods
+		x = -1
+		y = 1
+		relative_position_id = Generic_a_socialist_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_a_socialist_government }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY} 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_political_power= 150
+			add_ideas = generic_welfare
+		}
+	}
+
+	#Focus for Increase Taxes
+	focus = {
+		id = Generic_increase_taxes
+		icon = GFX_goal_generic_construct_civilian
+		x = -2
+		y = 1
+		relative_position_id = Generic_denounce_communism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_denounce_fascism }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = generic_taxes
+		}
+	}
+
+	#Focus for Denounce Fascism
+	focus = {
+		id = Generic_denounce_fascism
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 0
+		y = 2
+		relative_position_id = Generic_a_socialist_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_welfare_system
+		}
+		prerequisite = { 
+			focus = Generic_womens_suffrage
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT} 
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				if = {
+					is_historical_focus_on = yes
+					date < 1943.1.1
+				}
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_war_support = 0.1
+			every_country = {
+				limit = {
+					has_government = fascism 
+					NOT = {
+						tag = ROOT
+					}
+				}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_decrease
+				}
+			}
+		}
+	}
+
+	#Focus for A Conservative Government
+	focus = {
+		id = Generic_a_conservative_government
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		relative_position_id = Generic_campaign_for_elections
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_campaign_for_elections }
+		mutually_exclusive = { focus = Generic_a_liberal_government }
+		mutually_exclusive = { focus = Generic_a_socialist_government }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_country_leader_trait = conservative
+			set_country_leader_ideology = conservatism
+		}
+	}
+
+	#Focus for Power in Tradition
+	focus = {
+		id = Generic_power_in_tradition
+		icon = GFX_goal_anschluss
+		x = -1
+		y = 1
+		relative_position_id = Generic_a_conservative_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_a_conservative_government }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	#Focus for Leave Business Be
+	focus = {
+		id = Generic_leave_business_be
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 1
+		relative_position_id = Generic_a_conservative_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_a_conservative_government }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = generic_free_enterprise
+		}
+	}
+
+	#Focus for Denounce Communism
+	focus = {
+		id = Generic_denounce_communism
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 2
+		relative_position_id = Generic_a_conservative_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_power_in_tradition 
+		}
+		prerequisite = { 
+			focus = Generic_leave_business_be 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT} 
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+			if = {
+			is_historical_focus_on = yes
+			date < 1943.1.1
+				}
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			add_war_support = 0.1
+			every_country = {
+				limit = {
+					has_government = communism 
+					NOT = {
+						tag = ROOT
+						}
+					}
+				add_opinion_modifier {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+			hidden_effect = {
+				news_event = { id = genericfocustree.3 days = 3 random_days = 3 }
+			}
+		}
+	}
+
+	#Focus for A Liberal Government
+	focus = {
+		id = Generic_a_liberal_government
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 4
+		y = 1
+		relative_position_id = Generic_campaign_for_elections
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_campaign_for_elections }
+		mutually_exclusive = { focus = Generic_a_conservative_government }
+		mutually_exclusive = { focus = Generic_a_socialist_government }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY} 
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_country_leader_trait = liberal
+			set_country_leader_ideology = liberalism
+		}
+	}
+
+	#Focus for The Right to Liberty
+	focus = {
+		id = Generic_the_right_to_liberty
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		relative_position_id = Generic_a_liberal_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_a_liberal_government 
+			focus = Generic_a_conservative_government 
+		}
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+
+	#Focus for Equality before the Law
+	focus = {
+		id = Generic_equality_before_the_law
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 1
+		relative_position_id = Generic_a_liberal_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_a_liberal_government }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = generic_equality_law
+		}
+	}
+
+	#Focus for Limited Welfare
+	focus = {
+		id = Generic_limited_welfare
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 2
+		relative_position_id = Generic_a_liberal_government
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_equality_before_the_law 
+		}
+		prerequisite = { 
+			focus = Generic_the_right_to_liberty 
+		}
+		prerequisite = { 
+			focus = Generic_laissez_faire_economics 
+		}
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = generic_limited_welfare
+		}
+	}
+
+	#Focus for Pro-Democratic Diplomacy
+	focus = {
+		id = Generic_prodemocratic_diplomacy
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		relative_position_id = Generic_denounce_communism
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_limited_welfare 
+			focus = Generic_denounce_communism
+			focus = Generic_denounce_fascism 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			every_country = {
+			limit = {
+				NOT = {
+					tag = ROOT
+				}
+				has_government= democratic
+			}
+			add_opinion_modifier= {  
+				target = ROOT
+				modifier = medium_increase 
+				}
+			}
+		}
+	}
+
+	#Focus for A Democratic Alliance
+	focus = {
+		id = Generic_a_democratic_alliance
+		icon = GFX_goal_generic_alliance
+		x = 2
+		y = 1
+		relative_position_id = Generic_denounce_communism
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { 
+			focus = Generic_limited_welfare 
+			focus = Generic_denounce_communism
+			focus = Generic_denounce_fascism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule= { 
+			can_create_factions = yes 
+			}
+		}
+	}
+
+	#Focus for Prepare for War
+	focus = {
+		id = Generic_prepare_for_war
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = Generic_prodemocratic_diplomacy
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_prodemocratic_diplomacy }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = {
+			factor = 3
+		}
+		bypass = {
+			has_war = yes
+		}
+		available = {
+			threat > 0.10
+		}
+		completion_reward = {
+			add_ideas = generic_prepare_for_war
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Anti-Authoritarian Diplomacy
+	focus = {
+		id = Generic_antiauthoritarian_diplomacy
+		icon = GFX_goal_anti_comintern_pact
+		x = -2
+		y = 1
+		relative_position_id = Generic_prodemocratic_diplomacy
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_prodemocratic_diplomacy }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_country_leader_trait= anti_authortarian
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for The Light in the Darkness
+	focus = {
+		id = Generic_the_light_in_the_darkness
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = Generic_prodemocratic_diplomacy
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_democratic_revolution 
+			focus = Generic_prodemocratic_diplomacy 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = generic_light_darkness
+		}
+	}
+
+	#Focus for The Will of the People
+	focus = {
+		id = Generic_the_will_of_the_people
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 2
+		relative_position_id = Generic_prodemocratic_diplomacy
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_prepare_for_war 
+		}
+		prerequisite = { 
+			focus = Generic_antiauthoritarian_diplomacy 
+		}
+		prerequisite = { 
+			focus = Generic_the_light_in_the_darkness	 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 75
+			democratic > 0.90
+		}
+		completion_reward = {
+			add_ideas = generic_the_will_of_the_people
+		}
+	}
+
+	#Focus for Freedom to Research
+	focus = {
+		id = Generic_freedom_to_research
+		icon = GFX_focus_research
+		x = 4
+		y = 1
+		relative_position_id = Generic_prodemocratic_diplomacy
+		cost = 20
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_prodemocratic_diplomacy 
+			focus = Generic_democratic_revolution 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 60
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Maintain the Regime
+	focus = {
+		id = Generic_maintain_the_regime
+		icon = GFX_goal_generic_neutrality_focus
+		x = 12
+		y = 0
+		relative_position_id = Generic_the_spirit_of_democracy
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_open_the_political_sphere }
+		mutually_exclusive = { 
+			focus = Generic_collectivist_ethos 
+		}
+		mutually_exclusive = { 
+			focus = Generic_the_spirit_of_democracy 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 5
+				date < 1937.1.1
+				any_neighbor_country = {
+					is_major = yes
+				}
+			}
+		}
+		available = {
+			has_government= neutrality
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = generic_maintain_regime
+				days = 280
+			}
+		}
+	}
+
+	#Focus for Regime Propaganda
+	focus = {
+		id = Generic_regime_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = Generic_maintain_the_regime
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = Generic_maintain_the_regime }
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = 0.1 
+			}
+		}
+	}
+
+	#Focus for Relax Authoritarianism
+	focus = {
+		id = Generic_relax_authoritarianism
+		icon = GFX_goal_generic_improve_relations
+		x = -4
+		y = 2
+		relative_position_id = Generic_maintain_the_regime
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = Generic_regime_propaganda }
+		mutually_exclusive = { focus = Generic_embrace_authoritarianism }
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 15
+				any_neighbor_country = {
+					is_major = yes
+					has_government = democratic
+				}
+			}
+		}
+		available = {
+		not = { has_idea = generic_maintain_regime }
+			}
+		completion_reward = {
+				add_timed_idea = {
+				idea = generic_relax_authoritarianism
+				days = 140
+			}
+		}
+	}
+
+	#Focus for Forge our own Path
+	focus = {
+		id = Generic_forge_our_own_path
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		relative_position_id = Generic_regime_propaganda
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { 
+			focus = Generic_embrace_authoritarianism 
+			focus = Generic_relax_authoritarianism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule= { 
+				can_create_factions = yes 
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+				add_stability = -0.1
+			}
+		}
+	}
+
+	#Focus for Laissez Faire Economics
+	focus = {
+		id = Generic_laissez_faire_economics
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -1
+		y = 1
+		relative_position_id = Generic_relax_authoritarianism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_relax_authoritarianism 
+			focus = Generic_a_liberal_government 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = generic_laissez_faire
+		}
+	}
+
+	#Focus for Increase Freedoms
+	focus = {
+		id = Generic_increase_freedoms
+		icon = GFX_goal_generic_alliance
+		x = 1
+		y = 1
+		relative_position_id = Generic_relax_authoritarianism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_relax_authoritarianism }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_stability= 0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Appeal to Democracies
+	focus = {
+		id = Generic_appeal_to_democracies
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 2
+		relative_position_id = Generic_relax_authoritarianism
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_increase_freedoms 
+		}
+		prerequisite = { 
+			focus = Generic_laissez_faire_economics 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_political_power = 50
+			every_country = {
+				limit = {
+					has_government = democratic
+					NOT = {
+						tag = ROOT
+					}
+				}
+			}
+			add_opinion_modifier= { 
+				target = ROOT
+				modifier = medium_increase
+			}
+		}
+	}
+
+	#Focus for Democratic Revolution
+	focus = {
+		id = Generic_democratic_revolution
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		relative_position_id = Generic_appeal_to_democracies
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_appeal_to_democracies }
+		mutually_exclusive = { focus = Generic_stay_the_course }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		completion_reward = {
+			country_event= {
+				hours = 6 
+				id = genericfocustree.14
+			}
+			hidden_effect = {
+				news_event = { id = genericfocustree.4 days = 3 random_days = 3 }
+			}
+		}
+	}
+
+	#Focus for Sweeping Reform
+	focus = {
+		id = Generic_sweeping_reform
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 2
+		relative_position_id = Generic_appeal_to_democracies
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_democratic_revolution }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_government = democratic
+		}
+
+		completion_reward = {
+			add_stability = -0.2
+			add_timed_idea = {
+				idea = generic_sweeping_reform
+				days = 210
+			}
+			add_country_leader_trait = democratic_crusader
+		}
+	}
+
+	#Focus for Stay the Course
+	focus = {
+		id = Generic_stay_the_course
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 1
+		y = 1
+		relative_position_id = Generic_appeal_to_democracies
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_appeal_to_democracies }
+		mutually_exclusive = { focus = Generic_democratic_revolution }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = generic_stay_the_course
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for An Elected Dictator
+	focus = {
+		id = Generic_an_elected_dictator
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 2
+		relative_position_id = Generic_appeal_to_democracies
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_stay_the_course }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_country_leader_trait= elected_dictator
+		}
+	}
+
+	#Focus for Political Manoeuvres
+	focus = {
+		id = Generic_political_manoeuvres
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 2
+		relative_position_id = Generic_appeal_to_democracies
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_stay_the_course }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = 0.2
+			}
+			add_political_power= 100
+		}
+	}
+
+	#Focus for Embrace Authoritarianism
+	focus = {
+		id = Generic_embrace_authoritarianism
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 2
+		relative_position_id = Generic_maintain_the_regime
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_regime_propaganda }
+		mutually_exclusive = { focus = Generic_relax_authoritarianism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				any_neighbor_country = {
+					is_major = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { 
+			idea = generic_empower_regime
+			days = 280 }
+			add_stability = -0.1
+		}
+	}
+
+	#Focus for Crush Dissent
+	focus = {
+		id = Generic_crush_dissent
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 1
+		relative_position_id = Generic_embrace_authoritarianism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_embrace_authoritarianism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_stability= -0.10
+			add_ideas = generic_crush_dissent
+		}
+	}
+
+	#Focus for Necessity of War
+	focus = {
+		id = Generic_necessity_of_war
+		icon = GFX_goal_generic_major_war
+		x = -1
+		y = 1
+		relative_position_id = Generic_crush_dissent
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_crush_dissent }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_war_support= 0.1
+		}
+	}
+
+	#Focus for Enact a War Economy
+	focus = {
+		id = Generic_enact_a_war_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 1
+		y = 1
+		relative_position_id = Generic_crush_dissent
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_crush_dissent }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			if = {
+				limit = {NOT = {has_idea = war_economy} }
+				add_stability= -0.10
+				add_ideas = war_economy
+			}
+			else = {
+			add_political_power = 150
+			}
+		}
+	}
+
+	#Focus for Long Live the Nation
+	focus = {
+		id = Generic_long_live_the_nation
+		icon = GFX_goal_generic_demand_territory
+		x = -4
+		y = 0
+		relative_position_id = Generic_satisfied_with_dictatorship
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_enact_a_war_economy 
+		}
+		prerequisite = { 
+			focus = Generic_necessity_of_war 
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_long_live
+		}
+	}
+
+	#Focus for Anti-Revolutionary Diplomacy
+	focus = {
+		id = Generic_antirevolutionary_diplomacy
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		relative_position_id = Generic_long_live_the_nation
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_long_live_the_nation 
+			focus = Generic_stay_the_course 
+		}
+		mutually_exclusive = { focus = Generic_side_with_demons }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			every_country = {
+				limit = { 
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_opinion_modifier {
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+		}
+	}
+
+	#Focus for Side with Demons
+	focus = {
+		id = Generic_side_with_demons
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 1
+		relative_position_id = Generic_long_live_the_nation
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_long_live_the_nation }
+		mutually_exclusive = { focus = Generic_antirevolutionary_diplomacy }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			every_country = {
+				limit = { 
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_opinion_modifier {
+					modifier = medium_increase
+					target = ROOT
+				}
+			}
+		}
+	} 
+
+	#Focus for Proud not to Conform
+	focus = {
+		id = Generic_proud_not_to_conform
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 4
+		relative_position_id = Generic_forge_our_own_path
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_antirevolutionary_diplomacy 
+			focus = Generic_an_elected_dictator 
+			focus = Generic_sweeping_reform 
+			focus = Generic_side_with_demons 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			OR = {
+			neutrality > 0.90
+			democratic > 0.90
+			}
+			num_of_factories > 75
+		}
+		completion_reward = {
+			add_ideas = generic_proud_not_confrom
+		}
+	}
+
+	#Focus for Satisfied with Dictatorship
+	focus = {
+		id = Generic_satisfied_with_dictatorship
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = Generic_enact_a_war_economy
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_enact_a_war_economy 
+		}
+		prerequisite = { 
+			focus = Generic_necessity_of_war 
+		}
+		mutually_exclusive = { focus = Generic_an_emperor_for_our_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_country_leader_trait= dictator
+			add_country_leader_trait= satisfied
+		}
+	}
+
+	#Focus for The Great Dictator
+	focus = {
+		id = Generic_the_great_dictator
+		icon = GFX_goal_generic_military_sphere
+		x = -1
+		y = 1
+		relative_position_id = Generic_satisfied_with_dictatorship
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_satisfied_with_dictatorship }
+		mutually_exclusive = { 
+			focus = Generic_his_imperial_majesty 
+		}
+		mutually_exclusive = { 
+			focus = Generic_the_puppetmaster 
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			swap_ruler_traits = {
+				remove = dictator
+				add = great_dictator
+			}
+		}
+	}
+
+	#Focus for The Puppetmaster
+	focus = {
+		id = Generic_the_puppetmaster
+		icon = GFX_goal_generic_attack_allies
+		x = 1
+		y = 1
+		relative_position_id = Generic_satisfied_with_dictatorship
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_satisfied_with_dictatorship 
+			focus = Generic_an_emperor_for_our_empire 
+		}
+		mutually_exclusive = { 
+			focus = Generic_his_imperial_majesty 
+		}
+		mutually_exclusive = { 
+			focus = Generic_the_great_dictator 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_country_leader_trait= puppetmaster
+			remove_country_leader_trait = satisfied
+		}
+	}
+
+	#Focus for An Emperor for our Empire
+	focus = {
+		id = Generic_an_emperor_for_our_empire
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 0
+		relative_position_id = Generic_satisfied_with_dictatorship
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_enact_a_war_economy 
+		}
+		prerequisite = { 
+			focus = Generic_necessity_of_war 
+		}
+		mutually_exclusive = { focus = Generic_satisfied_with_dictatorship }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+						is_historical_focus_on = yes
+				}
+		}
+		completion_reward = {
+			add_country_leader_trait= emperor
+			hidden_effect = {
+				#country_event= {
+					#days = 1 
+				#id = genericfocustree.15
+								#}
+				news_event = { id = genericfocustree.11 days = 3 random_days = 3 }
+			}
+		}
+	}
+
+	#Focus for His Imperial Majesty
+	focus = {
+		id = Generic_his_imperial_majesty
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 3
+		y = 1
+		relative_position_id = Generic_satisfied_with_dictatorship
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_an_emperor_for_our_empire }
+		mutually_exclusive = { 
+			focus = Generic_the_great_dictator 
+		}
+		mutually_exclusive = { 
+			focus = Generic_the_puppetmaster 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			swap_ruler_traits = { 
+				remove = emperor
+				add = imperialist_emperor
+			}
+		}
+	}
+
+	#Focus for Liberty to the Extremes
+focus = {
+		id = Generic_extreme_liberty
+		icon = GFX_goal_generic_demand_territory
+		x = 86
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = Generic_open_the_political_sphere }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 0.5
+		modifier = {
+		factor = 0
+		is_historical_focus_on = yes
+			}
+		}
+		available = {
+			num_of_controlled_states > 1
+			NOT = {
+			has_completed_focus = Generic_improve_diplomat_corps
+			has_completed_focus = Generic_declare_neutrality
+			}
+		}
+		completion_reward = {
+		country_event= {
+			hours = 6 
+			id = genericfocustree.16
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+}
+
+#Focus for Distribute Arms to the People
+	focus = {
+		id = Generic_distribute_arms_to_the_people
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		relative_position_id = Generic_extreme_liberty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_extreme_liberty }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.05
+			}
+			add_stability = -0.1
+	hidden_effect = {
+		country_event = {
+				days = 12
+				random_days = 3
+				id = genericfocustree.19
+				}
+			}
+		}
+	}
+
+	#Focus for A War of Equality
+	focus = {
+		id = Generic_a_war_of_equality
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = Generic_extreme_liberty
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_extreme_liberty }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		set_rule = {
+			can_generate_female_aces = yes
+		}
+		add_war_support = 0.1
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.15
+			}
+			add_stability = -0.1
+		}
+	}
+
+	#Focus for Abolish the State
+	focus = {
+		id = Generic_abolish_the_state
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 2
+		relative_position_id = Generic_extreme_liberty
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_distribute_arms_to_the_people 
+		}
+		prerequisite = { 
+			focus = Generic_a_war_of_equality 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			neutrality > 0.5
+			has_stability  < 0.3
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+						days = 6
+						random_days = 5
+						id = genericfocustree.20
+						}
+			}
+
+			country_event = {
+				hours = 12
+				random_hours = 23
+				id = genericfocustree.17
+			}
+		hidden_effect = {
+			every_country = {
+				add_ai_strategy = {
+				    type = alliance
+				    id = ROOT
+				    value = -999
+					}
+				add_ai_strategy = {
+						type = befriend
+						id = ROOT
+						value = -200
+					}
+					add_ai_strategy = {
+						type = support
+						id = ROOT
+						value = -999
+					}
+					add_ai_strategy = {
+						type = protect
+						id = ROOT
+						value = -999
+					}
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = ROOT
+						value = -999
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = ROOT
+						value = -999
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Social Anarchism
+	focus = {
+		id = Generic_social_anarchism
+		icon = GFX_goal_generic_military_deal
+		x = -3
+		y = 1
+		relative_position_id = Generic_abolish_the_state
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_abolish_the_state }
+		mutually_exclusive = { focus = Generic_libertarian_anarchism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		completion_reward = {
+			swap_ruler_traits = {remove = loose_anarchists
+			add = social_anarchists}
+			set_cosmetic_tag = generic_anarchism_soc_neutrality
+		}
+	}
+
+	#Focus for Worker Autonomy
+	focus = {
+		id = Generic_worker_autonomy
+		icon = GFX_goal_generic_production 
+		x = -3
+		y = 1
+		relative_position_id = Generic_social_anarchism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_social_anarchism }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc
+					add_idea = generic_anarchism_soc_s_1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_2
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_2
+					add_idea = generic_anarchism_soc_s_3
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc
+						add_idea = generic_anarchism_soc_s_1
+					}
+				}
+			}			
+		}	
+	}
+
+	#Focus for Appropriate the Means of Production
+	focus = {
+		id = Generic_appropriate_the_means_of_production
+		icon = GFX_focus_generic_support_the_left_right
+		x = -1
+		y = 1
+		relative_position_id = Generic_social_anarchism
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		prerequisite = { focus = Generic_social_anarchism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc
+					add_idea = generic_anarchism_soc_s_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_1
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_1
+					add_idea = generic_anarchism_soc_s_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_4
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_4
+					add_idea = generic_anarchism_soc_s_5
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc
+						add_idea = generic_anarchism_soc_s_2
+					}
+				}
+			}			
+		}	
+	}
+
+	#Focus for Collectivise Agriculture
+	focus = {
+		id = Generic_collectivise_agriculture
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+		relative_position_id = Generic_appropriate_the_means_of_production
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_appropriate_the_means_of_production 
+		}
+		prerequisite = { 
+			focus = Generic_worker_autonomy 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_3
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_3
+					add_idea = generic_anarchism_soc_s_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_5
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_5
+					add_idea = generic_anarchism_soc_s_7
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_9
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_9
+					add_idea = generic_anarchism_soc_s_12
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_11
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_11
+					add_idea = generic_anarchism_soc_s_10
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_s_3
+						add_idea = generic_anarchism_soc_s_6
+					}
+				}
+			}			
+		}	
+	}
+
+	#Focus for Collectivise Industry
+	focus = {
+		id = Generic_collectivise_industry
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 1
+		relative_position_id = Generic_appropriate_the_means_of_production
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_appropriate_the_means_of_production 
+		}
+		prerequisite = { 
+			focus = Generic_worker_autonomy 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_3
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_3
+					add_idea = generic_anarchism_soc_s_9
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_5
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_5
+					add_idea = generic_anarchism_soc_s_11
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_6
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_6
+					add_idea = generic_anarchism_soc_s_12
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_7
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_7
+					add_idea = generic_anarchism_soc_s_10
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_s_3
+						add_idea = generic_anarchism_soc_s_9
+					}
+				}
+			}			
+		}	
+	}
+
+	#Focus for Share Burdens
+	focus = {
+		id = Generic_share_burdens
+		icon = GFX_goal_generic_consumer_goods
+		x = -1
+		y = 1
+		relative_position_id = Generic_worker_autonomy
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_worker_autonomy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {		
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_1
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_1
+					add_idea = generic_anarchism_soc_s_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_3
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_3
+					add_idea = generic_anarchism_soc_s_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_6
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_6
+					add_idea = generic_anarchism_soc_s_7
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_9
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_9
+					add_idea = generic_anarchism_soc_s_11
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_12
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_12
+					add_idea = generic_anarchism_soc_s_10
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_s_1
+						add_idea = generic_anarchism_soc_s_4
+					}
+				}
+			}			
+		}	
+	}
+
+	#Focus for Collectivised Economy
+	focus = {
+		id = Generic_collectivised_economy
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 2
+		relative_position_id = Generic_appropriate_the_means_of_production
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_collectivise_agriculture 
+		}
+		prerequisite = { 
+			focus = Generic_collectivise_industry 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPR_collectivized_society
+			if = {
+				limit = {
+					NOT = { has_idea = closed_economy }
+				}
+				add_ideas = closed_economy
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = disarmed_nation
+						has_idea = volunteer_only
+					}
+				}
+				add_ideas = volunteer_only
+			}
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_10
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_10
+					add_idea = generic_anarchism_soc_s_13
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_12
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_s_12
+					add_idea = generic_anarchism_soc_s_14
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_s_10
+						add_idea = generic_anarchism_soc_s_13
+					}
+				}
+			}
+			hidden_effect = {
+			every_country = {
+				add_ai_strategy = {
+						type = contain
+						id = ROOT
+						value = 100
+					}
+				}
+			}			
+		}	
+	}
+
+	#Focus for Freedom of Thought
+	focus = {
+		id = Generic_freedom_of_thought
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		relative_position_id = Generic_collectivised_economy
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_collectivised_economy 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {original_research_slots < 3}
+				add_research_slot = 1
+			}
+			add_tech_bonus= {
+			bonus = 1 
+			uses = 2 
+			category = electronics
+			category = support_tech 
+			}
+		}
+	}
+
+	#Focus for Fight for Our Own
+	focus = {
+		id = Generic_fight_for_our_own
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 2
+		relative_position_id = Generic_abolish_the_state
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_social_anarchism 
+			focus = Generic_libertarian_anarchism 
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = generic_fight_for_us
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Militarise the People
+	focus = {
+		id = Generic_militarise_the_people
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -1
+		y = 1
+		relative_position_id = Generic_fight_for_our_own
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_fight_for_our_own 
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = generic_fight_for_us
+				add_idea = generic_fight_for_us_2
+			}
+		}
+	}
+
+	#Focus for Militarise the Industry
+	focus = {
+		id = Generic_militarise_the_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		relative_position_id = Generic_fight_for_our_own	
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_fight_for_our_own 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Prepare for the Counter Attack
+	focus = {
+		id = Generic_prepare_for_the_counter_attack
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 2
+		relative_position_id = Generic_fight_for_our_own
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_militarise_the_people 
+		}
+		prerequisite = { 
+			focus = Generic_militarise_the_industry 
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_civil_war = no
+		}
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = generic_fight_for_us_2
+				add_idea = generic_threats_abroad
+			}
+		hidden_effect = {
+			every_country = {
+				if = {
+				limit = { is_major = yes }
+						add_ai_strategy = {
+							type = antagonize
+							id = SPC
+							value = 150
+						}
+						add_ai_strategy = {
+							type = consider_weak
+							id = SPC
+							value = 150
+						}
+						add_ai_strategy = {
+							type = prepare_for_war
+							id = SPC
+							value = 100
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	#Focus for Spark Anarchism Abroad
+	focus = {
+		id = Generic_spark_anarchism_abroad
+		icon = GFX_goal_generic_trade
+		x = 2
+		y = 1
+		relative_position_id = Generic_prepare_for_the_counter_attack
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_prepare_for_the_counter_attack }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		available = {
+			any_neighbor_country = {
+				exists = yes
+				num_of_controlled_states > 1
+			NOT = {	
+					OR = {
+						is_major = yes
+						has_government = neutrality
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		random_neighbor_country = {
+				limit = {
+				is_major = no
+				NOT = {
+				has_government = neutrality
+					}
+				}
+				country_event= {
+				days = 1
+				random_days = 7
+				id = genericfocustree.21
+				}
+			}
+		}
+	}
+
+	#Focus for Anarchism Worldwide
+	focus = {
+		id = Generic_anarchism_worldwide
+		icon = GFX_goal_generic_major_war
+		x = -2
+		y = 1
+		relative_position_id = Generic_prepare_for_the_counter_attack
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_prepare_for_the_counter_attack }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generic_threats_abroad
+				add_idea = generic_threats_abroad_2
+			}		
+   		random_neighbor_country = {
+        limit = { 
+            not = {
+                is_guaranteed_by = ROOT 
+                is_in_faction_with = ROOT 
+                has_non_aggression_pact_with = ROOT 
+                is_subject_of = ROOT 
+                is_major = yes
+            }
+        }
+        ROOT = { 
+            declare_war_on = { 
+                target = PREV 
+                type = annex_everything 
+    			    }
+    			}
+			}
+		}
+	}
+
+	#Focus for Communal Autarky
+	focus = {
+		id = Generic_communal_autarky
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		relative_position_id = Generic_prepare_for_the_counter_attack
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_collectivised_economy 
+			focus = Generic_economic_liberation 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = excavation_tech
+			}
+			random_owned_controlled_state = {
+			add_resource= { 
+			type = steel 
+			amount = 10
+				}
+			add_resource= { 
+			type = tungsten 
+			amount = 7
+				}
+			}
+			random_owned_controlled_state = {
+			add_resource= { 
+			type = aluminium 
+			amount = 8
+				}
+			}
+			if = {
+			limit = {
+				any_owned_state = {
+				is_on_continent = australia
+				}
+			}
+			random_owned_controlled_state = {
+			add_resource= { 
+			type = rubber 
+			amount = 9
+					}
+				}
+			}
+			if = {
+			limit = {
+				any_owned_state = {
+				OR = {
+					is_on_continent = africa
+					is_on_continent = south_america
+					}
+				}
+			}
+			random_owned_controlled_state = {
+			add_resource= { 
+			type = rubber 
+			amount = 3
+				}
+			add_resource= { 
+			type = tungsten
+			amount = 2
+				}
+			}
+		}
+			if = {
+			limit = {
+				any_owned_state = {
+				OR = {
+					is_on_continent = asia
+					is_on_continent = middle_east
+					}
+				}
+			}
+			random_owned_controlled_state = {
+			add_resource= { 
+			type = oil
+			amount = 5
+					}
+				}
+			}
+		}
+	}
+	#Focus for Greatness in Chaos
+	focus = {
+		id = Generic_greatness_in_chaos
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 1
+		relative_position_id = Generic_communal_autarky
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_communal_autarky 
+		}
+		prerequisite = { 
+			focus = Generic_spark_anarchism_abroad 
+		}
+		prerequisite = { 
+			focus = Generic_anarchism_worldwide 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			neutrality > 0.90
+			num_of_factories > 75
+		}
+		completion_reward = {
+			add_ideas = generic_great_chaos	
+		}
+	}
+
+	#Focus for Libertarian Anarchism
+	focus = {
+		id = Generic_libertarian_anarchism
+		icon = GFX_goal_generic_attack_allies
+		x = 3
+		y = 1
+		relative_position_id = Generic_abolish_the_state
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_abolish_the_state }
+		mutually_exclusive = { focus = Generic_social_anarchism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = neutrality
+		}
+		completion_reward = {
+		swap_ruler_traits = {remove = loose_anarchists
+			add = lib_anarchists}
+		set_cosmetic_tag = generic_anarchism_lib_neutrality
+		}
+	}
+
+	#Focus for Inculcate Individualist Zeal
+	focus = {
+		id = Generic_inculcate_individualist_zeal
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = Generic_libertarian_anarchism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_libertarian_anarchism }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc
+					add_idea = generic_anarchism_soc_l_1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_l_2
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_l_2
+					add_idea = generic_anarchism_soc_l_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_l_4
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_l_4
+					add_idea = generic_anarchism_soc_l_5
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc
+						add_idea = generic_anarchism_soc_l_1
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Free Militia
+	focus = {
+		id = Generic_free_militia
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 1
+		relative_position_id = Generic_libertarian_anarchism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_libertarian_anarchism }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+			limit = {has_idea = generic_anarchism_soc}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc
+				add_idea = generic_anarchism_soc_l_2
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_1}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_1
+				add_idea = generic_anarchism_soc_l_3
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_6}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_6
+				add_idea = generic_anarchism_soc_l_7
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc
+						add_idea = generic_anarchism_soc_l_2
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for To Each Their Own
+	focus = {
+		id = Generic_to_each_their_own
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 1
+		relative_position_id = Generic_inculcate_individualist_zeal
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_inculcate_individualist_zeal }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+			limit = {has_idea = generic_anarchism_soc_l_1}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_1
+				add_idea = generic_anarchism_soc_l_6
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_3}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_3
+				add_idea = generic_anarchism_soc_l_7
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_5}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_5
+				add_idea = generic_anarchism_soc_l_8
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_9}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_9
+				add_idea = generic_anarchism_soc_l_10
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_9}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_9
+				add_idea = generic_anarchism_soc_l_12
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_l_1
+						add_idea = generic_anarchism_soc_l_6
+					}
+				}
+			}
+		}
+	}		
+
+	#Focus for Independent Business
+	focus = {
+		id = Generic_independent_business
+		icon = GFX_goal_generic_consumer_goods
+		x = 1
+		y = 1
+		relative_position_id = Generic_inculcate_individualist_zeal
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_free_militia 
+		}
+		prerequisite = { 
+			focus = Generic_inculcate_individualist_zeal 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+			limit = {has_idea = generic_anarchism_soc_l_3}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_3
+				add_idea = generic_anarchism_soc_l_9
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_5}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_5
+				add_idea = generic_anarchism_soc_l_11
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_7}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_7
+				add_idea = generic_anarchism_soc_l_10
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_8}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_8
+				add_idea = generic_anarchism_soc_l_12
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_l_3
+						add_idea = generic_anarchism_soc_l_9
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for National Anarchism
+	focus = {
+		id = Generic_national_anarchism
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 1
+		relative_position_id = Generic_inculcate_individualist_zeal
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_free_militia }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+			limit = {has_idea = generic_anarchism_soc_l_2}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_2
+				add_idea = generic_anarchism_soc_l_4
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_3}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_3
+				add_idea = generic_anarchism_soc_l_5
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_7}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_7
+				add_idea = generic_anarchism_soc_l_8
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_9}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_9
+				add_idea = generic_anarchism_soc_l_11
+				}
+			}
+			else_if = {
+			limit = {has_idea = generic_anarchism_soc_l_10}
+			swap_ideas = {
+				remove_idea = generic_anarchism_soc_l_10
+				add_idea = generic_anarchism_soc_l_12
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_l_2
+						add_idea = generic_anarchism_soc_l_4
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Economic Liberation
+	focus = {
+		id = Generic_economic_liberation
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		relative_position_id = Generic_independent_business
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_to_each_their_own 
+		}
+		prerequisite = { 
+			focus = Generic_independent_business 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = generic_econ_lib
+			if = {
+				limit = {
+					NOT = { has_idea = closed_economy }
+				}
+				add_ideas = closed_economy
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = disarmed_nation
+						has_idea = volunteer_only
+					}
+				}
+				add_ideas = volunteer_only
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = civilian_economy
+					}
+				}
+				add_ideas = civilian_economy
+			}
+			if = {
+				limit = {
+					has_idea = generic_anarchism_soc_s_10
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_l_10
+					add_idea = generic_anarchism_soc_l_14
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = generic_anarchism_soc_l_12
+				}
+				swap_ideas = {
+					remove_idea = generic_anarchism_soc_l_12
+					add_idea = generic_anarchism_soc_l_15
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = generic_anarchism_soc_l_10
+						add_idea = generic_anarchism_soc_l_14
+					}
+				}
+			}
+			hidden_effect = {
+			every_country = {
+				add_ai_strategy = {
+						type = contain
+						id = ROOT
+						value = 100
+					}
+				}
+			}			
+		}	
+	}
+
+#Focus for Allow Private Research Centres
+	focus = {
+		id = Generic_allow_private_research_centres
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		relative_position_id = Generic_economic_liberation
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_economic_liberation 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {original_research_slots < 3}
+				add_research_slot = 1
+			}
+			add_tech_bonus= {
+			bonus = 1 
+			uses = 2 
+			category = radar_tecH
+			category = artillery
+			}
+		}
+	}
+
+	#Focus for Improve Diplomat Corps
+	focus = {
+		id = Generic_improve_diplomat_corps
+		icon = GFX_goal_tripartite_pact
+		x = 107
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = Generic_declare_neutrality }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			NOT = {
+			has_completed_focus = Generic_extreme_liberty
+			}
+		}
+		completion_reward = {
+			add_ideas= generic_diplomat_corps
+			set_variable = {
+				var = how_diplo
+				value = 0
+			}
+		}
+	}
+
+	#Focus for Limited Intervention
+	focus = {
+		id = Generic_limited_intervention
+		icon = GFX_goal_generic_political_pressure
+		x = -10
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+			modifier = {
+			factor = 0
+			has_government = neutrality
+
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea 
+			}
+			add_ideas= generic_intervention
+			}
+		}
+
+	#Focus for Volunteer Corps
+	focus = {
+		id = Generic_volunteer_corps
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -2
+		y = 1
+		relative_position_id = Generic_limited_intervention
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_limited_intervention }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	#Focus for Foreign Expeditions
+	focus = {
+		id = Generic_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		relative_position_id = Generic_volunteer_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_volunteer_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	#Focus for Interventionism
+	focus = {
+		id = Generic_interventionism
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0
+		y = 1
+		relative_position_id = Generic_foreign_expeditions
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_foreign_expeditions }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 7
+		}
+		completion_reward = {
+			swap_ideas= {
+			 remove_idea = generic_intervention 
+			add_idea = generic_intervention_2 
+				}
+		}
+	}
+
+	#Focus for Support the Spanish Nationalists
+	focus = {
+		id = Generic_support_the_spanish_nationalists
+		icon = GFX_focus_intervention_spain_nationalists
+		x = 3
+		y = 1
+		relative_position_id = Generic_limited_intervention
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = Generic_limited_intervention }
+		mutually_exclusive = { focus = Generic_support_the_spanish_republicans }
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				OR = {
+					has_manpower < 10000
+					if = {
+						limit = { has_government = democratic }
+						threat < 50
+					}
+				}
+			}
+		}
+		available = {
+			IF = {
+				NOT = {
+					OR = {
+					tag = SPR
+					tag = SPA
+					}
+				}
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+					has_government = democratic
+				}
+				SPR_scw_in_progress = yes
+				has_manpower > 5000
+				OR = {
+					any_state = {
+				        is_owned_by = ROOT
+				        is_on_continent = europe
+    			}
+    				any_state = {
+				        is_owned_by = ROOT
+				        is_on_continent = north_america
+    			}
+    			any_state = {
+			        is_owned_by = ROOT
+			        is_on_continent = south_america
+    				}
+    			}
+			}
+		}
+		completion_reward = {
+			add_manpower=  -5000
+			SPA = { 
+				country_event= {
+					hours = 16
+					random = 12
+					id = genericfocustree.2
+				}
+			}
+			SPA = {
+				add_opinion_modifier = {
+				target = ROOT
+				modifier = generic_supported_spain_civil_war	
+				}
+			}
+		}
+	}
+	#Focus for Support the Spanish Republicans
+	focus = {
+		id = Generic_support_the_spanish_republicans
+		icon = GFX_focus_intervention_spain_republic
+		x = 1
+		y = 1
+		relative_position_id = Generic_limited_intervention
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = Generic_limited_intervention }
+		mutually_exclusive = { focus = Generic_support_the_spanish_nationalists }
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				OR = {
+					has_manpower < 10000
+					IF = {
+						has_government = democratic
+						threat < 50
+					}
+				}
+			}
+		}
+		available = {
+			IF = {
+				NOT = {
+					OR = {
+					tag = SPR
+					tag = SPA
+					}
+				}
+				OR = {
+					has_government = neutrality
+					has_government = communism
+					has_government = democratic
+				}
+				SPR_scw_in_progress = yes
+				has_manpower > 5000
+				OR = {
+					any_state = {
+				        is_owned_by = ROOT
+				        is_on_continent = europe
+    			}
+    				any_state = {
+				        is_owned_by = ROOT
+				        is_on_continent = north_america
+    			}
+    			any_state = {
+			        is_owned_by = ROOT
+			        is_on_continent = south_america
+    				}
+    			}
+			}
+		}
+		completion_reward = {
+			add_manpower=  -5000
+			SPD = { 
+				country_event= {
+					hours = 16
+					random = 12
+					id = genericfocustree.2
+				}
+			}
+			SPD = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = generic_supported_spain_civil_war
+				}	
+			}
+		}
+	}
+
+	#Focus for Send Diplomats to Berlin
+	focus = {
+		id = Generic_send_diplomats_to_berlin
+		icon = GFX_focus_chi_mission_to_germany
+		x = 4
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+		or = {	
+		threat < 50
+		has_government = neutrality }
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+			OR = {
+				if  = {
+					GER = { has_government = communism }
+					has_government = communism
+				}
+				if = { 
+					GER = {has_government = democratic }
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				if = { 
+					GER = {has_government = fascism }
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if  = {
+					GER = { has_government = neutrality }
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = diplomats_from_germany
+			add_opinion_modifier= { 
+				target = GER
+				modifier = diplomats 
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = diplomats
+				}
+			}	
+			add_to_variable = {
+			    var = how_diplo
+			    value = 1
+			}
+		}
+	}
+	#Focus for Send Diplomats to Tokyo
+	focus = {
+		id = Generic_send_diplomats_to_tokyo
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		x = 6
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+		or = {	
+		threat < 50
+		has_government = neutrality }
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}
+			OR = {
+				if  = {
+					JAP = { has_government = communism }
+					has_government = communism
+				}
+				if = { 
+					JAP = {has_government = democratic }
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				if = { 
+					JAP = {has_government = fascism }
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if  = {
+					JAP = { has_government = neutrality }
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = diplomats_from_japan
+			add_opinion_modifier= { 
+				target = JAP
+				modifier = diplomats 
+			}
+			JAP = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = diplomats
+				}
+			}	
+			add_to_variable = {
+			    var = how_diplo
+			    value = 1
+			}
+		}
+	}
+
+
+	#Focus for Send Diplomats to London
+	focus = {
+		id = Generic_send_diplomats_to_london
+		icon = GFX_focus_chi_british_cooperation
+		x = 0
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+		or = {	
+		threat < 50
+		has_government = neutrality }
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = ENG
+			}
+			OR = {
+				if  = {
+					ENG = { has_government = communism }
+					has_government = communism
+				}
+				if = { 
+					ENG = {has_government = democratic }
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				if = { 
+					ENG = {has_government = fascism }
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if  = {
+					ENG = { has_government = neutrality }
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = diplomats_from_britain
+			add_opinion_modifier= { 
+				target = ENG
+				modifier = diplomats 
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = diplomats
+				}
+			}
+			add_to_variable = {
+			    var = how_diplo
+			    value = 1
+			}
+		}
+	}
+
+	#Focus for Send Diplomats to Washington
+	focus = {
+		id = Generic_send_diplomats_to_washington
+		icon = GFX_focus_chi_mission_to_the_us
+		x = -2
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+		or = {	
+		threat < 50
+		has_government = neutrality }
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = USA
+			}
+			OR = {
+				if  = {
+					USA = { has_government = communism }
+					has_government = communism
+				}
+				if = { 
+					USA = {has_government = democratic }
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				if = { 
+					USA = {has_government = fascism }
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if  = {
+					USA = { has_government = neutrality }
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = diplomats_from_usa
+			add_opinion_modifier= { 
+				target = USA
+				modifier = diplomats 
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = diplomats
+				}
+			}	
+			add_to_variable = {
+			    var = how_diplo
+			    value = 1
+			}
+		}
+	}
+
+	#Focus for Send Diplomats to Paris
+	focus = {
+		id = Generic_send_diplomats_to_paris
+		icon = GFX_focus_chi_reach_out_to_france
+		x = -4
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+		or = {	
+		threat < 50
+		has_government = neutrality }
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = FRA
+			}
+			OR = {
+				if  = {
+					FRA = { has_government = communism }
+					has_government = communism
+				}
+				if = { 
+					FRA = {has_government = democratic }
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				if = { 
+					FRA = {has_government = fascism }
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if  = {
+					FRA = { has_government = neutrality }
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = diplomats_from_france
+			add_opinion_modifier= { 
+				target = FRA
+				modifier = diplomats 
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = diplomats
+				}
+			}
+			add_to_variable = {
+			    var = how_diplo
+			    value = 1
+			}
+		}
+	}
+
+	#Focus for Send Diplomats to Moscow
+	focus = {
+		id = Generic_send_diplomats_to_moscow
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		x = -6
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+		or = {	
+		threat < 50
+		has_government = neutrality }
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = SOV
+			}
+			OR = {
+				if  = {
+					SOV = { has_government = communism }
+					has_government = communism
+				}
+				if = { 
+					SOV = {has_government = democratic }
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				if = { 
+					SOV = {has_government = fascism }
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if  = {
+					SOV = { has_government = neutrality }
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = diplomats_from_russia
+			add_opinion_modifier= { 
+				target = SOV
+				modifier = diplomats 
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = diplomats
+				}
+			}	
+			add_to_variable = {
+			    var = how_diplo
+			    value = 1
+			}
+		}
+	}
+
+	#Focus for Send Diplomats to Rome
+	focus = {
+		id = Generic_send_diplomats_to_rome
+		icon = GFX_focus_befriend_italy
+		x = 2
+		y = 1
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 0
+		or = {	
+		threat < 50
+		has_government = neutrality }
+			}
+		}
+		available = {
+			NOT = {
+				has_war_with = ITA
+			}
+			OR = {
+				if  = {
+					ITA = { has_government = communism }
+					has_government = communism
+				}
+				if = { 
+					ITA = {has_government = democratic }
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+				if = { 
+					ITA = {has_government = fascism }
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				if  = {
+					ITA = { has_government = neutrality }
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = diplomats_from_italy
+			add_opinion_modifier= { 
+				target = ITA
+				modifier = diplomats 
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = diplomats
+				}
+			}	
+			add_to_variable = {
+			    var = how_diplo
+			    value = 1
+			}
+		}
+	}
+
+	#Focus for Licensing Focus
+	focus = {
+		id = Generic_licensing
+		icon = GFX_focus_generic_license_production
+		x = -3
+		y = 1
+		relative_position_id = Generic_send_diplomats_to_london
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_send_diplomats_to_berlin 
+			focus = Generic_send_diplomats_to_tokyo 
+			focus = Generic_send_diplomats_to_london 
+			focus = Generic_send_diplomats_to_washington 
+			focus = Generic_send_diplomats_to_paris 
+			focus = Generic_send_diplomats_to_moscow 
+			focus = Generic_send_diplomats_to_rome 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_country_flag = diplomats_from_russia
+							has_country_flag = diplomats_from_france
+							has_country_flag = diplomats_from_usa
+							has_country_flag = diplomats_from_britain
+							has_country_flag = diplomats_from_germany
+							has_country_flag = diplomats_from_italy
+							has_country_flag = diplomats_from_japan
+						}
+					}
+				}
+				custom_effect_tooltip = foreign_license_tt
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_russia
+				}
+				add_relation_modifier = {
+					target = SOV
+					modifier = GEN_diplomatic_license
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_france
+				}
+				add_relation_modifier = {
+					target = FRA
+					modifier = GEN_diplomatic_license
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_usa
+				}
+				add_relation_modifier = {
+					target = USA
+					modifier = GEN_diplomatic_license
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_britain
+				}
+				add_relation_modifier = {
+					target = ENG
+					modifier = GEN_diplomatic_license
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_italy
+				}
+				add_relation_modifier = {
+					target = ITA
+					modifier = GEN_diplomatic_license
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_germany
+				}
+				add_relation_modifier = {
+					target = GER
+					modifier = GEN_diplomatic_license
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_japan
+				}
+				add_relation_modifier = {
+					target = JAP
+					modifier = GEN_diplomatic_license
+				}
+			}
+		}
+	}
+
+	#Focus for Invite Foreign Investments
+	focus = {
+		id = Generic_invite_foreign_investments
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -1
+		y = 1
+		relative_position_id = Generic_send_diplomats_to_london
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_send_diplomats_to_berlin 
+			focus = Generic_send_diplomats_to_tokyo 
+			focus = Generic_send_diplomats_to_london 
+			focus = Generic_send_diplomats_to_washington 
+			focus = Generic_send_diplomats_to_paris 
+			focus = Generic_send_diplomats_to_moscow 
+			focus = Generic_send_diplomats_to_rome 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			if = {
+				limit = {check_variable = { var = how_diplo value = 0 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 1 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 2 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment_2
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 3 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment_3
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 4 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment_4
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 5 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment_5
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 6 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment_6
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 7 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_investment_7
+					days = 365 
+				}
+			}
+			custom_effect_tooltip = foreign_investor_tt
+		}
+	}
+
+	#Focus for Invite Foreign Scientists
+	focus = {
+		id = Generic_invite_foreign_scientists
+		icon = GFX_focus_research2
+		x = 1
+		y = 1
+		relative_position_id = Generic_send_diplomats_to_london
+
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_send_diplomats_to_berlin 
+			focus = Generic_send_diplomats_to_tokyo 
+			focus = Generic_send_diplomats_to_london 
+			focus = Generic_send_diplomats_to_washington 
+			focus = Generic_send_diplomats_to_paris 
+			focus = Generic_send_diplomats_to_moscow 
+			focus = Generic_send_diplomats_to_rome 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			if = {
+				limit = {check_variable = { var = how_diplo value = 0 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 1 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 2 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists_2
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 3 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists_3
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 4 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists_4
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 5 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists_5
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 6 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists_6
+					days = 365 
+				}
+			}
+			else_if = {
+				limit = {check_variable = { var = how_diplo value = 7 compare = equals} }
+				add_timed_idea = {
+					idea = generic_foreign_scientists_7
+					days = 365 
+				}
+			}
+			custom_effect_tooltip = foreign_science_tt
+		}
+	}
+
+	#Focus for Pick a Side
+	focus = {
+		id = Generic_pick_a_side
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 2
+		relative_position_id = Generic_send_diplomats_to_london
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_send_diplomats_to_london 
+			focus = Generic_send_diplomats_to_washington 
+			focus = Generic_send_diplomats_to_paris 
+			focus = Generic_send_diplomats_to_moscow 
+			focus = Generic_send_diplomats_to_rome 
+			focus = Generic_send_diplomats_to_berlin 
+			focus = Generic_send_diplomats_to_tokyo 
+			focus = Generic_abandon_neutrality 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					OR = {	
+						threat < 95
+						has_war = no 
+					}
+				}
+			}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_russia
+				}
+				hidden_effect = {
+					SOV = {
+						add_ai_strategy = {
+						    type = alliance
+						    id = ROOT
+						    value = 10
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_france
+				}
+				hidden_effect = {
+					FRA = {
+						add_ai_strategy = {
+						    type = alliance
+						    id = ROOT
+						    value = 10
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_usa
+				}
+				hidden_effect = {
+					USA = {
+						add_ai_strategy = {
+						    type = alliance
+						    id = ROOT
+						    value = 10
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_britain
+				}
+				hidden_effect = {
+					ENG = {
+						add_ai_strategy = {
+						    type = alliance
+						    id = ROOT
+						    value = 10
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_italy
+				}
+				hidden_effect = {
+					ITA = {
+						add_ai_strategy = {
+						    type = alliance
+						    id = ROOT
+						    value = 10
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_germany
+				}
+				hidden_effect = {
+					GER = {
+						add_ai_strategy = {
+						    type = alliance
+						    id = ROOT
+						    value = 10
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = diplomats_from_japan
+				}
+				hidden_effect = {
+					JAP = {
+						add_ai_strategy = {
+						    type = alliance
+						    id = ROOT
+						    value = 10
+						}
+					}
+				}
+			}
+			add_ideas = generic_pick_side
+		}
+	}
+
+	#Focus for Technology Sharing
+	focus = {
+		id = Generic_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 1
+		relative_position_id = Generic_pick_a_side
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_pick_a_side }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		is_in_faction = yes
+		}
+		completion_reward = {
+			add_to_tech_sharing_group= continuous_tech_share
+			if = {
+				limit = {
+					original_research_slots < 3
+				}
+				add_research_slot = 1
+			}
+		}
+	}
+
+	#Focus for Declare Neutrality
+	focus = {
+		id = Generic_declare_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		x = 10
+		y = 0
+		relative_position_id = Generic_improve_diplomat_corps
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = Generic_improve_diplomat_corps }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_completed_focus = Generic_maintain_the_regime
+				}
+		}
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = democratic
+			}
+			NOT = {
+				has_completed_focus = Generic_extreme_liberty
+			}
+		}
+		completion_reward = {
+			add_war_support= -0.10
+			add_stability= 0.10
+			add_political_power= 150
+			add_ideas= neutrality_idea
+		}
+	}
+
+	#Focus for Abandon Neutrality
+	focus = {
+		id = Generic_abandon_neutrality
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 2
+		relative_position_id = Generic_declare_neutrality
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_declare_neutrality }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 1
+				threat > 90
+				is_historical_focus_on = no
+			}
+		}				
+		available = {
+			threat > 0.15
+			has_idea = neutrality_idea
+		}
+		completion_reward = {
+			add_stability= -0.2
+				remove_ideas = neutrality_idea
+		}
+	}
+
+	#Focus for Deterrence
+	focus = {
+		id = Generic_deterrence
+		icon = GFX_goal_generic_defence
+		x = -2
+		y = 1
+		relative_position_id = Generic_declare_neutrality
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_declare_neutrality }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	#Focus for Plan for the Worst
+	focus = {
+		id = Generic_plan_for_the_worst
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = Generic_declare_neutrality
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_declare_neutrality }
+		ai_will_do = {
+			factor = 3
+		}
+		bypass = {
+			has_war = yes
+		}
+		available = {
+			threat > 0.10
+		}
+		completion_reward = {
+			add_ideas= generic_prepare_for_war
+		}
+	}
+
+	#Focus for Desperate Defense
+	focus = {
+		id = Generic_desperate_defense
+		icon = GFX_goal_generic_military_sphere
+		x = -1
+		y = 1
+		relative_position_id = Generic_plan_for_the_worst
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_plan_for_the_worst }
+		mutually_exclusive = { focus = Generic_relentless_reconquest }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_defensive_war= yes
+		}
+		completion_reward = {
+			add_ideas= generic_desperate_def
+		}
+	}
+
+	#Focus for Relentless Reconquest
+	focus = {
+		id = Generic_relentless_reconquest
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 2
+		relative_position_id = Generic_declare_neutrality
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_plan_for_the_worst }
+		mutually_exclusive = { focus = Generic_desperate_defense }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_defensive_war= yes
+			ROOT = {
+				surrender_progress > 0.15
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_reconquest
+		}
+	}
+
+	#Focus for Unrestricted Trade
+	focus = {
+		id = Generic_unrestricted_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 4
+		y = 1
+		relative_position_id = Generic_declare_neutrality
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_declare_neutrality }
+		mutually_exclusive = { focus = Generic_protectionist_economics }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			factor = 3
+			if = {
+			has_government = democratic
+				}
+			}
+		}
+		available = {
+			or{
+			has_government = communism
+			has_government= democratic
+			has_government = neutrality
+				}
+			}
+		completion_reward = {
+			add_ideas= free_trade
+		}
+	}
+
+	#Focus for Protectionist Economics
+	focus = {
+		id = Generic_protectionist_economics
+		icon = GFX_goal_generic_trade
+		x = 2
+		y = 1
+		relative_position_id = Generic_declare_neutrality
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Generic_declare_neutrality }
+		mutually_exclusive = { focus = Generic_unrestricted_trade }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+			factor = 0.1
+			if = {
+			has_government = democratic
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas= generic_tariffs
+			if = {
+			limit = { 
+				OR = {
+					has_idea = free_trade
+					has_idea = export_focus
+					}
+				}
+				add_ideas = limited_exports
+			}
+
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_opinion_modifier {
+					target = ROOT
+					modifier = tariffs
+				}
+			}
+		}
+	}	
+
+	#Focus for Profit from War
+	focus = {
+		id = Generic_profit_from_war
+		icon = GFX_focus_mex_privatisation
+		x = 3
+		y = 2
+		relative_position_id = Generic_declare_neutrality
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Generic_protectionist_economics 
+			focus = Generic_unrestricted_trade 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 20
+			modifier = {
+			factor = 0.1
+			if = {
+				has_government = democratic
+				}
+			}
+		}
+		available = {
+			any_country = {
+				limit = { 
+					has_war = yes 
+				} 
+				exists = yes
+			}
+			has_war = no
+		}
+		completion_reward = {
+			add_ideas= generic_war_profit
+			unlock_decision_category_tooltip = war_profiteering_efforts
+		}
+	}
+
+#End of focuses 
+ }

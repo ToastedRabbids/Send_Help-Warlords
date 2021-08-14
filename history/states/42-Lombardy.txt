@@ -1,0 +1,43 @@
+
+state={
+	id=42
+	name="STATE_42"
+
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 8
+			arms_factory = 7
+			industrial_complex = 3
+			air_base = 10
+
+		}
+		victory_points = {
+			14913 30 
+		}
+		victory_points = {
+			15277 5 
+		}
+		victory_points = {
+			20149 5 
+		}
+		victory_points = {
+			15333 10 
+		}
+		victory_points = {
+			20163 15 
+		}
+		victory_points = {
+			20068 10 
+		}
+
+	}
+
+	provinces={
+		2732 2922 3006 3505 3948 5174 5400 5545 5857 6167 6602 8484 9187 10230 14913 15212 15224 15234 15237 15254 15277 15283 15297 15310 15316 15333 15380 15395 15433 15456 20068 20069 20147 20149 20151 20154 20155 20156 20157 20158 20162 20163 20164 20169 20170 20171 20172 20173 20174 20175 20179 20180 20182 20183 20185 20187 20188 20354 20357 
+	}
+	manpower=5736342
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

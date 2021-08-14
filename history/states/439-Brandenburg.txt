@@ -1,0 +1,29 @@
+
+state={
+	id=439
+	name="STATE_439"
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = BRN
+		add_core_of = DDR
+		buildings = {
+			infrastructure = 8
+			anti_air_building = 2
+			air_base = 6
+
+		}
+		victory_points = {
+			3832 10 
+		}
+
+	}
+
+	provinces={
+		42 700 926 1447 2019 2103 2834 3069 3666 3832 3976 4441 4541 5027 5517 5978 6922 8406 9296 9334 9469 10423 10871 10970 11081 11486 11491 13685 13706 13746 13751 13780 13796 13816 13837 13860 13868 13903 13905 13945 13991 13996 14000 14028 
+	}
+	manpower=1473267
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

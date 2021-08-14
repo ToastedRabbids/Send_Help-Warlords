@@ -1,0 +1,27 @@
+
+state={
+	id=498
+	name="STATE_498"
+
+	history={
+		owner = CZE
+		add_core_of = CZE
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			anti_air_building = 5
+
+		}
+		victory_points = {
+			8226 5 
+		}
+
+	}
+
+	provinces={
+		3429 8226 8408 14425 14454 14500 14529 14564 
+	}
+	manpower=763742
+	buildings_max_level_factor=1.000
+	state_category=town
+}

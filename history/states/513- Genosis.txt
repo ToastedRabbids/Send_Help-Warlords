@@ -1,0 +1,29 @@
+state={
+	id=513
+	name="Genosis"
+
+	history={
+		owner = ZUC
+		add_core_of = ZUC
+		buildings = {
+			infrastructure = 8
+			arms_factory = 6
+			industrial_complex = 3
+
+		}
+		victory_points = {
+			4408 40 
+		}
+
+	}
+	provinces={
+		4408 5242 6018 6114 7084 7660 10251 10853 13669 13753 13792 
+	}
+	manpower=5789003
+	buildings_max_level_factor=1.000
+	state_category = megalopolis
+		resources={
+		steel = 50
+		oil = 50
+		
+}

@@ -1,0 +1,63 @@
+
+state={
+	id=96
+	name="STATE_96"
+	resources={
+		steel=21.000
+		chromium=5.000
+		tungsten=5.000
+	}
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = THU
+		add_core_of = DDR
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			6558 3 
+		}
+		victory_points = {
+			6982 5 
+		}
+		victory_points = {
+			14118 3 
+		}
+		victory_points = {
+			14065 1 
+		}
+		victory_points = {
+			14077 20 
+		}
+		victory_points = {
+			5953 7 
+		}
+		victory_points = {
+			10595 3 
+		}
+		victory_points = {
+			11170 3 
+		}
+		victory_points = {
+			8822 10 
+		}
+		victory_points = {
+			14228 3 
+		}
+		victory_points = {
+			14264 1 
+		}
+
+	}
+
+	provinces={
+		2702 2882 3071 3087 4672 4742 5009 5953 6558 6560 6982 7978 8822 10595 11170 14065 14118 14183 14194 14197 14213 14228 14241 14251 14264 
+	}
+	manpower=3005214
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

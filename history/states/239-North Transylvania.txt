@@ -1,0 +1,33 @@
+
+state={
+	id=239
+	name="STATE_239"
+
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = TRA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			14757 1 
+		}
+		victory_points = {
+			14912 20 
+		}
+		victory_points = {
+			14943 10 
+		}
+
+	}
+
+	provinces={
+		1197 4454 5134 5651 6650 7734 8071 8540 10191 10808 10989 11022 11289 11474 14757 14773 14784 14818 14834 14853 14863 14869 14912 14943 20214 
+	}
+	manpower=700000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

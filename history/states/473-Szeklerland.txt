@@ -1,0 +1,26 @@
+state={
+	id=473
+	name="STATE_473"
+	
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = TRA
+		
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		victory_points = {
+			 14988 1 
+		}
+		
+	}
+		
+		provinces={
+		1542 2016 4207 4921 6134 6512 6987 10467 14870 14967 14988 15012 15036 15058 
+		}
+	manpower=650600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

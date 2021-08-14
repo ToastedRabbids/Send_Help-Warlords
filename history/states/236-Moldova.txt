@@ -1,0 +1,31 @@
+
+state={
+	id=236
+	name="STATE_236"
+	
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = MOL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			air_base = 2
+
+		}
+		victory_points = {
+			621 5 
+		}
+		victory_points = {
+			9181 5 
+		}
+
+	}
+
+	provinces={
+		104 251 529 621 2427 2581 2907 3247 3376 3656 3938 3998 4594 5916 6299 6330 6389 7015 7449 7946 8149 8832 8944 9091 9181 9208 10148 10227 10460 10464 11316 11478 11573 14518 14547 14605 14723 14740 14742 14754 14787 14849 14885 14888 14910 14917 14931 14939 14955 14977 14981 15039 
+	}
+	manpower=2525760
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

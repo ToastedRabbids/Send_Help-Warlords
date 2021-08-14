@@ -1,0 +1,25 @@
+state={
+	id=120
+	name="STATE_120"
+	provinces={
+		3975 8045 17237 17243 17245 17246 17247 
+	}
+	manpower=27400
+	buildings_max_level_factor=1.000
+	state_category = small_island
+	history=
+	{
+		owner = FIN
+		buildings = {
+			infrastructure = 5
+			3975 = {
+				naval_base = 1
+			}
+		}
+		
+		set_demilitarized_zone = yes
+		
+		add_core_of = FIN
+	}
+}
+

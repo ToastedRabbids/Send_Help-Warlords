@@ -1,0 +1,23 @@
+
+state={
+	id=460
+	name="STATE_460"
+
+	history={
+		owner = ENG
+		add_core_of = PAL
+		
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	provinces={
+		1878 2774 6580 7990 9585 10835 16734 16748 16778 20325 
+	}
+	manpower=253270
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

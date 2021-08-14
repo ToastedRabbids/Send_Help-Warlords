@@ -1,0 +1,32 @@
+
+state={
+	id=400
+	name="STATE_400"
+	provinces={
+		4959 6227 7390 7422 7444 7457 10066 10712 14659 14717 14782 14848 19461 
+	}
+	
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = BAD
+		add_core_of = WGR
+		set_demilitarized_zone = yes
+		buildings = {
+			infrastructure = 8
+		}
+		victory_points = {
+			7390 5 
+		}
+		victory_points = {
+			7444 1 
+		}
+		victory_points = {
+			14659 3 
+		}
+	}
+	
+	manpower=1017370
+	buildings_max_level_factor=1.000
+	state_category=city
+}

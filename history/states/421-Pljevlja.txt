@@ -1,0 +1,27 @@
+
+state={
+	id=421
+	name="STATE_421"
+
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = MNT
+		add_core_of = SDZ
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			1888 1 
+		}
+
+	}
+
+	provinces={
+		1704 1888 3339 7091 15719 20100 20102 20103 
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

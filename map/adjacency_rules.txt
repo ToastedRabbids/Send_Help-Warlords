@@ -1,0 +1,620 @@
+#Adjacency rules are special rules for adjacencies
+#If smbd who is at war fights over canal/strait it is considered closed
+#Enemy status is considered if any of sides controlling the chanel is at war with country
+#Friend status is considered non of sides controlling the chanel is at war with country and one of controllers is ally of giving military access
+#Every one else is considered as neutral according to canal/strait
+#Military access considered as being friend
+#Rules needs linking from the straits that are affected by the rule ( adjacency_rule_id )
+
+#Name is how you refer to the rule in adjecencies.csv
+
+#Turkish Straits
+adjacency_rule
+{
+	name = "BOSPHORUS_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 3195 19707 19708 19709 19710 19711 }
+	
+	icon = 3195
+	offset = { -2 0 -9 }
+}
+
+adjacency_rule
+{
+	name = "DARDANELLES_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 9750 15975 4926 7411 4819 }
+	
+	icon = 9750
+	offset = { -2 0 -9 }
+}
+
+adjacency_rule
+{
+	name = "DANISH_BELTS_STRAIT_1"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 13202 11039 8398 3186 8653 }
+	
+	icon = 13202
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "DANISH_BELTS_STRAIT_2"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 8158 2709 13301 9973 9246 }
+	
+	icon = 13301
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "DANISH_BELTS_STRAIT_3"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 13266 13242 7633 }
+	
+	icon = 13266
+	offset = { 0 0 0 }
+}
+
+
+#Gibraltar Strait
+adjacency_rule
+{
+	name = "GIBRALTAR_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 16633 }
+	
+	icon = 16633	
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "KIEL_CANAL"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 13469 13512 13479 9856 8620 2071 11411 13483 7266 }
+		
+	icon = 13469
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "PERSIAN_FAKE_CANAL"
+
+	contested =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	enemy =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { }
+	
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "BARENTS_FAKE_CANAL"
+
+	contested =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	enemy =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { }
+	
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "SUEZ_CANAL"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 5820 7891 16874 2595 20330 20009 16873 20318 16839 }
+
+	is_disabled = {
+		OR = {
+			has_global_flag = SUEZ_CANAL_BLOCKED
+			has_country_flag = SUEZ_CANAL_BLOCKED_FOR_COUNTRY
+		}
+		tooltip = disable_canal_tt
+	}
+		
+	icon = 5820
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "WHITE_SEA_BALTIC_CANAL_1"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 3974 12025 12040 12056 3813 6282 }
+
+	is_disabled = {
+		OR = {
+			# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_1_BUILT }
+			has_global_flag = WHITE_SEA_BALTIC_CANAL_1_BLOWN
+		}
+		# if = {
+			# limit = {
+				# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_1_BUILT }
+			# }
+			# tooltip = canal_not_built_tt
+		# }
+		tooltip = disable_canal_tt
+	}
+		
+	icon = 19276
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "WHITE_SEA_BALTIC_CANAL_2"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 468 12130 10949 6375 }
+
+	is_disabled = {
+		OR = {
+			# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_2_BUILT }
+			has_global_flag = WHITE_SEA_BALTIC_CANAL_2_BLOWN
+		}
+		# if = {
+			# limit = {
+				# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_2_BUILT }
+			# }
+			# tooltip = canal_not_built_tt
+		# }
+		tooltip = disable_canal_tt
+	}
+		
+	icon = 19294
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "WHITE_SEA_BALTIC_CANAL_3"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 12440 8580 12405 1221 224 12363 12379 12361 8209 10059 6555 }
+
+	is_disabled = {
+		OR = {
+			# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_3_BUILT }
+			has_global_flag = WHITE_SEA_BALTIC_CANAL_3_BLOWN
+		}
+		# if = {
+			# limit = {
+				# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_3_BUILT }
+			# }
+			# tooltip = canal_not_built_tt
+		# }
+		tooltip = disable_canal_tt
+	}
+		
+	icon = 19349
+	offset = { 0 0 0 }
+}
+
+adjacency_rule
+{
+	name = "WHITE_SEA_BALTIC_CANAL_4"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 12534 12506 10516 20063 493 }
+
+	is_disabled = {
+		OR = {
+			# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_4_BUILT }
+			has_global_flag = WHITE_SEA_BALTIC_CANAL_4_BLOWN
+		}
+		# if = {
+			# limit = {
+				# NOT = { has_global_flag = WHITE_SEA_BALTIC_CANAL_4_BUILT }
+			# }
+			# tooltip = canal_not_built_tt
+		# }
+		tooltip = disable_canal_tt
+	}
+		
+	icon = 10516
+	offset = { 0 0 0 }
+}

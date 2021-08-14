@@ -1,0 +1,22 @@
+
+state={
+	id=475
+	name="STATE_475"
+	provinces={
+		8165 8513 8856 15194 20245 20246 20249 20250 
+	}
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = TRA
+		add_core_of = BNT
+		
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+	}
+	manpower=188520
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

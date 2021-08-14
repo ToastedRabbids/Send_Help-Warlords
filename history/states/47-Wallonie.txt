@@ -1,0 +1,53 @@
+
+state={
+	id=47
+	name="STATE_47"
+
+	history={
+		owner = BEL
+		add_core_of = BEL
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			5470 5 
+		}
+		victory_points = {
+			14254 20 
+		}
+		victory_points = {
+			4012 1 
+		}
+		victory_points = {
+			19473 1 
+		}
+		victory_points = {
+			9873 2
+		}
+		victory_points = {
+			19474 1 
+		}
+		victory_points = {
+			14223 1 
+		}
+		victory_points = {
+			8299 15 
+		}
+		victory_points = {
+			8651 5 
+		}
+		victory_points = {
+			20070 5 
+		}
+	}
+
+	provinces={
+		4012 4066 5470 8299 8651 11305 14210 14222 14223 14254 14341 19473 20070 
+	}
+	manpower=2366910
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

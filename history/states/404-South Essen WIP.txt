@@ -1,0 +1,38 @@
+state={
+	id=404
+	name="STATE_404"
+	provinces={
+		2060 9994 11290 14303 14335 14347 14417 
+	}
+	
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = HES
+		add_core_of = WGR
+		set_demilitarized_zone = yes
+		buildings = {
+			infrastructure = 7
+		}
+		victory_points = {
+			11290 3 
+		}
+		victory_points = {
+			9994 5 
+		}
+		victory_points = {
+			14335 30 
+		}
+		victory_points = {
+			14303 1 
+		}
+		victory_points = {
+			14417 3 
+		}
+
+	}
+	
+	manpower=2278941‬
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

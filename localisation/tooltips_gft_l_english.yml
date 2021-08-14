@@ -1,0 +1,12 @@
+﻿l_english:
+ foreign_shipbuilders_tt: "§RIf at war, this idea will be lost!§!"
+ foreign_investor_tt: "§YThe more nations you have diplomats with, the greater the bonus to consumer goods.§!"
+ foreign_science_tt: "§YThe more nations you have diplomats with, the greater the bonus to research speed.§!"
+ foreign_license_tt: "Receive a license bonus with every country you have diplomats with."
+ sell_guns_to_aggressor:0 "Sell Infantry Equipment to [From.GetName]"
+ sell_meds_to_aggressor:0 "Sell Support Equipment to [From.GetName]"
+ sell_cars_to_aggressor:0 "Sell Motorised Equipment to [From.GetName]"
+ bought_stuff_recently:0 " Recently Purchased Items"
+
+ GEN_diplomatic_license:0 "Licensing Focus"
+ war_profiteering_efforts:0 "War Profiteering"

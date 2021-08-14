@@ -1,0 +1,27 @@
+
+state={
+	id=401
+	name="STATE_401"
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = SAX
+		add_core_of = DDR
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 1
+			anti_air_building = 2
+
+		}
+
+	}
+
+	provinces={
+		1085 3371 3952 4295 5129 6106 7248 7302 8797 9245 9377 10303 13909 13949 13962 14010 14030 14032 14044 14119 14151 
+	}
+	manpower=1542912
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

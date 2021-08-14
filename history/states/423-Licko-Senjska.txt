@@ -1,0 +1,23 @@
+state={
+	id=423
+	name="STATE_423"
+	provinces={
+		533 851 1995 2045 3050 3722 6477 6483 7829 8021 8254 10972 11633 15349 15372 15396 15426 15434 15500 15560 17325 20095 20097 20098 20099 
+	}
+	
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = CRO
+		
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			11633 = { naval_base = 2 }
+		}
+	}
+	
+	manpower=849760
+	buildings_max_level_factor=1.000
+	state_category=town
+}

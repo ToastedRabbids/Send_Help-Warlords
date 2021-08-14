@@ -1,0 +1,20 @@
+state={
+	id=470
+	name="STATE_470"
+	provinces={
+		8362 10081 15070 15081 
+	}
+	
+	history={
+		owner = AUS
+		add_core_of = AUS
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+	manpower=115057
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
