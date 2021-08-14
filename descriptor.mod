@@ -31,5 +31,5 @@ version="1.10.8"
 tags={
 	"Utilities"
 }
-name="Github Warlords"
+name="Official SendHelp Warlords"
 supported_version="1.10.8"
