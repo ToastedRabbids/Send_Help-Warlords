@@ -1,0 +1,24 @@
+
+state={
+	id=405
+	name="STATE_405"
+	provinces={
+		1451 7574 8733 14240 14277 
+	}
+	
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = WST
+		add_core_of = WGR
+		set_demilitarized_zone = yes
+		buildings = {
+			infrastructure = 7
+
+		}
+	}
+	
+	manpower=605547
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

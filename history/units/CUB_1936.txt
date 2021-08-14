@@ -1,0 +1,82 @@
+﻿division_template = {
+	name = "Legionaries"
+	division_names_group = 
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+	    artillery = { x = 2 y = 1 }
+		artillery = { x = 2 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "AT-ST"
+
+	division_names_group = 
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	##### Ejército de Cuba #####
+	division= {	# "1st Legionary Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 1257 # Krakow
+		division_template = "Legionaries"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "The Rex"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 1257 # Krakow
+		division_template = "AT-ST" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	##### No Notable Naval Forces #####
+}
+
+##### No Notable Air Forces #####
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "RED"
+		}
+		requested_factories = 2
+		progress = 0.54
+		efficiency = 100
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=407
+	name="STATE_407" #Udine
+
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		victory_points = {
+			15228 5 
+		}
+
+	}
+
+	provinces={
+		5540 6782 15159 15161 15198 15228 15266 15286 19476 19477 19491 20266 
+	}
+	manpower=496141
+	buildings_max_level_factor=1.000
+	state_category=city
+}

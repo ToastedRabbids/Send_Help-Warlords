@@ -1,0 +1,54 @@
+
+state={
+	id=25
+	name="STATE_25"
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			2280 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			1293 1 
+		}
+		victory_points = {
+			954 3 
+		}
+		victory_points = {
+			4041 3 
+		}
+		victory_points = {
+			13672 5 
+		}
+		victory_points = {
+			2280 5 
+		}
+		victory_points = {
+			11402 3 
+		}
+		victory_points = {
+			7477 1 
+		}
+		victory_points = {
+			10184 2 
+		}
+		victory_points = {
+			7133 1 
+		}
+
+	}
+
+	provinces={
+		954 1293 2280 4041 7133 7244 7477 8616 9685 10184 11402 13657 13668 13672 13704 13744 13772 17301 17302 17303 17304 
+	}
+	manpower=1264000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,43 @@
+#################
+#### FINLAND ####
+#################
+
+FIN_economics_tab = {
+	icon = generic_industry
+
+	picture = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = FIN
+	}
+}
+
+FIN_plunder_tab = {
+	icon = generic_industry
+
+	picture = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = FIN
+	}
+}
+
+FIN_military_tab = {
+	icon = GFX_decision_category_generic_arms_trade
+
+	picture = GFX_decision_category_ger_military_buildup
+
+	allowed = {
+		original_tag = FIN
+	}
+}
+
+FIN_special_politics_tab = {
+	icon = generic_political_actions
+
+	picture = GFX_decision_category_generic_propaganda
+
+	allowed = {
+		original_tag = FIN
+	}
+}

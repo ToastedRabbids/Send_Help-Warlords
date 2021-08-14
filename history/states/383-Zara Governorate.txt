@@ -1,0 +1,35 @@
+
+state={
+	id=383
+	name="STATE_383"
+
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = CRO
+		buildings = {
+			infrastructure = 5
+			dockyard = 1
+			industrial_complex = 2
+			4828 = {
+				naval_base = 4
+
+			}
+
+		}
+		victory_points = {
+			4410 1 
+		}
+		victory_points = {
+			4828 15 
+		}
+
+	}
+
+	provinces={
+		4410 4828 9955 11364 17328 17329 17330 17331 17334 17336 17337 20122 
+	}
+	manpower=307300
+	buildings_max_level_factor=1.000
+	state_category=town
+}

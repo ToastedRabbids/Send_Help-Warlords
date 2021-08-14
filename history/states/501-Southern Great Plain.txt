@@ -1,0 +1,29 @@
+
+state={
+	id=501
+	name="STATE_501"
+
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			11503 1 
+		}
+		victory_points = {
+			3070 1 
+		}
+
+	}
+
+	provinces={
+		3070 6961 10099 11503 14970 15005 15031 15073 20194 20196 20199 20202 20270 20272 20273 
+	}
+	manpower=615717
+	buildings_max_level_factor=1.000
+	state_category=town
+}

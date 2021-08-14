@@ -1,0 +1,54 @@
+
+state={
+	id=71
+	name="STATE_71"
+
+	history={
+		owner = AUS
+		add_core_of = AUS
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		victory_points = {
+			8259 20 
+		}
+		victory_points = {
+			15018 1 
+		}
+		victory_points = {
+			15008 1 
+		}
+		victory_points = {
+			2980 20 
+		}
+		victory_points = {
+			15060 1 
+		}
+		victory_points = {
+			15033 1 
+		}
+		victory_points = {
+			15105 3 
+		}
+		victory_points = {
+			15042 1 
+		}
+		victory_points = {
+			14958 1 
+		}
+		victory_points = {
+			8362 1 
+		}
+
+	}
+
+	provinces={
+		2980 3701 5673 6864 7005 7163 8096 10291 14958 14973 14996 15033 15042 15055 15060 
+	}
+	manpower=460230
+	buildings_max_level_factor=1.000
+	state_category=town
+}

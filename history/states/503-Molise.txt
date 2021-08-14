@@ -1,0 +1,27 @@
+state={
+	id=503
+	name="STATE_503"
+
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 6
+
+		}
+		victory_points = {
+			2237 5 
+		}
+		victory_points = {
+			2785 2 
+		}
+
+	}
+
+	provinces={
+		2204 2237 2589 2785 6610 16010 
+	}
+	manpower=388268
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

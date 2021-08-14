@@ -1,0 +1,29 @@
+state={
+	id=443
+	name="STATE_443"
+	provinces={
+		1990 2498 2758 3098 3951 5216 5996 9641 11408 14667 14673 14778 14789 20220 20224 20227 20228 20286 
+	}
+	
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 6
+		}
+		victory_points = {
+			5216 1 
+		}
+		victory_points = {
+			14789 1 
+		}
+		victory_points = {
+			3098 1 
+		}
+
+	}
+	
+	manpower=306801
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

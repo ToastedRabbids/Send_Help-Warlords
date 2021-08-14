@@ -1,0 +1,61 @@
+gameplay_information_decisions = {
+
+	gameplay_info_hide  = {
+		
+		fire_only_once = no
+		
+		complete_effect = {
+			set_global_flag = gameplay_info_hide 
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	ressource_info  = {
+		
+		fire_only_once = no
+		
+		complete_effect = {
+			country_event = {
+				id = info_event.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	us_info  = {
+		
+		fire_only_once = no
+		
+		complete_effect = {
+			country_event = {
+				id = info_event.2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	naval_info  = {
+		
+		fire_only_once = no
+		
+		complete_effect = {
+			country_event = {
+				id = info_event.3
+			}
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+}

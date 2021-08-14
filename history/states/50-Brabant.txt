@@ -1,0 +1,50 @@
+
+state={
+	id=50
+	name="STATE_50"
+	resources={
+		steel=54.000
+	}
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 4
+
+		}
+		victory_points = {
+			13935 1 
+		}
+		victory_points = {
+			13977 1 
+		}
+		victory_points = {
+			6113 3 
+		}
+		victory_points = {
+			14088 5 
+		}
+		victory_points = {
+			10756 3 
+		}
+		victory_points = {
+			11011 20 
+		}
+		victory_points = {
+			14042 2 
+		}
+		victory_points = {
+			255 1 
+		}
+
+	}
+
+	provinces={
+		255 272 6113 10756 11011 13935 13937 13977 14018 14042 14088 
+	}
+	manpower=1859200
+	buildings_max_level_factor=1.000
+	state_category=city
+}

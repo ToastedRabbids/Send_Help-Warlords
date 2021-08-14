@@ -1,0 +1,15 @@
+ideas = {
+
+	political_advisor = {
+
+		RED_Chiam_potok = {
+
+			picture = red_chiam_potok.dds
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { backroom_backstabber }
+		}
+

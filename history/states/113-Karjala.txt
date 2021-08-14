@@ -1,0 +1,50 @@
+state={
+	id=113
+	name="STATE_113"
+
+	history={
+		owner = FIN
+		add_core_of = FIN
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3 ## Added to give a boost to finnish economy
+			arms_factory = 1 ## Added simply to boost early finnish arms industry
+
+			#Mannerheim Line
+			12480 = {
+				bunker = 2
+				coastal_bunker = 1
+			}
+			12456 = {
+				bunker = 2
+			}
+			6206 = {
+				bunker = 2
+			}
+			10224 = {
+				bunker = 1
+			}
+			12468 = {
+				bunker = 1
+			}
+			10743 = {
+				bunker = 1
+			}
+			12419 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			12456 3 
+		}
+		
+
+	}
+
+	provinces={
+		968 1295 1529 1536 3477 3844 5666 5936 6121 6206 7650 7698 8756 8764 8875 9211 9484 9928 10157 10224 10718 10722 10743 10775 11086 11564 12217 12257 12303 12330 12349 12387 12419 12437 12456 12468 12480 17211 17213 17214 17218 19343 19372 19375 19377 19382 19384 
+	}
+	manpower=418635
+	buildings_max_level_factor=1.000
+	state_category=town
+}

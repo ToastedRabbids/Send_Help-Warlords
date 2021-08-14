@@ -1,0 +1,27 @@
+state={
+	id=395
+	name="STATE_395"
+	provinces={
+		2647 2742 4268 4563 5968 5993 10063 14833 14857 14897 14898 14957 19628 19630 19634 19639 19642 19687 19968 19974 19979 
+	}
+	
+	history={
+		owner = FRA
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 7
+
+		}
+		victory_points = {
+			5968 5 
+		}
+		victory_points = {
+			14833 1 
+		}
+
+	}
+	
+	manpower=682875
+	buildings_max_level_factor=1.000
+	state_category=city
+}

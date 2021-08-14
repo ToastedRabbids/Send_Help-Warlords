@@ -1,0 +1,26 @@
+
+state={
+	id=155
+	name="STATE_155"
+	
+
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = MAC
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		4330 5711 6811 10968 15917 15933 16004 
+	}
+	
+	manpower=75000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

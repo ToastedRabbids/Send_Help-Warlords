@@ -1,0 +1,19 @@
+state={
+	id=479
+	name="STATE_479"
+	provinces={
+		2701 15681 
+	}
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = KOS
+		buildings = {
+			infrastructure = 4
+		}
+	}
+	manpower=346600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

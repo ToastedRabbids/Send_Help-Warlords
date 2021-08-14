@@ -1,0 +1,21 @@
+state={
+	id=456
+	name="STATE_456"
+	provinces={
+		3145 4963 6181 8920 9898 11166 15080 15219 15259 
+	}
+	
+	history={
+		owner = SOV
+		add_core_of = SOV
+		add_core_of = AZR
+		add_core_of = GEO
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	
+	manpower=117258
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

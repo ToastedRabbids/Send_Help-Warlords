@@ -1,0 +1,19 @@
+state={
+	id=476
+	name="STATE_476"
+	provinces={
+		409 9180 9797 15221 20240 
+	}
+	history={
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = BNT
+		buildings = {
+			infrastructure = 5
+		}
+	}
+	manpower=234780
+	buildings_max_level_factor=1.000
+	state_category=town	
+}

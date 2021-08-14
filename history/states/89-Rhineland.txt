@@ -1,0 +1,54 @@
+
+state={
+	id=89
+	name="STATE_89"
+	resources={
+		steel=54.000
+	}
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = RHI
+		add_core_of = WGR
+		set_demilitarized_zone = yes
+		buildings = {
+			infrastructure = 8
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		
+		victory_points = {
+			8315 30 
+		}
+		victory_points = {
+			9652 20 
+		}
+		victory_points = {
+			14190 5 
+		}
+		victory_points = {
+			14180 3 
+		}
+		victory_points = {
+			1567 15 
+		}
+		victory_points = {
+			4789 10 
+		}
+		victory_points = {
+			4166 3 
+		}
+		victory_points = {
+			14056 1 
+		}
+
+	}
+
+	provinces={
+		701 1567 4166 4676 4789 8315 9652 14056 14084 14141 14180 14190 14276 
+	}
+	manpower=1843422
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

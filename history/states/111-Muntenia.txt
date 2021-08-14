@@ -1,0 +1,53 @@
+
+state={
+	id=111
+	name="STATE_111"
+	resources={
+		oil=70.000
+	}
+
+	history={
+		owner = ROM
+		add_core_of = ROM
+		add_core_of = WAL
+		buildings = {
+			infrastructure = 6
+			arms_factory = 4
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		victory_points = {
+			7674 5 
+		}
+		victory_points = {
+			11566 40 
+		}
+		victory_points = {
+			15330 1 
+		}
+		victory_points = {
+			9942 1 
+		}
+		victory_points = {
+			10630 5 
+		}
+		victory_points = {
+			11469 1 
+		}
+		victory_points = {
+			3856 1 
+		}
+		victory_points = {
+			8517 1 
+		}
+
+	}
+
+	provinces={
+		275 304 505 1006 1063 2110 2410 3008 3294 3502 3805 3856 3944 4620 4806 5064 5229 5590 5612 6513 7263 7391 7597 7668 7674 8030 8135 8137 8397 8517 8666 8699 8806 8940 9158 9176 9567 9693 9911 9942 10005 10028 10495 11025 11186 11201 11417 11443 11566 15170 15190 15197 15211 15226 15236 15264 15280 15281 15290 15299 15305 15312 15324 15329 15330 15368 15376 15438 15467 20306 20307 20308 20309 20310 20311 20312 20313 
+	}
+	manpower=3122980‬
+	buildings_max_level_factor=1.000
+	state_category=city
+}

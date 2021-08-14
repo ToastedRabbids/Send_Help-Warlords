@@ -1,0 +1,8 @@
+war_profiteering_efforts = {
+	icon = generic_economy
+
+	visible = {
+		has_completed_focus = Generic_profit_from_war
+	}
+}
+

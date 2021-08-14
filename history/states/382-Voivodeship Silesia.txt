@@ -1,0 +1,24 @@
+
+state={
+	id=382
+	name="STATE_382"
+	
+	manpower=1000000
+	resources={
+		steel=19 # was: 60
+		aluminium=7 # was: 20
+	}
+	state_category = city
+	history={
+		owner = SIC
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		add_core_of = SIC
+	}
+	
+	provinces={
+		1220 2066 14191 14299 
+	}
+}

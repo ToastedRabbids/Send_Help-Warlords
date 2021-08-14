@@ -1,0 +1,16 @@
+technology_sharing_group = {
+
+	id = FIN_ger_research
+	name = FIN_ger_research_name
+	desc = FIN_ger_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.2
+
+    available = {
+        FIN = {
+		has_completed_focus = FIN_axis_research
+	}
+    }
+
+}

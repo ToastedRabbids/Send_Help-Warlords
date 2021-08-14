@@ -1,0 +1,17 @@
+﻿l_english:
+    FIN_economics_tab:0 "§GFinnish Economical Decisions§!"
+    FIN_military_tab:0 "§GFinnish Defense Force Decisions§!"
+    FIN_special_politics_tab:0 "§YPolitical Decisions§!"
+    FIN_plunder_tab:0 "§RFinnish Plundering Economy§!"
+    FIN_purchase_guns:0 "Purchase Rifles"
+    FIN_purchase_artillery:0 "Purchase Cannons"
+    FIN_purchase_support:0 "Purchase Support Equipment"
+    FIN_fund_civilian_industry:0 "Build Civilian Factory"
+    FIN_fund_military_industry:0 "Build Arms Factory"
+    FIN_fascist_marches:0 "Fascist Rallies"
+    FIN_crush_commies:0 "Crush Opposition"
+    FIN_intimidation:0 "Intimidation Tactics"
+    FIN_mission_economy_plunder_1:0 "§YPlundered Assets Dwindling...§!"
+    fin_plunder_mission_tt:0 "§RPlunder§! any conquered nation."
+    
+  

@@ -1,0 +1,21 @@
+state={
+	id=469
+	name="STATE_469"
+	provinces={
+		8546 14725 14756 14772 
+	}
+	
+	history={
+		owner = AUS
+		add_core_of = AUS
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+	
+	manpower=226272
+	buildings_max_level_factor=1.000
+	state_category=town
+}

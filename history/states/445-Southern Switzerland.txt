@@ -1,0 +1,19 @@
+state={
+	id=445
+	name="STATE_445"
+	provinces={
+		492 1453 5536 6459 6826 7120 7204 8670 9212 9555 10314 10761 11045 15090 15146 15177 15195 15223 15246 20178 20189 
+	}
+	
+	history={
+		owner = SWI
+		add_core_of = SWI
+		buildings = {
+			infrastructure = 6
+		}
+	}
+	
+	manpower=331753
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

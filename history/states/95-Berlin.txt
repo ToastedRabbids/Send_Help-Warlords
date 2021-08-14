@@ -1,0 +1,36 @@
+
+state={
+	id=95
+	name="STATE_95"
+
+	history={
+		owner = GER
+		add_core_of = GER
+		add_core_of = BRN
+		add_core_of = WGR
+		buildings = {
+			infrastructure = 8
+			arms_factory = 3
+			industrial_complex = 1
+			anti_air_building = 2
+			air_base = 6
+
+		}
+		victory_points = {
+			19458 200 
+		}
+		victory_points = {
+			19456 10 
+		}
+		victory_points = {
+			19455 5 
+		}
+	}
+
+	provinces={
+		19455 19456 19458 19460 
+	}
+	manpower=2603253
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

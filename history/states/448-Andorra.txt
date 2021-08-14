@@ -1,0 +1,20 @@
+state={
+	id=448
+	name="STATE_448"
+	provinces={
+		10742 19714 19715 19716 19717 
+	}
+	
+	history={
+		owner = FRA
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 5
+		}
+
+	}
+	
+	manpower=550
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,21 @@
+state={
+	id=442
+	name="STATE_442"
+	provinces={
+		469 4329 6387 9095 15188 15231 20190 20192 20193 
+	}
+	
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 6
+		}
+		victory_points = { 15188 10 }
+
+	}
+	
+	manpower=239563
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

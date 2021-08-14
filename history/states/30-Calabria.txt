@@ -1,0 +1,26 @@
+
+state={
+	id=30
+	name="STATE_30"
+
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 5
+			fuel_silo = 1
+			dockyard = 1
+				10724 = { naval_base = 1 }
+		}
+		victory_points = { 19479 10 }
+		victory_points = { 10724 5 }
+		victory_points = { 10834 5 }
+	}
+
+	provinces={
+		195 1915 2307 3476 3731 5264 6009 6346 7171 7192 7606 9117 9780 9868 10724 10834 11199 16383 16404 16420 16438 16441 16445 16466 16517 17364 19478 19479 
+	}
+	manpower=1771651
+	buildings_max_level_factor=1.000
+	state_category=town
+}

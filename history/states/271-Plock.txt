@@ -1,0 +1,34 @@
+
+state={
+	id=271
+	name="STATE_271"
+
+	history={
+		add_core_of = POL
+		owner = POL
+		buildings = {
+			infrastructure = 6
+
+		}
+		victory_points = {
+			11083 5 
+		}
+		victory_points = {
+			13683 1 
+		}
+		victory_points = {
+			10768 1 
+		}
+		victory_points = {
+			13581 1 
+		}
+
+	}
+
+	provinces={
+		 3881 4060 4829 6205 7101 7793 8500 8582 8744 9076 9531 10145 10768 11083 11621 13544 13554 13582 13630 13642 13658 13673 13683 13699 13722 13723 13738 13739 
+	}
+	manpower=1412100
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

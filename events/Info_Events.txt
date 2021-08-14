@@ -1,0 +1,44 @@
+﻿###########################
+# Edo Events
+###########################
+
+add_namespace = info_event
+
+country_event = { ##ressource_info
+	id = info_event.1
+	title = info_event.1.t
+	desc = info_event.1.d
+	picture = GFX_edo_event_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = info_event.1.a
+	}
+}
+
+country_event = { ##us_info
+	id = info_event.2
+	title = info_event.2.t
+	desc = info_event.2.d
+	picture = GFX_edo_event_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = info_event.2.a
+	}
+}
+
+country_event = { ##sea_info
+	id = info_event.3
+	title = info_event.3.t
+	desc = info_event.3.d
+	picture = GFX_edo_event_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = info_event.3.a
+	}
+}

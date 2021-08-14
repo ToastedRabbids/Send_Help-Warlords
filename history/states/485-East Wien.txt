@@ -1,0 +1,31 @@
+state={
+	id=485
+	name="STATE_485"
+	provinces={
+		20049 20050 20051 
+	}
+	
+	history={
+		owner = AUS
+		add_core_of = AUS
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			20049 5 
+		}
+		victory_points = {
+			20050 5 
+		}
+		victory_points = {
+			20051 5 
+		}
+	}
+	
+	manpower=580480
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

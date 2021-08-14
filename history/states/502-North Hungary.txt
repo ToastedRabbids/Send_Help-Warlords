@@ -1,0 +1,24 @@
+state={
+	id=502
+	name="STATE_502"
+	provinces={
+		1172 1493 2212 2816 3167 3422 3788 4745 5248 5604 7032 8250 9834 10847 14634 14721 14786 14797 14894 14923 20209 20219 20222 20223 20225 20283 
+	}
+	
+	history={
+		owner = HUN
+		add_core_of = HUN
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			14894 1 
+		}
+	}
+	
+	manpower=715869
+	buildings_max_level_factor=1.000
+	state_category=town
+}

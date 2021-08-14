@@ -1,0 +1,24 @@
+state={
+	id=514
+	name="Dan Riverline"
+
+	history={
+		owner = RED
+		add_core_of = RED
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+}
+
+	}
+	provinces={
+		13788 20297 
+	}
+	manpower=5789003
+	buildings_max_level_factor=1.000
+	state_category = rural
+		resources={
+		
+}

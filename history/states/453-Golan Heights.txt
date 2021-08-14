@@ -1,0 +1,17 @@
+state={
+	id=453
+	name="STATE_453"
+	provinces={
+		7372 10482 
+	}
+	
+	history={
+		owner = FRA
+		add_core_of = SYR
+		
+    }
+	
+	manpower=5000
+	buildings_max_level_factor=1.000
+	state_category = wasteland
+}

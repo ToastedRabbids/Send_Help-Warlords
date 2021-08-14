@@ -1,0 +1,252 @@
+war_profiteering_efforts = {
+		
+	sell_guns_to_aggressor = {
+
+		icon = hol_attract_foreign_investors
+
+		available = {
+			has_equipment = { infantry_equipment > 2499 }
+			FROM = {
+				NOT = {
+					has_country_flag = bought_stuff_recently
+				}
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+
+		}
+
+		visible = {
+			NOT = {
+				has_war = yes
+			}
+			FROM = {
+				NOT = {
+					has_country_flag = bought_stuff_recently
+				}
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_in_faction_with = ROOT }
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		days_remove = 120
+		days_re_enable = 365
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			industrial_capacity_factory = 0.02
+			consumer_goods_factor = -0.05
+		}
+
+		complete_effect = {
+			
+			send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 2500
+				    target = FROM
+			}
+			hidden_effect = {
+				FROM = {
+					set_country_flag = { flag = bought_stuff_recently value = 1 days = 485 }
+				}
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = { NOT = { has_tag = FROM } }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = war_profitering
+				}
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = sold_us_equip
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	sell_meds_to_aggressor = {
+
+		icon = hol_attract_foreign_investors
+
+		available = {
+			has_equipment = { support_equipment > 1999 }
+			FROM = {
+				NOT = {
+					has_country_flag = bought_stuff_recently
+				}
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_war = yes
+			}
+			FROM = {
+				NOT = {
+					has_country_flag = bought_stuff_recently
+				}
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_in_faction_with = ROOT }
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		days_remove = 120
+		days_re_enable = 365
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			industrial_capacity_factory = 0.02
+			consumer_goods_factor = -0.05
+		}
+
+		complete_effect = {
+			send_equipment = {
+				    equipment = support_equipment
+				    amount = 2000
+				    target = FROM
+			}
+			hidden_effect = {
+				FROM = {
+					set_country_flag = { flag = bought_stuff_recently value = 1 days = 485 }
+				}
+			}
+		}
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	sell_cars_to_aggressor = {
+
+		icon = hol_attract_foreign_investors
+
+		available = {
+
+			has_equipment = { motorized_equipment > 1499 }
+			FROM = {
+				NOT = {
+					has_country_flag = bought_stuff_recently
+				}
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_war = yes
+			}
+			FROM = {
+				NOT = {
+					has_country_flag = bought_stuff_recently
+				}
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_in_faction_with = ROOT }
+				has_war = yes
+				OR = {
+					is_major = yes
+					num_of_factories > 29
+				}
+			}
+		}
+
+		days_remove = 120
+		days_re_enable = 365
+
+		fire_only_once = no
+
+		cost = 50
+
+		modifier = {
+			industrial_capacity_factory = 0.02
+			consumer_goods_factor = -0.05
+		}
+
+		complete_effect = {
+
+			send_equipment = {
+				    equipment = motorized_equipment
+				    amount = 1500
+				    target = FROM
+			}
+			hidden_effect = {
+				FROM = {
+					set_country_flag = { flag = bought_stuff_recently value = 1 days = 485 }
+				}
+			}
+		}
+		remove_effect = {
+
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+}
+

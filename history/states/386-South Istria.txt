@@ -1,0 +1,25 @@
+state={
+	id=386
+	name="STATE_386"
+	provinces={
+		8094 11212 15352 15384 17323 
+	}
+	
+	history={
+		owner = ITA
+		add_core_of = ITA
+		add_core_of = YUG
+		add_core_of = CRO
+		victory_points = { 11212 2 }
+		victory_points = { 15352 2 }
+		buildings = {
+			infrastructure = 2
+			11212 = { naval_base = 2 }
+			15352 = { naval_base = 1 }
+		}
+	}
+	
+	manpower=643147
+	buildings_max_level_factor=1.000
+	state_category=town
+}

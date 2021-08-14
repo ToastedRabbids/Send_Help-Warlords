@@ -1,0 +1,36 @@
+state={
+	id=394
+	name="STATE_394"
+	provinces={
+		1568 5055 7011 8885 10228 14239 14279 14317 14351 14413 
+	}
+	
+	history={
+		owner = BEL
+		add_core_of = BEL
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			14239 3
+		}
+		victory_points = {
+			7011 5 
+		}
+		victory_points = {
+			14351 1 
+		}
+		victory_points = {
+			14413 1 
+		}
+		victory_points = {
+			5055 2 
+		}
+	}
+	
+	manpower=1014390
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

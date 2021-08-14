@@ -1,0 +1,36 @@
+
+state={
+	id=61
+	name="STATE_61"
+	resources={
+		steel=48.000
+	}
+
+	history={
+		owner = FRA
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			air_base = 5
+
+		}
+		victory_points = {
+			14744 1 
+		}
+		victory_points = {
+			19699 1 
+		}
+		victory_points = {
+			6309 1 
+		}
+
+	}
+
+	provinces={
+		197 651 2062 5008 5146 6123 6309 7122 8516 10654 11366 15045 19627 19629 19640 19693 19694 19697 19698 19699 19950 19971 19993 
+	}
+	manpower=682875
+	buildings_max_level_factor=1.000
+	state_category=city
+}

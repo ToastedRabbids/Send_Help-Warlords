@@ -1,0 +1,53 @@
+
+state={
+	id=63
+	name="STATE_63"
+	resources={
+		aluminium=96.000
+	}
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			dockyard = 3
+			arms_factory = 1
+			fuel_silo = 1
+			air_base = 10
+
+		}
+		victory_points = {
+			20005 20 
+		}
+		victory_points = {
+			20001 1 
+		}
+		victory_points = {
+			20028 1 
+		}
+		victory_points = {
+			2790 1 
+		}
+		victory_points = {
+			1306 1 
+		}
+		victory_points = {
+			15762 1 
+		}
+		victory_points = {
+			19742 1 
+		}
+		victory_points = {
+			5603 1 
+		}
+
+	}
+
+	provinces={
+		325 957 1306 1668 2601 3811 4109 4382 4583 4786 5058 5252 7062 7799 8597 8958 10114 11173 11185 11601 15343 15351 15459 15485 15505 15545 15552 15564 15572 15587 15611 15614 15664 15677 15686 15718 15762 19827 19831 19838 19850 19853 19859 19862 19871 19991 19999 20000 20001 20002 20003 20004 20018 20020 20025 20029 20032 
+	}
+	manpower=2060400
+	buildings_max_level_factor=1.000
+	state_category=city
+}

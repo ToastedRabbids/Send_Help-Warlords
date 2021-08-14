@@ -1,0 +1,39 @@
+
+state={
+	id=126
+	name="STATE_126"
+	provinces={
+		493 4266 4653 10516 12459 12478 12506 12534 20059 20060 20061 20062 20063 
+	}
+	
+	resources={
+		aluminium=24
+	}
+	
+	history={
+		owner = SOV
+		add_core_of = SOV
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 3
+			air_base = 10
+			12534 = { naval_base = 10 }
+		}
+		victory_points = {
+			12534 30
+		}
+		victory_points = {
+			3471 3
+		}
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 7
+			}
+		}
+	}
+	manpower=3750158
+	buildings_max_level_factor=1.000
+	state_category = metropolis
+}

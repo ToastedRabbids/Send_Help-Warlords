@@ -1,0 +1,10 @@
+﻿l_english:
+ generic_anarchism_neutrality:0 "Anarchist Uprising"
+ generic_anarchism_neutrality_def:0 "the Anarchist Uprising"
+ generic_anarchism_neutrality_adj:1 "Anarchist"
+ generic_anarchism_soc_neutrality:0 "Anarchist Commune"
+ generic_anarchism_soc_neutrality_def:0 "the Anarchist Commune"
+ generic_anarchism_soc_neutrality_adj:1 "Anarchist"
+ generic_anarchism_lib_neutrality:0 "Anarchist Region"
+ generic_anarchism_lib_neutrality_def:0 "the Anarchist Region"
+ generic_anarchism_lib_neutrality_adj:1 "Anarchist"

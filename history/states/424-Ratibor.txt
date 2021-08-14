@@ -1,0 +1,28 @@
+state={
+	id=424
+	name="STATE_424"
+	resources={
+		steel=30.000
+		aluminium=10.000
+	}
+	provinces={
+		2419 4607 6638 7632 14196 14233 14265 14275 
+	}
+	
+	history={
+		add_core_of = SIC
+		add_core_of = SIL
+		owner = SIC
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 6
+
+		}
+
+	}
+	
+	manpower=5561036
+	buildings_max_level_factor=1.000
+	state_category= large_city
+}

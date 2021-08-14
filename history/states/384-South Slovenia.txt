@@ -1,0 +1,27 @@
+state={
+	id=384
+	name="STATE_384"
+	provinces={
+		1975 9058 9637 9791 10458 15318 15319 19998 20296 
+	}
+	
+	manpower=457720
+	buildings_max_level_factor=1.000
+	state_category = rural
+	
+	history =
+	{
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = SLV
+		buildings = {
+			infrastructure = 6
+		}
+		victory_points = {
+		19998 25
+		}
+		victory_points = {
+		1975 1
+		}
+	}
+}

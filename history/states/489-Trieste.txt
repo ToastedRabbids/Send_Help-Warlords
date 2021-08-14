@@ -1,0 +1,24 @@
+state={
+	id=489
+	name="STATE_489"
+	provinces={
+		3579 11453 
+	}
+	
+	history={
+		owner = ITA
+		add_core_of = ITA
+		buildings = {
+			infrastructure = 6
+			3579 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			3579 10 
+		}
+	}
+	manpower=386618
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=19
+	name="STATE_19"
+
+	history={
+		owner = IRE
+		add_core_of = IRE
+		buildings = {
+			infrastructure = 6
+		}
+		victory_points = {
+			10715 5
+		}
+		victory_points = {
+			4965 1
+		}
+		victory_points = {
+			5853 1
+		}
+		victory_points = {
+			13292 1
+		}
+	}
+
+	provinces={
+		676 2058 2205 2295 2629 2835 2985 4552 4624 4965 5853 5971 6781 8022 9004 9262 9516 10357 10377 10715 11462 13172 13229 13261 13273 13292 13311 13363 13403 17290 17293 
+	}
+	manpower=667100
+	buildings_max_level_factor=1.000
+	state_category=town
+}

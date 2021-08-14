@@ -1,0 +1,36 @@
+
+state={
+	id=40
+	name="STATE_40"
+	resources={
+		chromium=3.000
+	}
+
+	history={
+		owner = ENG
+		add_core_of = CYP
+		
+		
+		
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			16588 1 
+		}
+		victory_points = {
+			7856 1 
+		}
+		victory_points = {
+			11459 1 
+		}
+
+	}
+
+	provinces={
+		348 4579 7856 11459 11494 16588 16591 16605 16613 
+	}
+	manpower=173979
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
