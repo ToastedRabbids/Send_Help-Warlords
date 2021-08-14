@@ -155,7 +155,7 @@ set_popularities = {
 set_stability = 0.75
 
 create_country_leader = {
-	name = "Ioannis Metaxas"
+	name = "Bloatlord"
 	desc = "POLITICS_IOANNIS_METAXAS_DESC"
 	picture = "Portrait_Greece_Ioannis_Metaxas.dds"
 	expire = "1965.1.1"
