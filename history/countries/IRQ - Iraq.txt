@@ -95,7 +95,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Rashid Ali al-Gaylani"
+	name = "Saddam Hussein"
 	desc = ""
 	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_fascism1.dds"
 	expire = "1965.1.1"
