@@ -1,0 +1,26 @@
+ideas = {
+
+	political_advisor = {
+
+		RED_Chiam_potok = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		RED_Asian_Potok = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { captain of industry }
+		}
+
