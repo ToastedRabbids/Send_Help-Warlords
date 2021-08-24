@@ -27,6 +27,7 @@ RED = "countries/Redacted Government.txt"
 BOX = "countries/Boxman Legion.txt"
 SIC = "countries/Sickle Reich.txt"
 ZUC = "countries/Zucc Union.txt"
+GRI = "countries/Grim States.txt"
 
 ###German Releasable
 

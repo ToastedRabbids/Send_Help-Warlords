@@ -138,6 +138,10 @@ RED = {
 	color = rgb { 255 0 0 }
 	color_ui = rgb { 255 0 0 }
 }
+GRI = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
 SLO = {
 	color = rgb { 158  161  188 }
 	color_ui = rgb { 158  161  188 }

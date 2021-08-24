@@ -6,23 +6,24 @@ state={
 	}
 	
 	history={
-		owner = POL
-		add_core_of = POL
+		owner = GRI
+		add_core_of = GRI
 		buildings = {
 			infrastructure = 6
-			dockyard = 1
-			arms_factory = 2
-			industrial_complex = 1
-			5030 = { naval_base = 5 }
+			dockyard = 3
+			arms_factory = 3
+			industrial_complex = 5
+			5030 = { naval_base = 10 }
 
 		}
 		victory_points = {
-			5030 20 
+			5030 40 
 		}
 
 	}
 	
 	state_category=city
-	manpower=594055
+	manpower= 5594055
 	buildings_max_level_factor=1.000
+	state_category= megalopolis
 }

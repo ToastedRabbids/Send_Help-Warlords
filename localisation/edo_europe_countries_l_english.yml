@@ -44,6 +44,16 @@
  ZUC:0 "Zucc"
  ZUC_DEF:0 "Zuccian"
  ZUC_ADJ:0 "Zuccian"
+
+ GRI_democratic:0 "Grim States"
+ GRI_democratic_DEF:0 "the Grim States"
+ GRI_democratic_ADJ:0 "Grimist"
+ GRI:0 "Grim"
+ GRI_DEF:0 "Grim"
+ GRI_ADJ:0 "Grimist
+ GRI_communism:0 "Grim Socialist Republic"
+ GRI_communism_DEF:0 "the Grim Socialist Republic"
+ GRI_communism_ADJ:0 "Grimist"
  ####Yugoslavia releasables###
  
  KOS_neutrality:0 "Kosovo"
