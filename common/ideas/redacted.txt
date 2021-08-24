@@ -1,5 +1,30 @@
 ideas = {
+	country = {
 
+		Warlord_Spirit = {
+		
+			name = Warlord_Spirit
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_get_ally_desire_factor  = -1000
+				ai_join_ally_desire_factor = -1000	
+				join_faction_tension = 1000
+				guarantee_tension = 1000
+				enemy_declare_war_tension = 1000
+			}
+		}
+		
+	}
 	political_advisor = {
 
 		RED_Chiam_potok = {
@@ -22,5 +47,16 @@ ideas = {
 			}
 			
 			traits = { captain_of_industry }
+		}
+
+		RED_Amphora = {
+
+			picture = idea_rudolf_hess
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { prince_of_terror }
 		}
 
