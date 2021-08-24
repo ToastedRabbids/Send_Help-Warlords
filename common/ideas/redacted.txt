@@ -21,6 +21,6 @@ ideas = {
 				original_tag = RED
 			}
 			
-			traits = { captain of industry }
+			traits = { captain_of_industry }
 		}
 
