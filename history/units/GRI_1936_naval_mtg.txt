@@ -1,0 +1,67 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Battle Force"			
+		naval_base = 5030 # Danzig
+		task_force = {				
+			name = "Battleships, Battle Force"		# CO: Snyder
+			location = 5030 # Danzig
+			### Battleship Division 1 ###			
+			ship = { name = "Grim Dark" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRI version_name = "Socialist Class" } } }
+			ship = { name = "Marxist Hull" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRI version_name = "Socialist Class" } } }
+			ship = { name = "Anime Tiddies" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRI version_name = "Socialist Class" } } }	
+			ship = { name = "Bernie Bois" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+		 	ship = { name = "Bernie Bois 1" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 2" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class 3" } } }	
+			ship = { name = "Bernie Bois 4" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 5" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 6" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 7" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 8" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 9" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 10" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Boy" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Gorl" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 11" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 12" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 13" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI 	version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 14" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 15" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class 2" } } }	
+			ship = { name = "Bernie Bois 16" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 17" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Bernie Bois 18" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = GRI version_name = "Bernie Class" } } }	
+			ship = { name = "Gboat Bois" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gboat Gorls" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gboat 27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gboat 28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gboat 29" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gathtubs" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gathtubs 27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gathtubs 28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gathtubs 29" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "Gathtubs but Cooler" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRI version_name = "Gboat" } } }
+			ship = { name = "USS Brooklyn" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "Noam Chomsky Crusier" } } }	
+			ship = { name = "USS Chomsky" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "Noam Chomsky Crusier" } } }	
+			ship = { name = "USS Miami" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "Noam Chomsky Crusier" } } }	
+			ship = { name = "USS Sanders" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "Noam Chomsky Crusier" } } }	
+			ship = { name = "Noam's Crusier" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "Noam Chomsky Crusier" } } }
+			ship = { name = "Zero 2 Crusier" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "Noam Chomsky Crusier" } } }
+			ship = { name = "Purple Crusier" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "Noam Chomsky Crusier" } } }
+			ship = { name = "USS New Orleans" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "DOKTOR" } } }
+			ship = { name = "USS New York" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "DOKTOR" } } }
+			ship = { name = "DOKTOR" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "DOKTOR" } } }
+			ship = { name = "MEDIC" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "DOKTOR" } } }
+			ship = { name = "Blue Crusier" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRI version_name = "DOKTOR" } } }
+			ship = { name = "BIG BOI" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = GRI version_name = "BIG BOI" } } }
+			 	ship= { name = "Grims Personal Carriers" pride_of_the_fleet = yes definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = GRI version_name = "Grims Personal Carriers" } } 
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "GRI" amount = 10 }			
+					cv_CAS_equipment_1 =  { owner = "GRI" amount = 25 }					
+					cv_nav_bomber_equipment_1 =  { owner = "GRI" amount = 10 }
+					}
+				}
+			}
+		}
+	}
+}

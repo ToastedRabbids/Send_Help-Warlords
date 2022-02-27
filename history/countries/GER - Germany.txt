@@ -105,8 +105,6 @@ set_convoys = 200
 set_stability = 0.75 
 set_war_support = 0.3
 
-create_faction = Axis
-add_to_faction = GER
 
 add_ideas = {
 	sour_loser
@@ -168,6 +166,18 @@ create_country_leader = {
 	traits = {
 		#stalins_puppet # This will now be added in on_actions if SOV releases the country as a puppet via action or war conference
 		exiled # He left in 1933 so he should still be exiled
+	}
+}
+
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "portrait_ger_wilhelm_ii.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { 
+		anti_democrat  imperial_connections
+
 	}
 }
 

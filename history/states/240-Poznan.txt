@@ -8,7 +8,7 @@ state={
 		add_core_of = ZUC
 		buildings = {
 			infrastructure = 6
-			industrial_complex = 5
+			industrial_complex = 4
 			arms_factory = 5
 			air_base = 10
 

@@ -1242,6 +1242,46 @@ ideas = {
 			
 			traits = { tank_manufacturer }
 		}
+
+		generic_fast_tank_manufacturer = {
+
+			picture = henschel 
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = fast_tank_manufacturer limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+		}
+
+		generic_medium_tank_manufacturer = {
+
+			picture = chrysler
+			
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = medium_tank_manufacturer limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+		}
 	}
 	
 	naval_manufacturer = { 
@@ -1266,6 +1306,46 @@ ideas = {
 			}
 			
 			traits = { naval_manufacturer }
+		}
+
+		generic_raiding_naval_manufacturer = {
+			
+			picture = blohm_und_voss
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = raiding_fleet_naval_manufacturer limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+
+		generic_atlantic_naval_manufacturer = {
+			
+			picture = cammell_laird
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = atlantic_fleet_naval_manufacturer limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
 		}
 	}
 
@@ -1351,6 +1431,26 @@ ideas = {
 			}
 			
 			traits = { naval_aircraft_manufacturer }
+		}
+
+		generic_CAS_manufacturer = {
+			
+			picture = douglas_aircraft_company
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = CAS_manufacturer limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
 		}
 	}
 
@@ -1460,6 +1560,26 @@ ideas = {
 			
 			traits = { artillery_manufacturer }
 		}
+
+		generic_support_manufacturer = {
+			
+			picture = generic_infantry_equipment_manufacturer_1
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = support_equipment_manufacturer limit = 1 }
+				}
+			}
+			
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { support_equipment_manufacturer }
+		}
 	}
 
 	political_advisor = {
@@ -1467,7 +1587,9 @@ ideas = {
 		generic_captain_of_industry = {
 
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = captain_of_industry limit = 1 }
+				}
 			}
 			
 			traits = { captain_of_industry }
@@ -1485,11 +1607,26 @@ ideas = {
 		generic_war_industrialist = {
 
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = war_industrialist limit = 1 }
+				}
 			}
 			
 			traits = { war_industrialist }
 		}
+
+		generic_silent_workhorse = {
+
+			picture = martin_bormann
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = silent_workhorse limit = 1 }
+				}
+			}
+			
+			traits = { silent_workhorse }
+		}	
 	}
 
 	army_chief = {
@@ -1497,19 +1634,23 @@ ideas = {
 		generic_army_chief_off = {
 			
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = army_chief_offensive_2 limit = 1 }
+				}
 			}
 			
-			traits = { army_chief_offensive_1 }
+			traits = { army_chief_offensive_2 }
 		}
 
 		generic_army_chief_def = {
 			
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = army_chief_defensive_2 limit = 1 }
+				}
 			}
 			
-			traits = { army_chief_defensive_1 }
+			traits = { army_chief_defensive_2 }
 		}
 	}
 
@@ -1518,8 +1659,10 @@ ideas = {
 		generic_navy_chief_decisive_bat = {
 			
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = navy_chief_decisive_battle_2 limit = 1 }
 			}
+		}
 			
 			traits = { navy_chief_decisive_battle_2 }
 		}
@@ -1527,10 +1670,12 @@ ideas = {
 		generic_navy_anti_submarine = {
 			
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = navy_chief_maneuver_2 limit = 1 }
 			}
+		}
 			
-			traits = { navy_anti_submarine_2 }
+			traits = { navy_chief_maneuver_2 }
 		}
 	}
 
@@ -1539,8 +1684,10 @@ ideas = {
 		generic_air_close_air_sup = {
 			
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = air_close_air_support_2 limit = 1 }
 			}
+		}
 			
 			traits = { air_close_air_support_2 }
 		}
@@ -1548,10 +1695,12 @@ ideas = {
 		generic_air_chief_all_weather = {
 			
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = air_chief_ground_support_2 limit = 1 }
 			}
+		}
 			
-			traits = { air_chief_all_weather_2 }			
+			traits = { air_chief_ground_support_2 }			
 		}
 	}
 
@@ -1561,17 +1710,21 @@ ideas = {
 			ledger = army
 			
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = army_infantry_2 limit = 1 }
+				}
 			}
 			
-			traits = { army_artillery_1 }			
+			traits = { army_infantry_2 }			
 		}
 		
 		generic_army_log = {
 			ledger = army
 
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = army_logistics_2 limit = 1 }
+				}
 			}
 			
 			traits = { army_logistics_2 }			
@@ -1581,20 +1734,52 @@ ideas = {
 			ledger = navy
 
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = navy_fleet_logistics_2 limit = 1 }
 			}
+		}
 			
-			traits = { navy_fleet_logistics_1 }			
+			traits = { navy_fleet_logistics_2 }			
+		}
+
+		generic_navy_fleet_sub = {
+			ledger = navy
+
+			picture = generic_navy_europe_3
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = navy_submarine_2 limit = 1 }
+			}
+		}
+			
+			traits = { navy_submarine_2 }			
 		}
 
 		generic_air_air_combat_trainer = {
 			ledger = air
 
 			allowed = {
-				always = yes
+				NOT = {
+					has_available_idea_with_traits = { idea = air_bomber_interception_2 limit = 1 }
 			}
+		}
 			
-			traits = { air_air_combat_training_2 }			
+			traits = { air_bomber_interception_2 }			
+		}
+
+		generic_air_air_superiority = {
+			ledger = air
+
+			picture = generic_air_europe_3
+
+			allowed = {
+				NOT = {
+					has_available_idea_with_traits = { idea = air_air_superiority_2 limit = 1 }
+			}
+		}
+			
+			traits = { air_air_superiority_2 }			
 		}
 	}
 
@@ -1640,6 +1825,22 @@ ideas = {
 			}
 			
 			traits = { air_warfare_theorist }
+		}
+
+		generic_nuclear_warfare_theorist = {
+			ledger = army
+
+			picture = douglas_macarthur
+
+			allowed = {
+				always = yes
+			}
+			
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
 		}
 	}
 

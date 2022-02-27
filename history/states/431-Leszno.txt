@@ -10,7 +10,7 @@ state={
 		add_core_of = ZUC
 		buildings = {
 			infrastructure = 6
-			industrial_complex = 6
+			industrial_complex = 2
 			arms_factory = 2
 			air_base = 3
 
@@ -22,7 +22,7 @@ state={
 	
 	manpower=6631950
 	buildings_max_level_factor=1.000
-	state_category= metropolis
+	state_category= town
 		resources={
 		tungsten = 50
 		aluminium = 50

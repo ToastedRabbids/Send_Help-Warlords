@@ -1,8 +1,11 @@
 state={
 	id=412
 	name="STATE_412"
-	provinces={
-		5030 9842 13434 
+	resources={
+		steel=80.000
+		aluminium=26.000
+		oil=20.000
+
 	}
 	
 	history={
@@ -10,20 +13,22 @@ state={
 		add_core_of = GRI
 		buildings = {
 			infrastructure = 6
-			dockyard = 3
-			arms_factory = 3
-			industrial_complex = 5
-			5030 = { naval_base = 10 }
+			dockyard = 6
+			arms_factory = 2
+			industrial_complex = 4
+				5030 = { naval_base = 10 } 
 
 		}
 		victory_points = {
-			5030 40 
+			5030 50 
 		}
 
 	}
-	
-	state_category=city
-	manpower= 5594055
+
+	provinces={
+		5030 9842 13434 
+	}
+	manpower= 8594055
 	buildings_max_level_factor=1.000
 	state_category= megalopolis
 }

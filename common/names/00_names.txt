@@ -6,8 +6,8 @@
 
 default = {
 	male = {
-		names = { "Miser" "Mario" "Luke" "Pepe" "WHOAREYOU" "Donald" "Peter" "Postal" "Jim" "Steve" "Heavy"}
-		surnames = { "Man" "Mario" "WHOTHEFUCKISTHIS" "Skywalker" "Frog" "Trump" "Dude" "Griffin" "Halpert" "Minecraft" "WeaponsGuy"}
+		names = { "Miser" "Mario" "Luke" "Pepe" "WHOAREYOU" "Donald" "Peter" "Postal" "Jim" "Steve" "Heavy" "Walter" }
+		surnames = { "Man" "Mario" "WHOTHEFUCKISTHIS" "Skywalker" "Frog" "Trump" "Dude" "Griffin" "Halpert" "Minecraft" "WeaponsGuy" "Potok" "Miser" "White" }
 		callsigns = { }
 	}
 	#female = {

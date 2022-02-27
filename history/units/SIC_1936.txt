@@ -295,6 +295,18 @@ units = {
 		start_equipment_factor = 0.3
 
 	}
+	
+	division= {	# "1st Sickle Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 590 # New Berlin
+		division_template = "New Wehrmact"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
 	division= {	# "1st Sickle Unit"
 		division_name = {
 				is_name_ordered = yes
@@ -383,7 +395,18 @@ units = {
 		start_equipment_factor = 0.3
 
 	}
-
+	
+	division= {	# "1st Sickle Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 590 # New Berlin
+		division_template = "New Wehrmact"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
+	}
 
 	##### No Notable Naval Forces #####
 }

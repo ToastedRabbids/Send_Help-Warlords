@@ -2268,7 +2268,7 @@ leader_traits = {
 
 		equipment_bonus = {
 			armor = {
-				reliability = 0.05
+				armor_value = 0.05 reliability = 0.10 
 			}
 		}
 		
@@ -2416,7 +2416,20 @@ leader_traits = {
 	
 	naval_manufacturer = {
 		random = no
-		#generic
+				equipment_bonus = {
+			carrier = {
+				naval_speed = 0.1 naval_range = 0.05
+			}
+			capital_ship = {
+				naval_speed = 0.1 naval_range = 0.05
+			}
+			screen_ship = {
+				naval_speed = 0.1 naval_range = 0.05
+			}
+			submarine = {
+				naval_speed = 0.1 naval_range = 0.05
+			}
+		}
 		
 		ai_will_do = {
 			factor = 1
@@ -2425,35 +2438,55 @@ leader_traits = {
 	
 	artillery_manufacturer = {
 		random = no
-		
+		equipment_bonus = {
+			artillery_equipment = {
+				build_cost_ic = -0.05
+			}
+
 		ai_will_do = {
 			factor = 1
 		}
 	}
+}
 	
 	infantry_equipment_manufacturer = {
 		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.05
+			}
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
+}
 
 	support_equipment_manufacturer = {
 		random = no
+		equipment_bonus = {
+			support_equipment = {
+				build_cost_ic = -0.05
+			}
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
+}
 	
 	motorized_equipment_manufacturer = {
 		random = no
-		
+		equipment_bonus = {
+			motorized_equipment = {
+				build_cost_ic = -0.05
+			}
+
 		ai_will_do = {
 			factor = 1
 		}
 	}
+}
 	
 	industrial_concern = {
 		random = no

@@ -109,6 +109,10 @@ set_popularities = {
 	neutrality = 40
 }
 
+add_ideas = {
+	warlord_net
+}
+
 # probably needs some adjustment before nazi occupation in 1940
 1939.1.1 = {
 	#

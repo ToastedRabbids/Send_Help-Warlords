@@ -2,13 +2,18 @@
 state={
 	id=271
 	name="STATE_271"
+	resources={
+		steel=5.000
+		aluminium=26.000
+	}
 
 	history={
-		add_core_of = POL
-		owner = POL
+		add_core_of = GRI
+		owner = GRI
 		buildings = {
 			infrastructure = 6
-
+			arms_factory = 2
+			industrial_complex = 2
 		}
 		victory_points = {
 			11083 5 
@@ -17,18 +22,18 @@ state={
 			13683 1 
 		}
 		victory_points = {
-			10768 1 
+			10145 1 
 		}
 		victory_points = {
-			13581 1 
+			13642 1 
 		}
 
 	}
 
 	provinces={
-		 3881 4060 4829 6205 7101 7793 8500 8582 8744 9076 9531 10145 10768 11083 11621 13544 13554 13582 13630 13642 13658 13673 13683 13699 13722 13723 13738 13739 
+		 3881 4060 4829 7101 8500 8582 8744 9531 10145 11083 11621 13642 13658 13673 13683 13699 13722 13723 13738 13739 
 	}
 	manpower=1412100
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=town
 }

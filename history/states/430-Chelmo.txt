@@ -2,24 +2,30 @@
 state={
 	id=430
 	name="STATE_430"
+	resources={
+		steel=26.000
+		tungsten=30.000
+	}
 
 	history={
-		owner = POL
-		add_core_of = POL
+		owner = GRI
+		add_core_of = GRI
 		buildings = {
 			infrastructure = 6
+			arms_factory = 4
+			industrial_complex = 2
 
 		}
 		victory_points = {
-			436 5 
+			3213 20
 		}
 
 	}
 
 	provinces={
-		436 3213 5675 6869 8056 8987 13581 13593 13594 13767 20331 
+		3213 5675 6869 8056 8987 13581 13593 13594 20331 
 	}
-	manpower=486045
+	manpower=2486045
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category= metropolis 
 }

@@ -1,0 +1,16 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_red_doge"
+		texturefile = "gfx/interface/advisors/idea_red_doge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_red_chiam_potok"
+		texturefile = "gfx/interface/advisors/idea_red_chiam_potok.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_red_meme"
+		texturefile = "gfx/interface/advisors/idea_red_meme.dds"
+	}

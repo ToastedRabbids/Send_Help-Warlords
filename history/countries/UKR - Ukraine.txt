@@ -1,6 +1,6 @@
 ﻿capital = 331
 
-#oob = "UKR_1936"
+oob = "GEN_1936"
 
 set_research_slots = 3
 
@@ -60,7 +60,17 @@ if = {
 	}
 }
 
-set_popularities = {	democratic = 20	fascism = 30	communism = 50
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	fascism = 5
+	democratic = 10
+	neutrality = 85
 }
 
 create_country_leader = {
@@ -96,16 +106,16 @@ create_country_leader = {
 	}
 }
 
-#create_country_leader = {
-#	name = ""
-#	desc = ""
-#	picture = ""
-#	expire = "1953.3.1"
-#	ideology = oligarchism
-#	traits = {
-#		
-#	}
-#}
+create_country_leader = {
+	name = "Pavlo Skoropadsky"
+	desc = ""
+	picture = "Portrait_UKR_Pavlo_Skoropadsky.dds"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
 
 
 

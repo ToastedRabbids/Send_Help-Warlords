@@ -1,6 +1,15 @@
 capital = 412
 
-OOB = "WLR_1936"
+OOB = "GRI_1936"
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_naval_oob = "GRI_1936_naval_mtg"
+	else = {
+		set_naval_oob = "GRI_1936_naval_mtg"
+	}
+}
 
 set_research_slots = 4
 
@@ -19,6 +28,9 @@ set_technology = {
 	early_fighter = 1
 	early_bomber = 1
 	naval_bomber1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	cv_CAS1 = 1
 	CAS1 = 1
 }
 
@@ -26,7 +38,6 @@ if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
 		early_submarine = 1
-		basic_submarine = 1
 		early_destroyer = 1
 		early_light_cruiser = 1
 		basic_light_cruiser = 1
@@ -34,11 +45,9 @@ if = {
 		early_battleship = 1
 		early_battlecruiser = 1
 		early_carrier = 1
-		basic_carrier = 1
 		transport = 1
 		basic_destroyer = 1
 		basic_heavy_cruiser = 1
-		basic_battlecruiser = 1
 	}
 }
 if = {
@@ -66,7 +75,7 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		basic_ship_hull_heavy = 1
+		early_ship_hull_heavy = 1
 		dp_secondary_battery = 1
 	}
 }
@@ -81,7 +90,10 @@ set_politics = {
 set_popularities = {
 	democratic = 90
 	communism= 10
+}
 
+add_ideas = {
+	warlord_net
 }
 
 set_convoys = 550
@@ -108,90 +120,322 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
-	name = "Douglas MacArthur"
+create_country_leader = {
+	name = "Grim"
+	desc = "POLITICS_KING_ZOG_DESC"
 	picture = "Portrait_GRI_Grim.dds"
-	traits = { }
-	skill = 5
-	attack_skill = 3
-    defense_skill = 5
-    planning_skill = 3
-    logistics_skill = 5
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Grim"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_GRI_Grim.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
 }
 
 create_field_marshal = {
-	name = "Count Dooku"
-	portrait_path = "gfx/leaders/ZUC/portrait_ZUC_dooku.dds"
-	traits = { }
+	name = "Yanfei"
+	picture = "Portrait_GRI_Agnes.dds"
+	traits = { trait_engineer organisational_leader inflexible_strategist }
 	skill = 5
-	attack_skill = 4
-    defense_skill = 5
-    planning_skill = 3
-    logistics_skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 4
 }
 
-create_corps_commander = {
-	name = "General Grievous"
-	portrait_path = "gfx/leaders/ZUC/portrait_ZUC_grievous.dds"
-	traits = { }
-	skill = 5
-	attack_skill = 4
-    defense_skill = 4
-    planning_skill = 1
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Georgiy Zhukov"
-	picture = "Portrait_ZUC_Georgiy_Zhukov.png"
-	traits = { }
+create_field_marshal = {
+	name = "Yae Miko Guuji"
+	picture = "Portrait_GRI_Liz.dds"
+	traits = { trickster inspirational_leader brilliant_strategist }
 	skill = 5
 	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 5
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
-	name = "Mikhail Tukhachevsky"
-	portrait_path = "gfx/leaders/ZUC/portrait_ZUC_mik.png"
-	traits = { }
+	name = "Douglas MacArthur"
+	picture = "Portrait_GRI_MacArthur.dds"
+	traits = { offensive_doctrine brilliant_strategist career_officer media_personality politically_connected }
 	skill = 5
-	attack_skill = 3
-	defense_skill = 4
+	attack_skill = 4
+	defense_skill = 3
 	planning_skill = 4
 	logistics_skill = 2
 }
 
 create_corps_commander = {
-	name = "Semyon Timoshenko"
-	portrait_path = "gfx/leaders/ZUC/Portrait_ZUC_Semyon_Timoshenko.png"
-	traits = { }
-	skill = 3
+	name = "Dwight D. Eisenhower"
+	portrait_path = "gfx/leaders/GRI/portrait_GRI_Eisenhower.dds"
+	traits = { logistics_wizard organizer offensive_doctrine trait_cautious armor_officer politically_connected }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Zero Two"
+	picture = "Portrait_GRI_Zero2.dds"
+	traits = { trickster harsh_leader brilliant_strategist }
+	skill = 5
 	attack_skill = 3
 	defense_skill = 2
+	planning_skill = 5
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Vien Quitonm"
+	picture = "Portrait_GRI_BigBob.dds"
+	traits = { trickster }
+	skill = 3
+	attack_skill = 6
+	defense_skill = 4
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Maurice Rose"
+	portrait_path = "gfx/leaders/GRI/portrait_GRI_Rose.dds"
+	traits = { armor_officer trait_reckless brilliant_strategist }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 3
 }
 
 create_corps_commander = {
-	name = "Ventress"
-	portrait_path = "gfx/leaders/ZUC/portrait_ZUC_ventress.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 5
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Roger Roger"
-	portrait_path = "gfx/leaders/ZUC/portrait_ZUC_droid.dds"
-	traits = { }
+	name = "R2 Battle Droid Unit"
+ 	portrait_path = "gfx/leaders/GRI/Portrait_GRI_BDROID2.dds"
+	traits = { infantry_officer }
 	skill = 1
 	attack_skill = 1
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+	name = "Grim"
+	picture = "Portrait_GRI_Grim.dds"
+	traits = { arctic_water_expert superior_tactician aviation_enthusiast }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "Kujou Sara"
+	picture = "Portrait_GRI_Purple.dds"
+	traits = { JAP_samurai_lineage bold battleship_adherent superior_tactician spotter }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Graf Zeppelin"
+	picture = "Portrait_GRI_Erika.dds"
+	traits = { navy_career_officer naval_lineage seawolf silent_hunter }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	maneuvering_skill = 5
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Ernest King"
+	picture = "Portrait_GRI_KING.dds"
+	traits = { navy_career_officer aviation_enthusiast caustic_personality blockade_runner superior_tactician }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 6
+}
+
+create_navy_leader = {
+	name = "Chester W. Nimitz"
+	picture = "Portrait_GRI_Nimitz.dds"
+	traits = { gentlemanly blue_water_expert naval_lineage superior_tactician spotter }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 5
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "Field Master Brian O. Jenkins"
+	picture = "Portrait_GRI_Brian.dds"
+	traits = { lancer }
+	skill = 3
+	attack_skill = 5
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "Frank Jack Fletcher"
+	picture = "Portrait_GRI_Frank.dds"
+	traits = { gunnery_expert superior_tactician spotter }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Erika Deutschland Zeppelin"
+	picture = "Portrait_GRI_ErikaJr.dds"
+	traits = { bold }
+	skill = 1
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+
+create_equipment_variant = {
+	name = "Socialist Class"					
+	type = ship_hull_heavy_1
+	name_group = USA_BB_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bb_1
+		front_1_custom_slot = empty
+		mid_1_custom_slot = ship_airplane_launcher_1
+		mid_2_custom_slot = ship_secondaries_1
+		rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+
+create_equipment_variant = {
+	name = "Grims Personal Carriers"
+	type = ship_hull_carrier_conversion_bb
+	name_group = USA_CV_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_deck_slot_1 = ship_deck_space
+		fixed_ship_deck_slot_2 = ship_deck_space
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		mid_1_custom_slot = ship_deck_space
+		}
+	}
+
+create_equipment_variant = {
+	name = "Bernie Class"				
+	type = ship_hull_light_2
+	name_group = USA_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = ship_sonar_2
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_2
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+
+create_equipment_variant = {			
+	name = "Gboats"
+	type = ship_hull_submarine_1
+	name_group = USA_SS_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		fixed_ship_engine_slot = sub_ship_engine_1
+		rear_1_custom_slot = empty
+		}
+	}
+
+create_equipment_variant = {
+	name = "Noam Chomsky Cruiser"
+	type = ship_hull_cruiser_2
+	name_group = USA_CL_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_3
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		front_1_custom_slot = ship_light_medium_battery_2
+		mid_1_custom_slot = ship_airplane_launcher_1
+		mid_2_custom_slot = ship_anti_air_1
+		rear_1_custom_slot = ship_light_medium_battery_2
+		}
+	}
+
+create_equipment_variant = {
+	name = "DOKTOR"
+	type = ship_hull_cruiser_2
+	name_group = USA_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_medium_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_armor_slot = ship_armor_cruiser_3
+		mid_1_custom_slot = ship_airplane_launcher_1
+		mid_2_custom_slot = ship_anti_air_1
+		rear_1_custom_slot = ship_medium_battery_2
+		}
+	}
+
+create_equipment_variant = {
+	name = "BIG BOI"
+	type = ship_hull_heavy_1
+	name_group = ENG_BC_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_2
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_bc_2
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = ship_secondaries_1
+		rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
 }

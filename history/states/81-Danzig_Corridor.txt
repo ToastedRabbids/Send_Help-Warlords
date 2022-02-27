@@ -2,14 +2,23 @@
 state={
 	id=81
 	name="STATE_81"
+	resources={
+		oil=80.000
+		steel=26.000
+		tungsten=30
+	}
 
 	history={
-		owner = POL
-		add_core_of = POL
-		victory_points = { 10042 3 }
+		owner = GRI
+		add_core_of = GRI
+		victory_points = { 10042 40 }
 		buildings = {
 			infrastructure = 6
-			air_base = 3
+			dockyard = 5
+			industrial_complex = 3
+			arms_factory = 4
+			air_base = 10
+				10042 = { naval_base = 5 } 
 		}
 
 	}
@@ -17,7 +26,7 @@ state={
 	provinces={
 		1742 6923 9326 10042 10085 10787 11632 13400 13404 13493 13494 
 	}
-	manpower=366730
+	manpower=4266730
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=megalopolis
 }

@@ -1,0 +1,32 @@
+state={
+	id=515
+	name="NEW Washington"
+	resources={
+	oil=50.000
+	steel=46.000
+	aluminium=30.000
+
+	}
+
+	history={
+		owner = GRI
+		add_core_of = GRI
+		buildings = {
+			infrastructure = 6
+			arms_factory = 5
+			industrial_complex = 7
+
+		}
+		victory_points = {
+			436 30
+		}
+
+	}
+
+	provinces={
+		436 3456 5784 8798 13605 13767 
+	}
+	manpower=3686045
+	buildings_max_level_factor=1.000
+	state_category= megalopolis
+}

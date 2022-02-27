@@ -12,7 +12,8 @@ state={
 		aluminium=2 # was: 2
 	}
 	history={
-		owner = BUL
+		owner = YUG
+		add_core_of = YUG
 		add_core_of = BUL
 		buildings = {
 			infrastructure = 5

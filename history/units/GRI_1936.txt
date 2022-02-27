@@ -1,0 +1,437 @@
+division_template = {
+	name = "New Armed Forces"
+	division_names_group = USA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 } 
+	}
+}
+
+division_template = {
+	name = "Old Town Road"  
+	division_names_group = USA_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "AAT-1"
+
+	division_names_group = USA_Arm_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "National Guard"  
+	division_names_group = POL_INF_01
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	##### Ejército de Cuba #####
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "AAT-1"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # New Berlin
+		division_template = "AAT-1" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Nas"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # New Berlin
+		division_template = "Old Town Road" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division= {	# "AAT-1"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # New Berlin
+		division_template = "AAT-1" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Nas"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # New Berlin
+		division_template = "Old Town Road" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1st Grim Armed Unit"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "New Armed Forces"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "National Guard"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "National Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+		
+	}
+	division= {	# "National Guard"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "National Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "National Guard"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "National Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "National Guard"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "National Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3	
+
+	}
+	division= {	# "National Guard"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # Danzing
+		division_template = "National Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Nas"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 5030 # New Berlin
+		division_template = "Old Town Road" 
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}
+
+
+
+air_wings = {
+    81 = {
+        fighter_equipment_0 = {
+            owner = "GRI"
+            amount = 110
+        }
+    }
+}
+
+air_wings = {
+    81 = {
+        CAS_equipment_1 = {
+            owner = "GRI"
+            amount = 87
+        }
+    }
+}
+
+air_wings = {
+    81 = {
+        tac_bomber_equipment_0 = {
+            owner = "GRI"
+            amount = 105
+        }
+    }
+}
+
+air_wings = {
+    81 = {
+        nav_bomber_equipment_1 = {
+            owner = "GRI"
+            amount = 80
+        }
+    }
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GRI"
+		}
+		requested_factories = 2
+		progress = 0.54
+		efficiency = 100
+	}
+}

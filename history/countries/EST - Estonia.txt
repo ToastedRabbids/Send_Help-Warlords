@@ -31,6 +31,10 @@ if = {
 	}
 }
 
+add_ideas = {
+	warlord_net
+}
+
 set_convoys = 5
 
 1939.1.1 = {

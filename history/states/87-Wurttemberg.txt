@@ -7,10 +7,11 @@ state={
 	}
 
 	history={
-		owner = GER
+		owner = BAY
 		add_core_of = GER
 		add_core_of = WUR
 		add_core_of = WGR
+		add_core_of = BAY
 		buildings = {
 			infrastructure = 8
 			arms_factory = 3

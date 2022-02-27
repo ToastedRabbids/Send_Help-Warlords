@@ -1,6 +1,6 @@
 ﻿capital = 323
 
-#oob = "BLR_1936"
+oob = "GEN_1936"
 
 set_research_slots = 3
 
@@ -60,7 +60,16 @@ if = {
 	}
 }
 
-set_popularities = {	democratic = 15	neutrality = 20	communism = 60	fascism = 5
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communism = 10
+	neutrality = 90
 }
 
 create_country_leader = {
@@ -106,6 +115,18 @@ create_country_leader = {
         #
     }
 }
+
+create_country_leader = {
+    name = "Panteleimon IsorrowProudctions Ponomarenko"
+    desc = ""
+    picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+    expire = "1965.1.1"
+    ideology = despotism
+    traits = {
+        #
+    }
+}
+
 
 
 

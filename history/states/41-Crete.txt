@@ -9,7 +9,8 @@ state={
 	state_category = rural
 	history=
 	{
-		owner = GRE
+		owner = YUG
+		add_core_of = YUG
 		add_core_of = GRE
 		buildings = {
 			infrastructure = 4

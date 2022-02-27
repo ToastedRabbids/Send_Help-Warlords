@@ -26,7 +26,6 @@ if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
 		early_submarine = 1
-		basic_submarine = 1
 		early_destroyer = 1
 		early_light_cruiser = 1
 		basic_light_cruiser = 1
@@ -81,7 +80,10 @@ set_politics = {
 set_popularities = {
 	democratic = 30
 	fascism= 70
+}
 
+add_ideas = {
+	warlord_net
 }
 
 set_convoys = 5
@@ -109,10 +111,32 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Boxman"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_box_Boxman.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Miser"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "Portrait_box_Miser.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
 create_field_marshal = {
 	name = "Boxman"
 	portrait_path = "gfx/leaders/BOX/portrait_BOX_boxman.dds"
-	traits = { }
+	traits = { aggressive_assaulter offensive_doctrine inspirational_leader }
 	skill = 5
 	attack_skill = 5
     defense_skill = 3
@@ -123,7 +147,7 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Darth Revan"
 	portrait_path = "gfx/leaders/BOX/portrait_BOX_revan.dds"
-	traits = { }
+	traits = { offensive_doctrine organisational_leader }
 	skill = 5
 	attack_skill = 4
     defense_skill = 3
@@ -134,7 +158,7 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Derian Arkelius"
 	portrait_path = "gfx/leaders/BOX/portrait_BOX_arkelius.dds"
-	traits = { }
+	traits = { panzer_leader brilliant_strategist }
 	skill = 5
 	attack_skill = 3
     defense_skill = 4
@@ -145,7 +169,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Darth Maul"
 	portrait_path = "gfx/leaders/BOX/portrait_BOX_maul.dds"
-	traits = { }
+	traits = { trickster trait_reckless harsh_leader }
 	skill = 5
 	attack_skill = 5
     defense_skill = 5
@@ -156,7 +180,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Erwin Rommel"
 	portrait_path = "gfx/leaders/BOX/Portrait_BOX_erwin.png"
-	traits = { }
+	traits = { trickster trait_reckless war_hero armor_officer media_personality }
 	skill = 5
 	attack_skill = 4
 	defense_skill = 4
@@ -167,7 +191,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Commander Cody"
 	portrait_path = "gfx/leaders/BOX/portrait_BOX_cody.dds"
-	traits = { }
+	traits = { commando infantry_leader adaptable }
 	skill = 3
 	attack_skill = 3
     defense_skill = 2

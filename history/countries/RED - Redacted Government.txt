@@ -26,7 +26,6 @@ if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {
 		early_submarine = 1
-		basic_submarine = 1
 		early_destroyer = 1
 		early_light_cruiser = 1
 		basic_light_cruiser = 1
@@ -84,6 +83,10 @@ set_popularities = {
 
 }
 
+add_ideas = {
+	warlord_net
+}
+
 set_convoys = 5
 
 
@@ -103,7 +106,29 @@ create_country_leader = {
 	desc = "POLITICS_KING_ZOG_DESC"
 	picture = "GFX_RED_Redacted.dds"
 	expire = "1965.1.1"
-	ideology = rexism
+	ideology = falangism
+	traits = {
+		# 
+	}
+}
+
+create_country_leader = {
+	name = "Redacted"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "GFX_RED_Redacted.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		# 
+	}
+}
+
+create_country_leader = {
+	name = "URN"
+	desc = "POLITICS_KING_ZOG_DESC"
+	picture = "GFX_RED_URN.dds"
+	expire = "1965.1.1"
+	ideology = anarchist_communism
 	traits = {
 		# 
 	}
@@ -112,7 +137,7 @@ create_country_leader = {
 create_field_marshal = {
 	name = "Redacted"
 	portrait_path = "gfx/leaders/RED/portrait_RED_redacted.dds"
-	traits = { }
+	traits = { offensive_doctrine organisational_leader inspirational_leader media_personality trickster trait_reckless }
 	skill = 5
 	attack_skill = 5
     defense_skill = 5
@@ -121,9 +146,9 @@ create_field_marshal = {
 }
 
 create_field_marshal = {
-	name = "Doge"
+	name = "Doge" 
 	portrait_path = "gfx/leaders/RED/portrait_RED_doge.dds"
-	traits = { }
+	traits = {  infantry_officer infantry_leader trickster trait_reckless }
 	skill = 5
 	attack_skill = 4
     defense_skill = 3
@@ -132,20 +157,20 @@ create_field_marshal = {
 }
 
 create_corps_commander = {
-	name = "Władysław Sikorski"
-	portrait_path = "gfx/leaders/RED/portrait_RED_wlad.png"
-	traits = { }
+	name = "Dogeler von Müller"
+	picture = "GFX_RED_Dogeler.dds"
+	traits = { armor_officer panzer_leader war_hero trait_reckless }
 	skill = 5
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 5
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Andrzej Duda"
 	portrait_path = "gfx/leaders/RED/portrait_RED_andrzej_duda.dds"
-	traits = { }
+	traits = { harsh_leader trait_reckless politically_connected }
 	skill = 5
 	attack_skill = 5
     defense_skill = 4
@@ -156,7 +181,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Chiam Potok"
 	portrait_path = "gfx/leaders/RED/portrait_RED_chiam_potok.dds"
-	traits = { }
+	traits = { career_officer media_personality guerilla_fighter politically_connected }
 	skill = 5
 	attack_skill = 3
     defense_skill = 5
@@ -165,20 +190,20 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Joe Rogan"
-	portrait_path = "gfx/leaders/RED/portrait_RED_joe_rogan.dds"
-	traits = { }
+	name = "Władysław Sikorski"
+	portrait_path = "gfx/leaders/RED/portrait_RED_wlad.png"
+	traits = { defensive_doctrine }
 	skill = 3
-	attack_skill = 5
-    defense_skill = 5
-    planning_skill = 2
-    logistics_skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "The Trumspter"
 	portrait_path = "gfx/leaders/RED/portrait_RED_trumpster.dds"
-	traits = { }
+	traits = { harsh_leader }
 	skill = 3
 	attack_skill = 6
     defense_skill = 3
@@ -189,10 +214,23 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Class D"
 	portrait_path = "gfx/leaders/RED/portrait_RED_class_d.dds"
-	traits = { }
+	traits = { substance_addict substance_abuser disgruntled hidden_sympathies trait_SPA_falangist_loyalties }
 	skill = 1
 	attack_skill = 0
     defense_skill = 1
     planning_skill = 3
+    logistics_skill = 2
+}
+
+
+
+#create_corps_commander = {
+	name = "Joe Rogan"
+	portrait_path = "gfx/leaders/RED/portrait_RED_General_Dogerell_Müller.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 5
+    defense_skill = 5
+    planning_skill = 2
     logistics_skill = 2
 }

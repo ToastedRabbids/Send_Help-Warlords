@@ -1,0 +1,82 @@
+spriteTypes = {	
+
+
+
+	SpriteType = {
+		name = "GFX_idea_warlord_net"
+		texturefile = "gfx/interface/ideas/idea_warlord_net.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_doge_bark"
+		texturefile = "gfx/interface/ideas/idea_red_doge.dds"
+	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_chiam_potok"
+		texturefile = "gfx/interface/ideas/idea_red_chiam_potok.dds"
+	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_asian_potok"
+		texturefile = "gfx/interface/ideas/idea_glassesman.dds"
+	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_amphora_based"
+		texturefile = "gfx/interface/ideas/idea_red_amphora.dds"
+	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_robert_potok"
+		texturefile = "gfx/interface/ideas/idea_red_king_robert_potok.dds"
+	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_DBJ_WI"
+		texturefile = "gfx/interface/ideas/idea_red_DBJ.dds"
+	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_Happy_Potok"
+		texturefile = "gfx/interface/ideas/idea_red_Happy_Potok.dds"
+	
+	}
+
+	SpriteType = {
+		name = "GFX_idea_Sad_Potok"
+		texturefile = "gfx/interface/ideas/idea_red_Sad_Potok.dds"
+
+	}
+
+	SpriteType = {
+		name = "GFX_idea_Albert"
+		texturefile = "gfx/interface/ideas/idea_red_Albert.dds"
+
+	}
+
+	SpriteType = {
+		name = "GFX_idea_Cheems"
+		texturefile = "gfx/interface/ideas/idea_red_Cheems.dds"
+
+	}
+
+	SpriteType = {
+		name = "GFX_idea_AviatorPotok"
+		texturefile = "gfx/interface/ideas/idea_red_AviatorPotok.dds"
+
+	}
+
+	SpriteType = {
+		name = "GFX_idea_SCPpeanut"
+		texturefile = "gfx/interface/ideas/idea_red_SCPpeanut.dds"
+
+	}
+
+}

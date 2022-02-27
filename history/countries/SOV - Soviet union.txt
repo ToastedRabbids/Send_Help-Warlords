@@ -95,8 +95,6 @@ set_popularities = {
 	communism = 88
 }
 
-create_faction = Comintern
-add_to_faction = SOV
 
 add_ideas = {
 	trotskyite_plot
@@ -130,10 +128,22 @@ create_country_leader = {
 create_country_leader = {
 	name = "Alexander Fyodorovich Kerensky"
 	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
-	picture = "Portrait_Soviet_Generic_1.dds"
+	picture = "Portrait_SOV_Aleksandr_Kerensky.dds"
 	expire = "1953.3.1"
 	ideology = socialism
 	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Vladimir Romanov"
+	desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
+	picture = "Portrait_SOV_Vladimir_Romanov.dds"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		autocratic_imperialist
 		
 	}
 }

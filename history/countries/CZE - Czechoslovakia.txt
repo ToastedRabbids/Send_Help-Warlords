@@ -26,6 +26,7 @@ if = {
 	add_ideas = {
 		CZE_skoda_works
 		CZE_divided_nation
+		warlord_net
 	}
 	give_guarantee = YUG
 	give_guarantee = ROM
@@ -37,6 +38,7 @@ if = {
 	}
 	add_ideas = {
 		CZE_fortification_focus
+		warlord_net
 	}
 }
 

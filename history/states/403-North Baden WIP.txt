@@ -6,10 +6,11 @@ state={
 	}
 	
 	history={
-		owner = GER
+		owner = BAY
 		add_core_of = GER
 		add_core_of = BAD
 		add_core_of = WGR
+		add_core_of = BAY
 		set_demilitarized_zone = yes
 		buildings = {
 			infrastructure = 8

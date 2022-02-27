@@ -11,7 +11,8 @@ state={
 		chromium=32.000 #added due to portugal setup
 	}
 	history={
-		owner = POR
+		owner = SPR
+		add_core_of = SPR
 		add_core_of = POR
 		buildings = {
 			infrastructure = 6

@@ -12,7 +12,7 @@ state={
 		aluminium=30 # was: 30
 	}
 	history={
-		owner = GER
+		owner = BAY
 		add_core_of = GER
 		add_core_of = BAY
 		add_core_of = WGR

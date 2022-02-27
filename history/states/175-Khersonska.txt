@@ -11,7 +11,7 @@ state={
 		chromium=23 # was: 22
 	}
 	history={
-		owner = SOV
+		owner = UKR
 		add_core_of = SOV
 		add_core_of = UKR
 		buildings = {

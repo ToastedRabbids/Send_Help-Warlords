@@ -7,6 +7,16 @@
  RUS_democratic:0 "Russian Federation"
  RUS_democratic_ADJ:0 "Russian"
  RUS_democratic_DEF:0 "the Russian Federation"
+ RUS_neutrality:0 "Russian Empire"
+ RUS_neutrality_ADJ:0 "Russian"
+ RUS_neutrality_DEF:0 "the Russian Empire"
+
+ SOV_democratic:0 "Russian Republic"
+ SOV_democratic_ADJ:0 "Russian"
+ SOV_democratic_DEF:0 "the Russian Republic"
+ SOV_neutrality:0 "Russian Empire"
+ SOV_neutrality_ADJ:0 "Russian"
+ SOV_neutrality_DEF:0 "the Russian Empire"
  
  RED_democratic:0 "Redacted Government"
  RED_democratic_DEF:0 "the Redacted Government"
@@ -17,6 +27,9 @@
  RED_fascism:0 "Redacted Government"
  RED_fascism_DEF:0 "the Redacted Government"
  RED_fascism_ADJ:0 "Redactedist"
+ RED_neutrality:0 "Redacted Government"
+ RED_neutrality_DEF:0 "the Redacted Government"
+ RED_neutrality_ADJ:0 "Redactedist"
 
  BOX_fascism:0 "Boxman Legion"
  BOX_fascism_DEF:0 "the Boxman Legion"
@@ -27,6 +40,9 @@
  BOX_democratic:0 "Boxman Legion"
  BOX_democratic_DEF:0 "the Boxman Legion"
  BOX_democratic_ADJ:0 "Legionairst"
+ BOX_neutrality:0 "Boxman Legion"
+ BOX_neutrality_DEF:0 "the Boxman Legion"
+ BOX_neutrality_ADJ:0 "Legionairst"
 
  SIC_fascism:0 "Sickle Reich"
  SIC_fascism_DEF:0 "the Sickle Reich"
@@ -37,6 +53,9 @@
  SIC_democratic:0 "Richmoe Republic"
  SIC_democratic_DEF:0 "the Richmoe Republic"
  SIC_democratic_ADJ:0 "Moeian"
+ SIC_neutrality:0 "Sickle Empire"
+ SIC_neutrality_DEF:0 "the Sickle Empire"
+ SIC_neutrality_ADJ:0 "Sicklist"
 
  ZUC_communism:0 "Zucc Union"
  ZUC_communism_DEF:0 "the Zucc Union"
@@ -44,16 +63,29 @@
  ZUC:0 "Zucc"
  ZUC_DEF:0 "Zuccian"
  ZUC_ADJ:0 "Zuccian"
+ ZUC_democratic:0 "Zucc Union"
+ ZUC_democratic_DEF:0 "the Zucc Union"
+ ZUC_democratic_ADJ:0 "Zuccian"
+ ZUC_neutrality:0 "Zucc Commune"
+ ZUC_neutrality_DEF:0 "the Zucc Commune"
+ ZUC_neutrality_ADJ:0 "Zuccian"
 
- GRI_democratic:0 "Grim States"
- GRI_democratic_DEF:0 "the Grim States"
+ GRI_democratic:0 "Qusai"
+ GRI_democratic_DEF:0 "the Qusai"
  GRI_democratic_ADJ:0 "Grimist"
  GRI:0 "Grim"
  GRI_DEF:0 "Grim"
  GRI_ADJ:0 "Grimist
- GRI_communism:0 "Grim Socialist Republic"
- GRI_communism_DEF:0 "the Grim Socialist Republic"
+ GRI_communism:0 "Qusai People's Republic"
+ GRI_communism_DEF:0 "the Qusai People's Republic"
  GRI_communism_ADJ:0 "Grimist"
+ GRI_fascism:0 "Empire of Qusai"
+ GRI_fascism_DEF:0 "the Empire of Qusai"
+ GRI_fascism_ADJ:0 "Grimist"
+ GRI_neutrality:0 "Kingdom of Qusai"
+ GRI_neutrality_DEF:0 "the Kingdom of Qusai"
+ GRI_neutrality_ADJ:0 "Grimist"
+
  ####Yugoslavia releasables###
  
  KOS_neutrality:0 "Kosovo"
@@ -472,3 +504,27 @@
  SOV_reichskommissariat_fascism:0 "Reichkomissariat Moskovien"
  SOV_reichskommissariat_fascism_DEF:0 "Reichkomissariat Moskovien"
  SOV_reichskommissariat_fascism_ADJ:0 "Moskovite"
+
+ UKR_neutrality:0 "Ukraine"
+ UKR_neutrality_ADJ:0 "Ukrainian"
+ UKR_neutrality_DEF:0 "Ukraine"
+
+ BLR_neutrality:0 "Belarus"
+ BLR_neutrality_ADJ:0 "Belarus"
+ BLR_neutrality_DEF:0 "Belarus"
+
+ RED_communism:0 "URN Republic"
+ RED_communism_DEF:0 "the URNS"
+ RED_communism_ADJ:0 "Urnist"
+
+ BOX_communism:0 "Miser Commune"
+ BOX_communism_DEF:0 "the Miser Commune"
+ BOX_communism_ADJ:0 "Miserian"
+
+ SIC_communism:0 "Femboy Republic"
+ SIC_communism_DEF:0 "the Femboy Republic"
+ SIC_communism_ADJ:0 "Spectrist"
+
+ ZUC_fascism:0 "Confederacy of independent systems"
+ ZUC_fascism_DEF:0 "the CIS"
+ ZUC_fascism_ADJ:0 "Separatists"

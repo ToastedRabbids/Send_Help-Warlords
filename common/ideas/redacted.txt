@@ -1,9 +1,7 @@
 ideas = {
-	country = {
 
-		Warlord_Spirit = {
-		
-			name = Warlord_Spirit
+	country = {
+		warlord_net = {
 			
 			allowed = {
 				always = no
@@ -15,32 +13,39 @@ ideas = {
 
 			removal_cost = -1
 			
+			picture = warlord_net
+
 			modifier = {
 				ai_get_ally_desire_factor  = -1000
-				ai_join_ally_desire_factor = -1000	
+				ai_join_ally_desire_factor = -1000
+				#ai_focus_aggressive_factor = -1000
 				join_faction_tension = 1000
-				guarantee_tension = 1000
-				enemy_declare_war_tension = 1000
+				send_volunteer_size = 5
+				send_volunteer_divisions_required = -0.1
 			}
+
+			rule = {
+				can_join_factions = no
+			}			
 		}
-		
 	}
+
 	political_advisor = {
 
 		RED_Chiam_potok = {
 
-			picture = generic_political_advisor_europe_3
+			picture = chiam_potok
 			
 			allowed = {
 				original_tag = RED
 			}
 			
-			traits = { backroom_backstabber }
+			traits = { silent_workhorse }
 		}
 
 		RED_Asian_Potok = {
 
-			picture = generic_political_advisor_asia_2
+			picture = asian_potok
 			
 			allowed = {
 				original_tag = RED
@@ -51,7 +56,7 @@ ideas = {
 
 		RED_Amphora = {
 
-			picture = idea_rudolf_hess
+			picture = amphora_based
 			
 			allowed = {
 				original_tag = RED
@@ -60,3 +65,213 @@ ideas = {
 			traits = { prince_of_terror }
 		}
 
+		RED_Doge = {
+
+			picture = doge_bark
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		RED_Doge_Brandon_Johannesburg  = {
+
+			picture = DBJ_WI
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		RED_Albert = {
+
+			picture = Albert
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { technocrat }
+		}
+	}
+
+	army_chief = {
+				
+		RED_Depressed_Potok = {
+			
+			picture = Sad_Potok
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RED_Happy_Potok = {
+			
+			picture = Happy_Potok
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RED_King_Robert_Potok = {
+			
+			picture = robert_potok
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		RED_kazimierz_sosnkowski = {
+			
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RED_aviator_potok = {
+			
+			picture = AviatorPotok
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RED_SCP173 = {
+			
+			picture = SCPpeanut
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { air_tactical_bombing_2  }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		RED_Trump = {
+
+			picture = george_patton
+
+			ledger = army
+			
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { army_infantry_2 }			
+		}
+		
+		RED_Wlad = {
+
+			picture = generic_army_europe_3
+
+			ledger = army
+
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { army_logistics_2 }			
+		}
+
+		RED_Winged = {
+
+			picture = USA_walter_krueger
+
+			ledger = army
+
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { army_cavalry_2 }			
+		}
+
+		RED_Cheems = {
+
+			picture = Cheems
+
+			ledger = air
+
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { air_air_superiority_2 }			
+		}
+
+		RED_Joe = {
+
+			picture = semyon_timoshenko
+
+			ledger = air
+
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = {  air_air_combat_training_2 }			
+		}
+
+		RED_Fly = {
+
+			picture = albert_kesselring
+
+			ledger = air
+
+			allowed = {
+				original_tag = RED
+			}
+			
+			traits = { air_bomber_interception_2 }			
+		}
+	}

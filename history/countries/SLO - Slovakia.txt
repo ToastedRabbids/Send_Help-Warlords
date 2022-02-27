@@ -1,6 +1,6 @@
 ﻿capital = 245
 
-#oob = "SLO_1939"
+oob = "GEN_1936"
 
 set_technology = {
 	gw_artillery = 1
@@ -70,6 +70,10 @@ set_popularities = {
 	communism = 5
 }
 
+add_ideas = {
+	warlord_net
+}
+
 create_country_leader = {
 	name = "Jozef Tiso"
 	desc = "POLITICS_JOZEF_TISO_DESC"
@@ -79,4 +83,15 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Jozef Tiso"
+	picture = "Portrait_Slovakia_Jozef_Tiso.dds"
+	traits = { }
+	skill = 5
+	attack_skill = 5
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 2
 }
