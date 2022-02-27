@@ -187,6 +187,7 @@ set_popularities = {
 add_ideas = {
 	POL_surrender_limit
 	warlord_net
+	foreign_net
 }
 
 1939.1.1 = {

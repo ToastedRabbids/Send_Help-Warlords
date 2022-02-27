@@ -4,7 +4,7 @@ state={
 	name="STATE_143"
 
 	history={
-		owner = SAU
+		owner = ENG
 		add_core_of = SAU
 		add_core_of = IRQ
 		buildings = {

@@ -24,6 +24,7 @@ if = {
 }
 add_ideas = {
 	anti_german_military
+	foreign_net
 }
 
 

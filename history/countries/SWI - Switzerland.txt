@@ -87,7 +87,9 @@ set_popularities = {
 	}
 }
 
-
+add_ideas = {
+ 	foreign_net
+}
 
 set_stability = 0.85
 

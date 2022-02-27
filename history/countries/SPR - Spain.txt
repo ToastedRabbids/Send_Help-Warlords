@@ -76,6 +76,10 @@ set_politics = {
 set_convoys = 150
 set_stability = 0.5
 
+add_ideas = {
+ 	foreign_net
+}
+
 
 create_country_leader = {
 	name = "Niceto Alcalá-Zamora"

@@ -173,6 +173,7 @@ add_ideas = {
 	free_trade
 	limited_conscription
 	partial_economic_mobilisation
+	foreign_net
 }
 
 create_country_leader = {

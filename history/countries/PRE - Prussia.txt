@@ -1,4 +1,4 @@
-﻿capital = 74
+capital = 74
 
 OOB = "GEN_1936"
 
@@ -59,7 +59,6 @@ set_popularities = {
 add_ideas = {
 	warlord_net
 }
-
 
 create_country_leader = {
 	name = "Wilhelm II"

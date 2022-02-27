@@ -56,6 +56,10 @@ set_popularities = {
 	communism = 80
 }
 
+add_ideas = {
+ 	foreign_net
+}
+
 create_country_leader = {
 	name = "Ernst Thalmann"
 	desc = "POLITICS_WILHELM_PIECK_DESC"

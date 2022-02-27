@@ -35,7 +35,7 @@ country_event = {
 				ideology = communism
 				size = 0.5
 				capital = 41
-				states = { 168 169 366 370 234 371 464 228 229 107 }
+				states = { 168 169 366 370 234 371 464 228 229 107 163 }
 			}
 			random_other_country = {
 				limit = {
@@ -83,7 +83,7 @@ country_event = {
 				ideology = fascism
 				size = 0.5
 				capital = 233
-				states = { 231 170 232 369 368 233 230 235 307 77 }
+				states = { 231 170 232 369 368 233 230 235 307 77 164 165 166 372 }
 			}
 			random_other_country = {
 				limit = {

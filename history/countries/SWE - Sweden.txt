@@ -14,6 +14,7 @@ set_research_slots = 3
 add_ideas = {
 	free_trade
 	neutrality_idea
+	foreign_net
 }
 
 

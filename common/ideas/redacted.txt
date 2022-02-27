@@ -19,13 +19,13 @@ ideas = {
 				ai_get_ally_desire_factor  = -1000
 				ai_join_ally_desire_factor = -1000
 				#ai_focus_aggressive_factor = -1000
-				join_faction_tension = 1000
+				join_faction_tension = 0
 				send_volunteer_size = 5
 				send_volunteer_divisions_required = -0.1
 			}
 
 			rule = {
-				can_join_factions = no
+				#can_join_factions = no
 			}			
 		}
 	}

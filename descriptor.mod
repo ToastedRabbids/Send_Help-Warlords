@@ -33,3 +33,4 @@ tags={
 }
 name="Official SendHelp Warlords"
 supported_version="1.10.8"
+remote_file_id="2766741082"

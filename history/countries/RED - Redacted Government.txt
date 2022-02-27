@@ -225,12 +225,12 @@ create_corps_commander = {
 
 
 #create_corps_commander = {
-	name = "Joe Rogan"
-	portrait_path = "gfx/leaders/RED/portrait_RED_General_Dogerell_Müller.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 5
-    defense_skill = 5
-    planning_skill = 2
-    logistics_skill = 2
+	#name = "Joe Rogan"
+	#portrait_path = "gfx/leaders/RED/portrait_RED_General_Dogerell_Müller.dds"
+	#traits = { }
+	#skill = 3
+	#attack_skill = 5
+    #defense_skill = 5
+    #planning_skill = 2
+    #logistics_skill = 2
 }

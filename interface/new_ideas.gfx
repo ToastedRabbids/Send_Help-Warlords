@@ -79,4 +79,10 @@ spriteTypes = {
 
 	}
 
+	SpriteType = {
+		name = "GFX_idea_foreign_net"
+		texturefile = "gfx/interface/ideas/idea_foreign_neutrality.dds"
+
+	}
+
 }

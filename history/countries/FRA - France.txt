@@ -117,6 +117,7 @@ add_ideas = {
 	FRA_protected_by_the_maginot_line
 	limited_conscription
 	FRA_surrender_limit
+	foreign_net
 }
 
 create_country_leader = {

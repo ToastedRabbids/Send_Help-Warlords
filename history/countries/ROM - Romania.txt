@@ -12,6 +12,7 @@ if = {
 add_ideas = {
 	free_trade
 	neutrality_idea
+	foreign_net
 }
 
 if = {
